@@ -10,12 +10,15 @@ group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'puma' # Use Puma as the development server, for fun, cause puma is interesting
   gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
-  # bootstrap
-  gem 'therubyracer'
+  gem 'therubyracer' # Required by less
+  gem 'guard-minitest'
 end
 
 group :development, :test do
   gem 'debugger', group: [:development, :test]
+  gem 'fabrication'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara' # Use with: bin/rails generate minitest:feature CanAccessHome --spec
 end
 
 # Use ActiveModel has_secure_password
