@@ -5,6 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'less-rails-bootstrap'
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'slim-rails' # HAML-like markup language. Faster than HAML. Supports streaming.
 
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
