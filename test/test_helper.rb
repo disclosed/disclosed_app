@@ -10,8 +10,21 @@ require "minitest/rails/capybara"
 # Uncomment for awesome colorful output
 require "minitest/pride"
 
-class ActiveSupport::TestCase
+# Make sure the data is removed between each test
+require "database_cleaner"
+
+# Truncate tables after each test case runs
+# Using :transaction here would be faster, but it doesn't work.
+# TODO: Figure out why.
+DatabaseCleaner.strategy = :truncation
+
+class MiniTest::Spec
   ActiveRecord::Migration.check_pending!
 
-  # Add more helper methods to be used by all tests here...
+  before :each do
+    DatabaseCleaner.start
+  end
+  after :each do
+    DatabaseCleaner.clean
+  end
 end

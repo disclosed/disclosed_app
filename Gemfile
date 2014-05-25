@@ -17,10 +17,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger', group: [:development, :test]
+  gem 'pry'
   gem 'fabrication'
   gem 'minitest-rails'
   gem 'minitest-rails-capybara' # Use with: bin/rails generate minitest:feature CanAccessHome --spec
+  gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
