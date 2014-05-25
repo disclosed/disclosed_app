@@ -2,6 +2,7 @@ require "test_helper"
 
 describe Agency do
   describe "Validations" do
+
     it "must be valid" do
       agency = Fabricate(:agency)
       agency.must_be :valid?
@@ -19,6 +20,28 @@ describe Agency do
       agency = Fabricate.build(:agency, :abbr => "moe")
       agency.save.must_equal false
       agency.errors[:abbr].must_include "has already been taken"
+    end
+
+    it "should determine the abbr based on the name if no abbr given" do
+      AGENCIES.each do |name, details|
+        agency = Fabricate(:agency, name: name, abbr: nil)
+        agency.abbr.must_equal details["alias"]
+      end
+    end
+
+    it "should save the given abbr if both name and abbr are provided" do
+      ec = Fabricate(:agency, name: "Environment Canada", abbr: "ec")
+      ec.abbr.must_equal "ec"
+    end
+
+    it "should determine the abbr when the agency name has the wrong case" do
+      ec = Fabricate(:agency, name: "environment canada", abbr: nil)
+      ec.abbr.must_equal "ec"
+    end
+
+    it "should raise an error if the agency is not found" do
+
+      proc {Fabricate(:agency, name: "Fooo!", abbr: nil)}.must_raise Agency::UnknownAgency
     end
   end
 end
