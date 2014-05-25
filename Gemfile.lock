@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bootstrap_form (2.1.1)
     builder (3.2.2)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -185,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap_form
   debugger
   fabrication
   guard-minitest

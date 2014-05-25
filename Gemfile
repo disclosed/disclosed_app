@@ -4,6 +4,7 @@ gem 'rails', '4.1.1'
 gem 'pg'
 gem 'jquery-rails'
 gem 'less-rails-bootstrap'
+gem 'bootstrap_form' # https://github.com/bootstrap-ruby/rails-bootstrap-forms
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'slim-rails' # HAML-like markup language. Faster than HAML. Supports streaming.
 
