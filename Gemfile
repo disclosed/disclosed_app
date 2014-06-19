@@ -18,6 +18,7 @@ end
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-debugger'
   gem 'fabrication'
   gem 'minitest-rails'
   gem 'minitest-rails-capybara' # Use with: bin/rails generate minitest:feature CanAccessHome --spec
