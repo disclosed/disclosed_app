@@ -6,10 +6,10 @@ class ContractLoader
   
   attr_reader :contracts
 
-  def initialize(csv_string)
+  def initialize(file_path)
     @contracts = []
     config_csv_converter
-    parse(csv_string)
+    parse(file_path)
   end
 
   def upsert_into_db!
@@ -32,10 +32,15 @@ class ContractLoader
     end
   end
 
-  def parse(csv_string)
-    rows = CSV.new(csv_string, headers: true, header_converters: :symbol, converters: [:all, :blank_to_nil])
-    #binding.pry
-    @contracts = rows.to_a.map! {|row| row.to_hash }
+  # Read the CSV from a file and return the contents of the file
+  # as an array of hashes.
+  def parse(file_path)
+    begin
+      rows = CSV.read(file_path, headers: true, header_converters: :symbol, converters: [:all, :blank_to_nil])
+    rescue StandardError => e
+      raise "Could not load CSV file. Make sure the URL is correct and the returned CSV file has headers. Original error: #{e.message}"
+    end
+    @contracts = rows.collect {|row| row.to_hash }
   end
 
   def build_attributes(contract)
