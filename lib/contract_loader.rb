@@ -50,25 +50,41 @@ class ContractLoader
       vendor_name:      contract[:vendor_name],
       reference_number: contract[:reference_number],
       effective_date:   contract[:contract_date].to_date,
-      start_date:       get_start_date(contract),
-      end_date:         get_end_date(contract),
+      start_date:       get_start_date(contract[:contract_period]),
+      end_date:         get_end_date(contract[:contract_period]),
       value:       contract[:contract_value].to_i,
       description: contract[:description_of_work],
       comments:    contract[:comments]
     }
   end
 
-  def split_contract_period(contract_hash)
-    return contract_hash[:contract_period].split
+  # date_string - the start date and end date of the contract
+  #             ex: 2013-10-18 to 2013-10-18
+  #             ex: May 1, 2008 to April 30, 2011
+  # Returns an array with the two date strings
+  def extract_dates(date_string)
+    dates = date_string.match(/(.*)\sto\s(.*)/)
+    if !dates
+      raise "Don't know how to parse contract period string: #{date_string}"
+    end
+    dates[1, 2]
   end
 
-  def get_start_date(contract_hash)
-    dates = split_contract_period(contract_hash)
-    dates.first.to_date
+  # date_string - the start date and end date of the contract
+  #             ex: 2013-10-18 to 2013-10-18
+  #             ex: May 1, 2008 to April 30, 2011
+  # Returns a ruby date object with the first date
+  def get_start_date(date_string)
+    date = extract_dates(date_string).first
+    Chronic.parse(date)
   end
 
-  def get_end_date(contract_hash)
-    dates = split_contract_period(contract_hash)
-    return dates.last.to_date if dates.length > 1
+  # date_string - the start date and end date of the contract
+  #             ex: 2013-10-18 to 2013-10-18
+  #             ex: May 1, 2008 to April 30, 2011
+  # Returns a ruby date object with the last date
+  def get_end_date(date_string)
+    date = extract_dates(date_string).last
+    Chronic.parse(date)
   end
 end
