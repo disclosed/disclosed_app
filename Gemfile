@@ -23,6 +23,7 @@ group :development, :test do
   gem 'fabrication'
   gem 'minitest-rails'
   gem 'minitest-rails-capybara' # Use with: bin/rails generate minitest:feature CanAccessHome --spec
+  gem 'mocha' # delicious mocks and stubs
   gem 'database_cleaner'
 end
 
