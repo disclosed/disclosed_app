@@ -37,8 +37,10 @@ class ContractLoader
   def parse(file_path)
     begin
       rows = CSV.read(file_path, headers: true, header_converters: :symbol, converters: [:all, :blank_to_nil])
+    rescue CSV::MalformedCSVError => e
+      raise "Could not parse CSV file. Original error: #{e.message}"
     rescue StandardError => e
-      raise "Could not load CSV file. Make sure the URL is correct and the returned CSV file has headers. Original error: #{e.message}"
+      raise "Could not load CSV file. Make sure the file has CSV headers. Original error: #{e.message}"
     end
     @contracts = rows.collect {|row| row.to_hash }
   end
