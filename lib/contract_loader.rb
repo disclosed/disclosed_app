@@ -85,7 +85,7 @@ class ContractLoader
     else
       start_date = Chronic.parse(date_string)
       if start_date.nil? # not a single date
-        raise "Don't know how to parse contract period string: #{date_string}"
+        raise ContractLoaderError, "Don't know how to parse contract period string: #{date_string}"
       end
     end
     [start_date.to_date, end_date.try(:to_date) || nil]
