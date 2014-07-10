@@ -10,6 +10,6 @@ namespace :contracts do
     puts "Found #{loader.contracts.length} contracts."
     puts "Loading contracts into database"
     loader.upsert_into_db!
-    puts "Done."
+    puts "Done. Skipped #{loader.skipped_count} contracts with invalid data."
   end
 end

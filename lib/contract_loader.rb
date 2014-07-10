@@ -4,21 +4,24 @@
 require "csv"
 class ContractLoader
   
-  attr_reader :contracts
+  attr_reader :contracts, :skipped_count
 
   def initialize(file_path)
     @contracts = []
+    @skipped_count = 0
     config_csv_converter
     parse(file_path)
   end
 
   def upsert_into_db!
     @contracts.each do |contract|
-      print "."
-      ref_no = contract[:reference_number].to_s
-      raise "Contract must have a reference number. #{contract.inspect}" unless ref_no
       attributes = build_attributes(contract)
-      if existing_contract = Contract.where(reference_number: ref_no).first
+      if !valid_attributes?(attributes)
+        @skipped_count += 1
+        next
+      end
+      existing_contract = Contract.where(reference_number: attributes[:reference_number]).first
+      if existing_contract
         existing_contract.update_attributes!(attributes)
       else
         Contract.create!(attributes)
@@ -46,13 +49,23 @@ class ContractLoader
     @contracts = rows.collect {|row| row.to_hash }
   end
 
+  def valid_attributes?(attrs)
+    return false if !attrs.present?
+    return false if !attrs[:reference_number].present?
+    return true
+  end
+
   def build_attributes(contract)
-    start_date, end_date = extract_dates(contract[:contract_period])
+    begin
+      start_date, end_date = extract_dates(contract[:contract_period])
+    rescue ContractLoaderError
+      return nil
+    end
     {
       url: contract[:url],
       agency: Agency.find_or_create_by(name: contract[:agency]),
       vendor_name:      contract[:vendor_name] || "Unknown",
-      reference_number: contract[:reference_number],
+      reference_number: contract[:reference_number].try(:to_s),
       effective_date:   contract[:contract_date].try(:to_date),
       start_date:       start_date,
       end_date:         end_date,

@@ -94,12 +94,19 @@ describe ContractLoader do
     end
 
     it "should update contract details if a contract with same ref number already exists" do
-      @loader.upsert_into_db!
+      loader = ContractLoader.new(Rails.root.join('test/fixtures/sample_contracts.csv'))
+      loader.upsert_into_db!
       second_loader = ContractLoader.new(Rails.root.join('test/fixtures/sample_contracts_v2.csv'))
       Contract.count.must_equal 5
       second_loader.upsert_into_db!
       Contract.count.must_equal 5
       Contract.where(reference_number: "P1400400").first.vendor_name.must_equal "DNR CONSULTING GROUP INC"
+    end
+
+    it "should skip csv records with invalid date" do
+      loader = ContractLoader.new(Rails.root.join('test/fixtures/sample_contracts_with_errors.csv'))
+      loader.upsert_into_db!
+      Contract.count.must_equal 1 # saves the contract with an invalid date
     end
 
     it "should load all contracts and agencies into the database" do
