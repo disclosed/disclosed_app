@@ -1,15 +1,25 @@
-require 'open-uri'
 # Examples:
-# rake contracts:load[https://raw.githubusercontent.com/disclosed/disclosed/master/data/supreme_court_of_canada_contracts.csv]
+# rake contracts:load[/path/to/csv/file.csv]
+# rake contracts:load[/path/to/csv/directory]
 namespace :contracts do
   desc "Update the contracts database using data in a CSV file"
-  task :load, [:url] => [:environment] do |t, args|
-    url = args[:url]
-    puts "Loading CSV data from #{url}"
-    loader = ContractLoader.new(open(url).path)
-    puts "Found #{loader.contracts.length} contracts."
-    puts "Loading contracts into database"
-    loader.upsert_into_db!
-    puts "Done. Skipped #{loader.skipped_count} contracts with invalid data."
+  task :load, [:path] => [:environment] do |t, args|
+    path = args[:path]
+    if File.directory?(path)
+      Dir.glob(path + "/*.csv") do |path|
+        load_csv(path)
+      end
+    else
+      load_csv(path)
+    end
   end
+end
+
+def load_csv(path)
+  puts "Loading CSV data from #{path}"
+  loader = ContractLoader.new(path)
+  puts "Found #{loader.contracts.length} contracts."
+  puts "Loading contracts into database"
+  loader.upsert_into_db!
+  puts "Done. Skipped #{loader.skipped_count} contracts with invalid data."
 end
