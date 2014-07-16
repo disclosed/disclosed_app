@@ -26,6 +26,7 @@ group :development, :test do
   gem 'mocha' # delicious mocks and stubs
   gem 'database_cleaner'
   gem 'typhoeus' # used by scraper to make web requests
+  gem 'timecop' # time freezing gem
 end
 
 # Use ActiveModel has_secure_password
