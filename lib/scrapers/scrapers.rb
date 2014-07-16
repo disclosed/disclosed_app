@@ -1,0 +1,2 @@
+module Scrapers
+end
