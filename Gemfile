@@ -25,8 +25,10 @@ group :development, :test do
   gem 'minitest-rails-capybara' # Use with: bin/rails generate minitest:feature CanAccessHome --spec
   gem 'mocha' # delicious mocks and stubs
   gem 'database_cleaner'
-  gem 'typhoeus' # used by scraper to make web requests
+  gem 'mechanize' # used by scraper to make web requests
   gem 'timecop' # time freezing gem
+  gem 'vcr'     # record web requests for scraper tests
+  gem 'fakeweb' # used by vcr
 end
 
 # Use ActiveModel has_secure_password
