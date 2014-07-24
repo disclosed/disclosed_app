@@ -48,11 +48,15 @@ module Scrapers
         end
       end
       attrs["url"] = url
-      # flatten nested attributes
+      attrs = flatten_to_json(attrs)
+      attrs
+    end
+    
+    # Transform nested data to JSON strings
+    def flatten_to_json(attrs)
       attrs.each do |k, attr|
         attrs[k] = attr.to_json if attr.is_a? Hash
       end
-      attrs
     end
 
 
@@ -63,7 +67,7 @@ module Scrapers
 
       @urls = Wombat.crawl do
         base_url "http://www.dfo-mpo.gc.ca/PD-CP"
-        path "/#{2013}-Q#{3}-eng.htm"
+        path "/#{quarter.year}-Q#{quarter.quarter}-eng.htm"
         contract_link "xpath=//table//td[2]//a[1]/@href", :list
       end
 
