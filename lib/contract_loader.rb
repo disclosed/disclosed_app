@@ -58,7 +58,7 @@ class ContractLoader
   def build_attributes(contract)
     begin
       start_date, end_date = Contract.extract_dates(contract[:contract_period])
-    rescue ContractLoaderError
+    rescue ArgumentError
       return nil
     end
     {
