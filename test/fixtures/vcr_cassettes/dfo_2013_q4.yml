@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Thu, 24 Jul 2014 23:22:35 GMT
+      - Mon, 04 Aug 2014 01:05:37 GMT
       server:
       - Microsoft-IIS/6.0
       x-ua-compatible:
@@ -41,7 +41,7 @@ http_interactions:
       content-type:
       - text/html
       set-cookie:
-      - ASPSESSIONIDSATBTCBC=KNCGGGAAMBMCOGHEDLEPGEKD; path=/
+      - ASPSESSIONIDQCASSCRC=ENCLMGBDCOGLCADCPMAGPDEJ; path=/
       cache-control:
       - private
     body:
@@ -212,5 +212,5 @@ http_interactions:
         Notices</a></div>\r\n\r\n\t</div>\r\n\r\n\t<!-- FOOTER ENDS | FIN DU PIED
         DE LA PAGE -->\r\n\r\n\t</div>\r\n\r\n</div></div>\r\n\r\n</body>\r\n\r\n</html>\r\n\r\n</body>\r\n\r\n</html>\r\n"
     http_version: '1.1'
-  recorded_at: Thu, 24 Jul 2014 23:22:08 GMT
+  recorded_at: Mon, 04 Aug 2014 01:05:33 GMT
 recorded_with: VCR 2.9.2
