@@ -16,7 +16,7 @@ require "minitest/pride"
 require "vcr"
 VCR.configure do |c|
   c.cassette_library_dir = 'test/fixtures/vcr_cassettes'
-  c.hook_into :fakeweb # or :webmock
+  c.hook_into :webmock
 end
 
 # Make sure the data is removed between each test

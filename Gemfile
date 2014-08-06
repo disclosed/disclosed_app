@@ -27,7 +27,7 @@ group :development, :test do
   gem 'wombat' # scraper DSL
   gem 'timecop' # time freezing gem
   gem 'vcr'     # record web requests for scraper tests
-  gem 'fakeweb' # used by vcr
+  gem 'webmock' # used by vcr
   gem 'chronic' # Natural language date parser used by scraper to parse dates
   gem 'monetize' # Parse money amounts. Used by scraper.
 end
