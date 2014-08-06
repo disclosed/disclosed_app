@@ -1,6 +1,7 @@
 class Contract < ActiveRecord::Base
   belongs_to :agency
 
+  validates :reference_number, presence: true, uniqueness: true
   validates :url,            presence: true
   validates :vendor_name,    presence: true
   validates :value,          presence: true
@@ -34,5 +35,16 @@ class Contract < ActiveRecord::Base
     end
     [start_date.to_date, end_date.try(:to_date) || nil]
   end
+
+  def self.create_or_update!(attrs)
+    contract = self.find_by(reference_number: attrs[:reference_number])
+    if contract
+      contract.update_attributes!(attrs)
+    else
+      contract = Contract.create!(attrs)
+    end
+    contract
+  end
+
 end
 

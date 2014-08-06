@@ -57,5 +57,31 @@ describe Contract do
       proc {Contract.extract_dates("All your base are belong to us")}.must_raise ArgumentError
     end
   end
+
+  describe "::create_or_update" do
+    before do
+      @agency = Fabricate(:agency)
+    end
+
+    it "should create a record if a reference number doesn't exist" do
+      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", agency: @agency)
+      Contract.create_or_update!(contract_attrs)
+      Contract.find_by(reference_number: "A100").wont_equal nil
+    end
+
+    it "should update a record if the reference number exists" do
+      contract = Fabricate(:contract, reference_number: "A123", agency: @agency)
+      attrs = Fabricate.attributes_for(:contract, reference_number: "A123", vendor_name: "New Company Inc.")
+      contract = Contract.create_or_update!(attrs)
+      contract.must_be :persisted?
+      Contract.find_by(reference_number: "A123").vendor_name.must_equal "New Company Inc."
+    end
+
+    it "should raise an exception if the contract data is invalid" do
+      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", vendor_name: nil, agency: @agency)
+
+      proc { Contract.create_or_update!(contract_attrs) }.must_raise ActiveRecord::RecordInvalid
+    end
+  end
 end
 

@@ -16,16 +16,11 @@ class ContractLoader
   def upsert_into_db!
     @contracts.each do |contract|
       attributes = build_attributes(contract)
-      if !valid_attributes?(attributes)
+      if !Contract.new(attributes).valid?
         @skipped_count += 1
         next
       end
-      existing_contract = Contract.where(reference_number: attributes[:reference_number]).first
-      if existing_contract
-        existing_contract.update_attributes!(attributes)
-      else
-        Contract.create!(attributes)
-      end
+      Contract.create_or_update!(attributes)
     end
   end
 
