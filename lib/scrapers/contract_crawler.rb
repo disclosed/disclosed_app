@@ -3,7 +3,6 @@
 # The crawler might have to visit more than one page to get the data for
 # a single contract.
 class Scrapers::ContractCrawler
-  include Wombat::Crawler
 
   def initialize(quarter = Scrapers::Quarter.latest)
     raise ArgumentError, "Invalid quarter #{quarter}" if !quarter.valid?
@@ -12,12 +11,8 @@ class Scrapers::ContractCrawler
 
   # Scrape all contracts in a given quarter
   # Returns an Array of Hashes with the contract data
-  def scrape_contracts
-    results = []
-    contract_urls.each do |url|
-      results << contract_hash(url)
-    end
-    results
+  def scrape_contracts(index_range = 0..-1)
+    contract_urls[index_range].collect {|url| contract_hash(url)}
   end
 
   protected

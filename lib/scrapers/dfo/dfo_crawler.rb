@@ -40,9 +40,10 @@ class Scrapers::Dfo::DfoCrawler < Scrapers::ContractCrawler
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in this quarter
   def contract_urls
+    quarter = @quarter
     urls = Wombat.crawl do
       base_url "http://www.dfo-mpo.gc.ca/PD-CP"
-      path     "/#{@quarter.year}-Q#{@quarter.quarter}-eng.htm"
+      path     "/#{quarter.year}-Q#{quarter.quarter}-eng.htm"
       contract_link "xpath=//table//td[2]//a[1]/@href", :list do |all_urls|
         all_urls.map { |url| "http://www.dfo-mpo.gc.ca/PD-CP/" + url }
       end
@@ -50,5 +51,6 @@ class Scrapers::Dfo::DfoCrawler < Scrapers::ContractCrawler
 
     urls.values.flatten
   end
+
 
 end

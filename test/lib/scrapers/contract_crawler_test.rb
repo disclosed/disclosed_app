@@ -12,5 +12,25 @@ describe Scrapers::ContractCrawler do
       scraper = Scrapers::ContractCrawler.new(y2013q4)
       scraper.instance_variable_get(:@quarter).must_equal y2013q4
     end
+
+  end
+
+  describe "#scrape_contracts" do
+    it "should scrape all contracts by default" do
+      scraper = Scrapers::ContractCrawler.new
+      scraper.stubs(:contract_urls).returns(["http://one.com", "http://two.com", "http://three.com"])
+      scraper.expects(:contract_hash).with("http://one.com")
+      scraper.expects(:contract_hash).with("http://two.com")
+      scraper.expects(:contract_hash).with("http://three.com")
+      scraper.scrape_contracts
+    end
+
+    it "should scrape only some of the contracts in the list" do
+      scraper = Scrapers::ContractCrawler.new
+      scraper.stubs(:contract_urls).returns(["http://one.com", "http://two.com", "http://three.com"])
+      scraper.expects(:contract_hash).with("http://one.com")
+      scraper.expects(:contract_hash).with("http://two.com")
+      scraper.scrape_contracts(0..1)
+    end
   end
 end

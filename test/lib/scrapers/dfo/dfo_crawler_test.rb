@@ -2,15 +2,13 @@ require "test_helper"
 describe Scrapers::Dfo::DfoCrawler do
 
   describe "#scrape_contracts" do
+
     it "should parse the data from a contract page" do
       VCR.use_cassette('dfo_2013_q4') do
         y2013q4 = Scrapers::Quarter.new(2013, 4)
         scraper = Scrapers::Dfo::DfoCrawler.new(y2013q4)
-        scraper.stubs(:contract_urls).returns([
-          "http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120002"
-        ])
-        contracts = scraper.scrape_contracts
-        contract = contracts.first
+        contracts = scraper.scrape_contracts(0..2)
+        contract = contracts.second
         contract['vendor_name'].must_equal "DOCULIBRE INC"
         contract['reference_number'].must_equal "F4748-120002"
         contract['effective_date'].must_equal Date.parse("2013-01-01")
@@ -22,5 +20,7 @@ describe Scrapers::Dfo::DfoCrawler do
         contract['comments'].must_equal "{\"main\":\" \",\"additional\":\"\"}"
       end
     end
+
   end
+
 end
