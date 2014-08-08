@@ -1,10 +1,13 @@
+# rake contracts:scrape["ec","2013q4"]
 namespace :contracts do
   desc "Scrape the contract data for a given government agency and load it in the DB."
-  task :scrape, [:agency_code] => [:environment] do |t, args|
+  task :scrape, [:agency_code, :quarter] => [:environment] do |t, args|
     agency_code = args[:agency_code].try(:downcase)
+    quarter_string = args[:quarter]
     if Agency.exists?(abbr: agency_code)
       puts "Scraping contracts"
-      crawler = crawler_for_agency(agency_code).new
+      quarter = Scrapers::Quarter.parse(quarter_string)
+      crawler = crawler_for_agency(agency_code).new(quarter)
       contracts = crawler.scrape_contracts
       puts "Found #{contracts.length} contracts."
       puts "Saving contracts in the database."
@@ -28,10 +31,10 @@ end
 def show_help
   puts <<-eos
 Usage:
-rake contracts:scrape[AGENCY_CODE]
+rake contracts:scrape[AGENCY_CODE,QUARTER]
 Example:
   To scrape the contracts in the most recent quarter from the Depatrment of Fisheries and Oceans
-  rake contracts:scrape[dfo]
+  rake contracts:scrape[dfo,2013q2]
   eos
 end
 

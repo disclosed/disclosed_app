@@ -1,6 +1,7 @@
 require "test_helper"
 
 describe Scrapers::Quarter do
+
   describe "#valid?" do
     it "must be valid if the year and quarter are valid" do
       [1, 2, 3, 4].each do |quarter|
@@ -59,4 +60,17 @@ describe Scrapers::Quarter do
       Timecop.return
     end
   end
+
+  describe "::parse" do
+    it "should create a quarter based on a string" do
+      quarter = Scrapers::Quarter.parse("2013q1")
+      quarter.year.must_equal 2013
+      quarter.quarter.must_equal 1
+    end
+
+    it "should raise an error if the quarter string is invalid" do
+      proc {Scrapers::Quarter.parse("asdfasd")}.must_raise ArgumentError
+    end
+  end
+
 end

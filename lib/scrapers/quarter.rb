@@ -2,6 +2,12 @@ class Scrapers::Quarter < Struct.new(:year, :quarter)
   QUARTER_MONTH_RANGES = [(4..6), (7..9), (10..12), (1..3)].freeze
   QUARTER_SEQUENCE = [4, 1, 2, 3] # the order of the quarters in a year
                                   # the year starts with the 4th quarter
+  def self.parse(quarter_string = "")
+    matches, year, quarter = quarter_string.match(/^(\d{4})q([1-4])$/i).to_a
+    raise ArgumentError, "Quarter string is invalid. Should be something like 2013q4" if !year or !quarter
+    self.new(year.to_i, quarter.to_i)
+  end
+
   def -(num_quarters)
     new_year = year - (num_quarters / 4)
     quarter_sequence_index = (QUARTER_SEQUENCE.index(quarter) - num_quarters)
