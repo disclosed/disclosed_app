@@ -29,7 +29,6 @@ class Scrapers::Pc::PcCrawler < Scrapers::ContractCrawler
       end
     end
     attrs["url"] = url
-    attrs = flatten_to_json(attrs)
     attrs
   end
 

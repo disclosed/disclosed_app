@@ -19,6 +19,7 @@ describe Scrapers::ContractCrawler do
     it "should scrape all contracts by default" do
       scraper = Scrapers::ContractCrawler.new
       scraper.stubs(:contract_urls).returns(["http://one.com", "http://two.com", "http://three.com"])
+      scraper.stubs(:flatten_to_json).returns(nil)
       scraper.expects(:contract_hash).with("http://one.com")
       scraper.expects(:contract_hash).with("http://two.com")
       scraper.expects(:contract_hash).with("http://three.com")
@@ -28,6 +29,7 @@ describe Scrapers::ContractCrawler do
     it "should scrape only some of the contracts in the list" do
       scraper = Scrapers::ContractCrawler.new
       scraper.stubs(:contract_urls).returns(["http://one.com", "http://two.com", "http://three.com"])
+      scraper.stubs(:flatten_to_json).returns(nil)
       scraper.expects(:contract_hash).with("http://one.com")
       scraper.expects(:contract_hash).with("http://two.com")
       scraper.scrape_contracts(0..1)
