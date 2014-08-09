@@ -45,7 +45,6 @@ class Scrapers::Pc::PcCrawler < Scrapers::ContractCrawler
         all_urls.map { |url| "http://www.pc.gc.ca/apps/pdc/" + url }
       end
     end
-binding.pry
     urls.values.flatten
   end
 
