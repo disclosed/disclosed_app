@@ -1,3 +1,4 @@
+# Load contract data from a CSV file
 # Examples:
 # rake contracts:load[/path/to/csv/file.csv]
 # rake contracts:load[/path/to/csv/directory]

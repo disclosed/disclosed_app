@@ -16,16 +16,11 @@ class ContractLoader
   def upsert_into_db!
     @contracts.each do |contract|
       attributes = build_attributes(contract)
-      if !valid_attributes?(attributes)
+      if !Contract.new(attributes).valid?
         @skipped_count += 1
         next
       end
-      existing_contract = Contract.where(reference_number: attributes[:reference_number]).first
-      if existing_contract
-        existing_contract.update_attributes!(attributes)
-      else
-        Contract.create!(attributes)
-      end
+      Contract.create_or_update!(attributes)
     end
   end
 
@@ -57,8 +52,8 @@ class ContractLoader
 
   def build_attributes(contract)
     begin
-      start_date, end_date = extract_dates(contract[:contract_period])
-    rescue ContractLoaderError
+      start_date, end_date = Contract.extract_dates(contract[:contract_period])
+    rescue ArgumentError
       return nil
     end
     {
@@ -75,34 +70,6 @@ class ContractLoader
     }
   end
 
-  # date_string - the start date and end date of the contract
-  # Most contracts seem to look like this...
-  #             ex: 2013-10-18 to 2013-10-20
-  #             ex: 2013-10-18 à 2013-10-20
-  #             ex: May 1, 2008 to April 30, 2011
-  #             ex: 2013-10-18
-  # Returns an array with the two dates
-  # If there is no end date, the end date is nil
-  # FIXME: Move this logic into the scraper.
-  def extract_dates(date_string)
-    return [nil, nil] if !date_string.present?
-    date_range_match = date_string.match(/(.*)\sto\s(.*)/i)
-    date_range_match ||= date_string.match(/(\d{4}\-\d{2}\-\d{2})\s*to\s*(\d{4}\-\d{2}\-\d{2})/)
-    date_range_match ||= date_string.match(/(.*)\&agrave;(.*)/i)
-    if date_range_match
-      start_date = Chronic.parse(date_range_match[1])
-      end_date   = Chronic.parse(date_range_match[2])
-      if start_date.nil? || end_date.nil?
-        raise ContractLoaderError, "Don't know how to parse contract period string: #{date_string}"
-      end
-    else
-      start_date = Chronic.parse(date_string)
-      if start_date.nil? # not a single date
-        raise ContractLoaderError, "Don't know how to parse contract period string: #{date_string}"
-      end
-    end
-    [start_date.to_date, end_date.try(:to_date) || nil]
-  end
 end
 
 class ContractLoaderError < StandardError; end;

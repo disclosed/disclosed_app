@@ -7,7 +7,6 @@ gem 'less-rails-bootstrap'
 gem 'bootstrap_form' # https://github.com/bootstrap-ruby/rails-bootstrap-forms
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'slim-rails' # HAML-like markup language. Faster than HAML. Supports streaming.
-gem 'chronic' # Natural language date parser
 
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -20,11 +19,20 @@ end
 group :development, :test do
   gem 'pry'
   gem 'pry-debugger'
+  gem 'wombat' # scraper DSL
+  gem 'chronic' # Natural language date parser used by scraper to parse dates
+  gem 'monetize' # Parse money amounts. Used by scraper.
+end
+
+group :test do
   gem 'fabrication'
   gem 'minitest-rails'
   gem 'minitest-rails-capybara' # Use with: bin/rails generate minitest:feature CanAccessHome --spec
   gem 'mocha' # delicious mocks and stubs
   gem 'database_cleaner'
+  gem 'timecop' # time freezing gem
+  gem 'vcr'     # record web requests for scraper tests
+  gem 'webmock' # used by vcr
 end
 
 # Use ActiveModel has_secure_password
