@@ -21,7 +21,7 @@ In 2004 the Government announced a new policy on the mandatory publication of co
 
 The format of the contract data is dictated by these [guidelines](http://www.tbs-sct.gc.ca/pd-dp/dc/index-eng.asp)
 
-## What other data are you planning to make available?
+### What other data are you planning to make available?
 
 The Proactive Disclosure Act requires every agency to publish:
 
@@ -32,7 +32,7 @@ The Proactive Disclosure Act requires every agency to publish:
 - [Position Reclassifications](http://www.international.gc.ca/department-ministere/transparency-transparence/reclassification.aspx?lang=eng)
 
 
-## Wait, I thought the government already has an Open Data initiative!
+### Wait, I thought the government already has an Open Data initiative!
 
 Yes, the open data website currently publishes 209,183 data sets. But there are a few problems:
 
@@ -42,4 +42,103 @@ Yes, the open data website currently publishes 209,183 data sets. But there are 
 - Difficult for your average citizen to view the data.
 
 The goal of this project is to organize the data sets in a way that makes sense.
+
+## Tech Stack
+
+Ruby on Rails web app
+Ruby on Rails API
+Ruby scrapers using [Wombat](https://github.com/felipecsl/wombat)
+
+## Scrapers
+
+You can help out by writing a scraper for the contracts data. Here is a list of all the scrapers that need to be written:
+
+### Writing a contract agency scraper
+
+Fork this project. Take a look at some of the crawlers that were already written in `lib/scrapers/`.
+
+Contract data is typically structured like this.
+
+- `Quarters Page`: list of all quarters published by an agency [example](http://www.tbs-sct.gc.ca/scripts/contracts-contrats/reports-rapports-eng.asp)
+- `Contracts Page`: list of links to each contract in a quarter [example](http://www.tbs-sct.gc.ca/scripts/contracts-contrats/reports-rapports-eng.asp?r=l&yr=2013&q=4&d=)
+- `Contract Detail Page`: details for a single contract [example](http://www.tbs-sct.gc.ca/scripts/contracts-contrats/reports-rapports-eng.asp?r=c&refNum=2406210451&q=4&yr=2013&d=)
+
+Generate a new crawler for the agency.
+
+    rails generate crawler agency rcmp
+          create  lib/scrapers/rcmp/rcmp_crawler.rb
+          create  test/lib/scrapers/rcmp/rcmp_crawler_test.rb
+
+
+This will the crawler file you need to implement. Use Wombat to write these methods.
+
+```ruby
+class Scrapers::Rcmp::RcmpCrawler < Scrapers::ContractCrawler
+
+  protected
+  # Extract all the contract data from a contract page.
+  # url - the url of the contract page
+  # Returns a hash containing the contract information.
+  # See test/lib/scrapers/rcmp/rcmp_crawler_test.rb for data format.
+  def contract_hash(url)
+    raise "Not implemented"
+  end
+
+  # Return an Array with the urls the parser needs to visit to scrape all
+  # contracts in this quarter.
+  def contract_urls(quarter)
+    raise "Not implemented"
+  end
+end
+```
+
+And the test file to test your scraper:
+
+```ruby
+describe Scrapers::Rcmp::RcmpCrawler do
+  describe "#scrape_contracts" do
+    it "should parse the data from a contract page" do
+      VCR.use_cassette('rcmp_2012_q4', record: :new_episodes) do
+        quarter = Scrapers::Quarter.new(2012, 4)
+        scraper = Scrapers::Rcmp::RcmpCrawler.new(quarter)
+        contracts = scraper.scrape_contracts(0..2)
+        contract = contracts.first
+        contract['vendor_name'].must_equal 
+        contract['reference_number'].must_equal 
+        contract['effective_date'].must_equal Date.parse("")
+        contract['start_date'].must_equal Date.parse("")
+        contract['end_date'].must_equal Date.parse("")
+        contract['url'].must_equal ""
+        contract['value'].must_equal # Integer value (no decimals)
+        contract['description'].must_equal ""
+        contract['comments'].must_equal ""
+      end
+    end
+  end
+end
+```
+
+Here is an example for what the `contract_hash` method needs to return.
+
+```ruby
+contract_hash("http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120002")
+
+#=>
+{
+ "vendor_name"=>"DOCULIBRE INC",
+ "reference_number"=>"F4748-120002",
+ "effective_date"=>Tue, 01 Jan 2013,  # Date object
+ "description"=>
+  "0473 Information Technology and Telecommunications Consultantss; Regional Office: Gulf; Contact Phone: 1-866-266-6603",
+ "start_date"=>Tue, 01 Jan 2013,
+ "end_date"=>Sun, 31 Mar 2013,
+ "value"=>9500, # Integer
+ "comments"=>"",
+ "url"=>"http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120002"
+}
+```
+
+
+
+
 
