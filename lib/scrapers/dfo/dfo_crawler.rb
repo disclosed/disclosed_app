@@ -13,8 +13,12 @@ class Scrapers::Dfo::DfoCrawler < Scrapers::ContractCrawler
       end
       description do
         main "css=table.pdcp tr:nth-child(4) td"
-        regional_office "css=table.pdcp tr:nth-child(8) td"
-        contact_phone "css=table.pdcp tr:nth-child(9) td"
+        regional_office "css=table.pdcp tr:nth-child(8) td" do |office|
+          "Regional Office: #{office}"
+        end
+        contact_phone "css=table.pdcp tr:nth-child(9) td" do |phone|
+          "Contact Phone: #{phone}"
+        end
       end
       # start_date and end_date
       start_date "css=table.pdcp tr:nth-child(5) td" do |date|

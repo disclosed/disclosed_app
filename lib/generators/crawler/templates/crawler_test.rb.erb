@@ -13,8 +13,8 @@ describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Crawler do
         contract['end_date'].must_equal Date.parse("")
         contract['url'].must_equal ""
         contract['value'].must_equal # Integer value (no decimals)
-        contract['description'].must_equal "{\"main\":\"\"}"
-        contract['comments'].must_equal "{\"main\":\"\"}"
+        contract['description'].must_equal ""
+        contract['comments'].must_equal ""
       end
     end
   end
