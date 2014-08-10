@@ -12,7 +12,7 @@ class Scrapers::ContractCrawler
   # Scrape all contracts in a given quarter
   # Returns an Array of Hashes with the contract data
   def scrape_contracts(index_range = 0..-1)
-    contract_urls[index_range].collect do |url|
+    contract_urls(@quarter)[index_range].collect do |url|
       flatten_to_json(contract_hash(url))
     end
   end
@@ -26,7 +26,7 @@ class Scrapers::ContractCrawler
 
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in the quarter
-  def contract_urls
+  def contract_urls(quarter)
     raise "Please implement me!"
   end
 

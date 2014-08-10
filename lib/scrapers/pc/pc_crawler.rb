@@ -35,8 +35,7 @@ class Scrapers::Pc::PcCrawler < Scrapers::ContractCrawler
   # Figure out the urls that contain the data for each contract
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in this quarter
-  def contract_urls
-    quarter = @quarter
+  def contract_urls(quarter)
     urls = Wombat.crawl do
       base_url "http://www.pc.gc.ca/apps/pdc/index_e.asp"
       path     "?oqYEAR=#{quarter.year}-#{quarter.year + 1}&oqQUARTER=#{quarter.quarter}"

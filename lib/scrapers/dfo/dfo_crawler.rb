@@ -38,8 +38,7 @@ class Scrapers::Dfo::DfoCrawler < Scrapers::ContractCrawler
   # Figure out the urls that contain the data for each contract
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in this quarter
-  def contract_urls
-    quarter = @quarter
+  def contract_urls(quarter)
     urls = Wombat.crawl do
       base_url "http://www.dfo-mpo.gc.ca/PD-CP"
       path     "/#{quarter.year}-Q#{quarter.quarter}-eng.htm"

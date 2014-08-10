@@ -11,7 +11,7 @@ class Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Crawler < Scrape
 
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in this quarter.
-  def contract_urls
+  def contract_urls(quarter)
     raise "Not implemented"
   end
 end
