@@ -51,17 +51,19 @@ Ruby scrapers using [Wombat](https://github.com/felipecsl/wombat)
 
 ## Scrapers
 
-You can help out by writing a scraper for the contracts data. Here is a list of all the scrapers that need to be written:
-
-### Writing a contract agency scraper
-
-Fork this project. Take a look at some of the crawlers that were already written in `lib/scrapers/`.
+You can help out by writing a scraper for the contracts data. Here is a list of all the scrapers that need to be written: https://github.com/disclosed/disclosed_app/milestones/Kickstart%20Ruby%20scrapers
 
 Contract data is typically structured like this.
 
 - `Quarters Page`: list of all quarters published by an agency [example](http://www.tbs-sct.gc.ca/scripts/contracts-contrats/reports-rapports-eng.asp)
 - `Contracts Page`: list of links to each contract in a quarter [example](http://www.tbs-sct.gc.ca/scripts/contracts-contrats/reports-rapports-eng.asp?r=l&yr=2013&q=4&d=)
 - `Contract Detail Page`: details for a single contract [example](http://www.tbs-sct.gc.ca/scripts/contracts-contrats/reports-rapports-eng.asp?r=c&refNum=2406210451&q=4&yr=2013&d=)
+
+### Writing a contract agency scraper
+
+Fork this project. Take a look at some of the crawlers that were already written in `lib/scrapers/`.
+
+
 
 Generate a new crawler for the agency.
 
@@ -138,6 +140,21 @@ contract_hash("http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120
 }
 ```
 
+The Wombat Wiki has a useful howto for [how to use wombat for scraping](https://github.com/felipecsl/wombat/wiki).
+
+### Running the tests
+
+```
+bundle exec guard
+```
+
+### Running the scraper
+
+To run your scraper for 2014, 2nd quarter:
+
+```
+rake contracts:scrape[rcmp,2014q2]
+```
 
 
 
