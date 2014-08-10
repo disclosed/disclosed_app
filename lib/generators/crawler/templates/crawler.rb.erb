@@ -4,7 +4,7 @@ class Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Crawler < Scrape
   # Extract all the contract data from a contract page.
   # url - the url of the contract page
   # Returns a hash containing the contract information.
-  # See test/lib/scrapers/rcmp/rcmp_crawler_test.rb for data format.
+  # See test/lib/scrapers/<%= @agency.downcase %>/<%= @agency.downcase %>_crawler_test.rb for data format.
   def contract_hash(url)
     raise "Not implemented"
   end
