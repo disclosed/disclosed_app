@@ -33,6 +33,7 @@ group :test do
   gem 'timecop' # time freezing gem
   gem 'vcr'     # record web requests for scraper tests
   gem 'webmock' # used by vcr
+  gem "codeclimate-test-reporter", require: nil
 end
 
 # Use ActiveModel has_secure_password

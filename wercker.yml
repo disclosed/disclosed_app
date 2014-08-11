@@ -14,5 +14,5 @@ build:
             code: bin/rake db:schema:load RAILS_ENV=test
         - script:
             name: Run tests
-            code: bin/rake test:all
+            code: CODECLIMATE_REPO_TOKEN=a34a36d4afaa209c976d95c87538cc803d9f67d0276e1c24d011bc181960d9b9 bin/rake test:all
 
