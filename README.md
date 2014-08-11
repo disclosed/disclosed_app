@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/disclosed/disclosed_app/badges/gpa.svg)](https://codeclimate.com/github/disclosed/disclosed_app)
+[![Test Coverage](https://codeclimate.com/github/disclosed/disclosed_app/badges/coverage.svg)](https://codeclimate.com/github/disclosed/disclosed_app)
+
 HEADS UP: This is the readme for a future release.
 
 ## About
