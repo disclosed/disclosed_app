@@ -1,0 +1,18 @@
+box: wercker/rvm
+services:
+  - wercker/postgresql
+build:
+  steps:
+    - rvm-use:
+      version: 2.1.0
+    # Execute the bundle install step, a step provided by wercker
+    - bundle-install
+    # A step that prepares the database.yml using the database in services
+    - rails-database-yml
+    - script:
+        name: Set up db
+        code: bin/rake db:schema:load RAILS_ENV=test
+    - script:
+        name: Run tests
+        code: bin/rake test
+
