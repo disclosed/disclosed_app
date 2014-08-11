@@ -1,3 +1,4 @@
+[![wercker status](https://app.wercker.com/status/044339e960a4e88f16adc938cc1ba630/s "wercker status")](https://app.wercker.com/project/bykey/044339e960a4e88f16adc938cc1ba630)
 [![Code Climate](https://codeclimate.com/github/disclosed/disclosed_app/badges/gpa.svg)](https://codeclimate.com/github/disclosed/disclosed_app)
 [![Test Coverage](https://codeclimate.com/github/disclosed/disclosed_app/badges/coverage.svg)](https://codeclimate.com/github/disclosed/disclosed_app)
 
