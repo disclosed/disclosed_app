@@ -1,8 +1,8 @@
 div class="pure-menu pure-menu-open pure-menu-horizontal"
-  div#search_field 
-    = form_tag '/fill_this_out_later' do 
-      .pure-u-1-6
-        = text_field_tag :query, placeholder: "Search by agency or contractor"
+  div#search_field
+    .pure-form 
+      = form_tag '/fill_this_out_later' do 
+        = text_field_tag :query 
   ul
     li
       a href="#" 
