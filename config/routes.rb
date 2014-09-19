@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  
+
   namespace :api, path: "", constraints: { subdomain: "api" }, defaults: { format: :json } do
+    get 'contracts/filter'
+    get 'agencies/filter'
     resources :contracts, :agencies, only: [:new, :create, :show, :index]
   end
   get 'home/index'
