@@ -1,0 +1,10 @@
+div class="pure-menu pure-menu-open pure-menu-horizontal"
+  div#search_field 
+    = form_tag '/fill_this_out_later' do 
+      .pure-u-1-6
+        = text_field_tag :query, placeholder: "Search by agency or contractor"
+  ul
+    li
+      a href="#" 
+    li
+      a href="#" API 
