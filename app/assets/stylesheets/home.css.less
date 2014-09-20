@@ -1,11 +1,128 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Less here: http://lesscss.org/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-body.home.index {
-  padding-top: 30px;
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
 
-  h3 {
-    padding: 20px 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+.is-center {
+    text-align: center;
+}
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+}
+.pure-menu.pure-menu-open.pure-menu-fixed {
+    border-bottom: 5px #674172;
+    z-index: 4;
+}
+
+.home-menu a {
+    color: #6FBEF3;
+}
+.home-menu li a:hover {
+    background-color: #674172;
+    border: none;
+    text-decoration: none;
+}
+
+.splash-container {
+    background: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+}
+
+.splash {
+    width: 50%;
+    margin: auto;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #674172;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    margin: 41vh 0; 
+}
+
+.footer ul li a {
+  text-decoration: none;
+}
+
+.pure-menu li a:hover {
+  background: none; 
+  color: #34495E;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+
+    body {
+        font-size: 16px;
+    }
+    .content {
+        padding: 1em;
+    }
+
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+        }
+
+/*    .splash-container {
+        height: 500px;
+    }*/
+
+    .splash {
+        width: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+
+
+    .l-box-lrg {
+        border: none;
+    }
+
+}
+
+@media (min-width: 78em) {
+    .splash-head {
+        font-size: 300%;
+    }
 }

@@ -2,9 +2,14 @@ doctype html
 html
   head
     title DisclosedWeb
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.5.0/pure-min.css', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body class="#{controller_name} #{action_name}"
-    .container
-      = yield
+  body 
+    == render 'layouts/header'
+    div class="splash-container"
+      div class="splash"
+        div class="splash-head" Agencies
+    == yield
+    == render 'layouts/footer'
