@@ -27,6 +27,14 @@ module DisclosedWeb
     config.generators do |g|
       g.test_framework      :minitest, spec: true, fixture_replacement: :fabrication
       g.fixture_replacement :fabrication, dir: "test/fabricators"
+    
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get]
+      end
+    end
+
     end
   end
 end
