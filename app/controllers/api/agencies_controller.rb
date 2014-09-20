@@ -21,10 +21,4 @@ class Api::AgenciesController < ApplicationController
     respond_with(@agencies)
   end
 
-  protected
-
-  def agency_params
-    params.require(:agency).permit(:name, :abbr)
-  end
-
 end

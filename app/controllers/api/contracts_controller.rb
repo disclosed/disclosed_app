@@ -21,10 +21,4 @@ class Api::ContractsController < ApplicationController
     respond_with(@contracts)
   end
 
-  protected
-
-  def contract_params
-    params.require(:contract).permit(:vendor_name, :reference_number, :effective_date, :start_date, :end_date, :url, :value, :description, :comments)
-  end
-
 end
