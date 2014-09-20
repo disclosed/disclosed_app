@@ -7,7 +7,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body class="#{controller_name} #{action_name}"
-    = render 'layouts/header'
-    .container
-       = yield
-        / = render 'footer'
+    == render 'layouts/header'
+    div class="splash-container"
+      div class="splash"
+        p class="splash-head"
+          | Agency   
+    == yield
+    == render 'layouts/footer'
