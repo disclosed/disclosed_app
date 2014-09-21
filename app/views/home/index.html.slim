@@ -1,13 +1,1 @@
 
-h3.text-center Search for past contracts across Canadian government agencies
-.row
-  .col-md-12
-    = bootstrap_form_tag url: '/fill_this_out_later' do |f|
-      .row
-        .col-md-8.col-md-offset-2
-          = f.search_field :query, placeholder: "Search by agency or contractor. Ex. Environment Canada or AMEX", hide_label: true
-      .row
-        .col-md-12.text-center
-          = f.primary "Find Contracts"
-          
-
