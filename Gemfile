@@ -7,6 +7,7 @@ gem 'less-rails-bootstrap'
 gem 'bootstrap_form' # https://github.com/bootstrap-ruby/rails-bootstrap-forms
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'slim-rails' # HAML-like markup language. Faster than HAML. Supports streaming.
+gem 'rack-cors', require: 'rack/cors'
 
 gem 'c3-rails' # A D3 library for data visualization.
 gem 'd3_rails' # C3 is dependent on a D3 library present. 
