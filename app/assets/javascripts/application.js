@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require twitter/bootstrap
+//= require d3
+//= require c3
+//= require ./chart
+//= require ./home
