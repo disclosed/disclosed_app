@@ -16,9 +16,4 @@ class Api::AgenciesController < ApplicationController
     @agency = Agency.new(agency_params)
   end
 
-  def filter
-    @agencies = Agency.filter(params[:query]) # An Agency class method (self.filter) needs to be created in the Agency model in order for this to be implemented - use scopes?
-    respond_with(@agencies)
-  end
-
 end

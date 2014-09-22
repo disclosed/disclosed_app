@@ -2,14 +2,14 @@
 // All this logic will automatically be available in application.js.
 
 var handlers = {
-  request: function(){
+  requestJSON: function(){
     $.ajax({
       type: "GET",
       dataType: "json",
       cache: false,
       url: "http://api.disclosed.ca:3000/contracts",
       success: function (data){
-        console.log("successful call to api!", data);
+        console.log("successful JSON request to api!", data);
       }
     });
   }
@@ -19,5 +19,5 @@ var handlers = {
 
 $(function(){
   console.log("hi");
-  handlers.request();
+  handlers.requestJSON();
 });
