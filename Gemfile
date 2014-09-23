@@ -11,6 +11,7 @@ gem 'rack-cors', require: 'rack/cors' # Enables cross-origin resource sharing fo
 
 gem 'c3-rails' # A D3 library for data visualization.
 gem 'd3_rails' # C3 is dependent on a D3 library present.
+gem 'chosen-rails'
 
 gem 'filterrific' #sorting library for ruby
 
