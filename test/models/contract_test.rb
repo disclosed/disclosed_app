@@ -17,6 +17,10 @@ describe Contract do
       contract.errors[:agency].must_include "can't be blank"
     end
   end
+  
+  describe "Scopes" do
+
+  end
 
   describe "::extract_dates" do
     it "should extract dates that look like 2014-01-01" do

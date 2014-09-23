@@ -44,4 +44,8 @@ describe Agency do
       proc {Fabricate(:agency, name: "Fooo!", abbr: nil)}.must_raise Agency::UnknownAgency
     end
   end
+
+  describe "Scopees" do
+  
+  end
 end

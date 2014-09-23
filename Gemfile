@@ -12,6 +12,8 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'c3-rails' # A D3 library for data visualization.
 gem 'd3_rails' # C3 is dependent on a D3 library present. 
 
+gem 'filterrific' #sorting library for ruby
+
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'puma' # Use Puma as the development server, for fun, cause puma is interesting

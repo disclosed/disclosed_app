@@ -71,6 +71,8 @@ GEM
     execjs (2.0.2)
     fabrication (2.11.2)
     ffi (1.9.3)
+    filterrific (1.3.1)
+      rails (>= 3.0.0)
     formatador (0.2.5)
     guard (2.6.1)
       formatador (>= 0.2.4)
@@ -254,6 +256,7 @@ DEPENDENCIES
   d3_rails
   database_cleaner
   fabrication
+  filterrific
   guard-minitest
   jquery-rails
   less-rails-bootstrap

@@ -7,7 +7,9 @@ class Agency < ActiveRecord::Base
   validates :abbr, presence: true, uniqueness: true
 
   before_validation :extract_abbr, on: :create
-
+ 
+  scope :agency_name, -> (agency_query) { where ("name like ?", "%#{agency_query}%")}
+  
   protected
   def extract_abbr
     return unless self.abbr.blank?
@@ -18,6 +20,6 @@ class Agency < ActiveRecord::Base
     end
     self.abbr = AGENCIES[agency_key]["alias"]
   end
-
+   
 end
 
