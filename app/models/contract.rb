@@ -9,9 +9,9 @@ class Contract < ActiveRecord::Base
   
   before_validation :extract_economic_object_code, on: :create  
   
-  scope :vendor_name, -> (vendor_query) do
-    return none if vendor_query.blank?
-    where("lower(vendor_name) like ?", "%#{vendor_query.downcase}%") 
+  scope :vendor_name, -> (vendor) do
+    return none if vendor.blank?
+    where("lower(vendor_name) like ?", "%#{vendor.downcase}%") 
   end
 
   scope :effective_date, -> (effective_date) do
@@ -19,8 +19,17 @@ class Contract < ActiveRecord::Base
    where effective_date: effective_date 
   end
 
-  scope :description, -> (description_query) { where("description like ?", "%#{description_query}%") }
-  # date_string - the start date and end date of the contract
+  scope :description, -> (description) do 
+    return none if description.blank?
+    where("description like ?", "%#{description}%")
+  end 
+
+  scope :value, -> (value) do 
+    return none if description.blank?
+    where("value > ?", value)
+  end
+  
+    # date_string - the start date and end date of the contract
   # Most contracts seem to look like this...
   #             ex: 2013-10-18 to 2013-10-20
   #             ex: 2013-10-18 à 2013-10-20
