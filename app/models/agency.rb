@@ -7,7 +7,14 @@ class Agency < ActiveRecord::Base
   validates :abbr, presence: true, uniqueness: true
 
   before_validation :extract_abbr, on: :create
- 
+  
+  filterrific(
+    default_settings: { sorted_by: 'effective_date' },
+    filter_names: [
+      :agency_name
+    ]
+  )
+
   scope :agency_name, -> (agency_query) { where ("name like ?", "%#{agency_query}%")}
   
   protected
