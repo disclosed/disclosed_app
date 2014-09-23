@@ -8,10 +8,6 @@ html
     = csrf_meta_tags
   body 
     == render 'layouts/header'
-    div class="splash-container"
-      div class="splash"
-        div class="splash-head"
-          | Agencies
-          div id="chart"
+    
     == yield
     == render 'layouts/footer'

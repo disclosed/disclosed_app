@@ -2,23 +2,10 @@ class Api::ContractsController < ApplicationController
 
   respond_to :json
   
-  #refactor index into smaller helper(s) for filtering; 
   def index
     @contracts = Contract.all.limit(25)
-    @filterrific = Filterific.new(
-      Contract, params[:filterrific] || session[:filterrific_contracts] 
-    )
-    @filterrific.select_options = {
-      sorted_by: Contract.options_for_sorted_by
-    }
-    @contracts = Contract.filterrific_find(@filterrific)
-    session[filterrific_contracts] = @filterrific.to_hash
-    
     respond_with(@contracts)
-
-  rescue ActiveRecord::RecordNotFound
-    redirect_to(action: :reset_filterrific) and return # refactor to redirect to initial graph. 
-  
+    render
   end
 
   def show
@@ -33,13 +20,5 @@ class Api::ContractsController < ApplicationController
   def filter
     @contracts = Contract.filter(params[:query])  # A Contract class method (self.filter) needs to be created in the Contract model in order for this to be implemented - use scopes?
     respond_with(@contracts)
-  end
- 
-  def filtered_results
-  end
-
-  def reset_filterrific
-    session[:filterrific_contracts] = nil
-    redirect_to action: :index
   end
 end

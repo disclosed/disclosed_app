@@ -9,17 +9,16 @@ class Contract < ActiveRecord::Base
   
   before_validation :extract_economic_object_code, on: :create  
   
-  filterrific(
-    default_settings: { sorted_by: 'effective_date' }, 
-    filter_names: [
-      :vendor_name,
-      :effective_date,
-      :description
-    ]
-  )
-  
-  scope :vendor_name, -> (vendor_query) { where("lower(vendor_name) like ?", "%#{vendor_query.downcase}%")}  
-  scope :effective_date, -> (effective_date) { where effective_date: effective_date }
+  scope :vendor_name, -> (vendor_query) do
+    return none if vendor_query.blank?
+    where("lower(vendor_name) like ?", "%#{vendor_query.downcase}%") 
+  end
+
+  scope :effective_date, -> (effective_date) do
+   return none if effective_date.blank?
+   where effective_date: effective_date 
+  end
+
   scope :description, -> (description_query) { where("description like ?", "%#{description_query}%") }
   # date_string - the start date and end date of the contract
   # Most contracts seem to look like this...
