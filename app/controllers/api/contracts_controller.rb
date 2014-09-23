@@ -22,5 +22,4 @@ class Api::ContractsController < ApplicationController
       format.csv { send_data(@contracts.to_csv, disposition: "attachment; filename=federal_contracts.csv") }
     end
   end
-
 end

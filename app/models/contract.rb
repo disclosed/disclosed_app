@@ -6,7 +6,20 @@ class Contract < ActiveRecord::Base
   validates :vendor_name,    presence: true
   validates :value,          presence: true
   validates :agency,         presence: true
+  
+  before_validation :extract_economic_object_code, on: :create  
+  
+  scope :vendor_name, -> (vendor_query) do
+    return none if vendor_query.blank?
+    where("lower(vendor_name) like ?", "%#{vendor_query.downcase}%") 
+  end
 
+  scope :effective_date, -> (effective_date) do
+   return none if effective_date.blank?
+   where effective_date: effective_date 
+  end
+
+  scope :description, -> (description_query) { where("description like ?", "%#{description_query}%") }
   # date_string - the start date and end date of the contract
   # Most contracts seem to look like this...
   #             ex: 2013-10-18 to 2013-10-20
@@ -45,7 +58,7 @@ class Contract < ActiveRecord::Base
     end
     contract
   end
-
+  
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names
@@ -55,5 +68,9 @@ class Contract < ActiveRecord::Base
     end
   end
 
+  # Economic object code is the numbered category for description of the services provided by vendor. 
+  def extract_economic_object_code 
+    raise "Implement me!"
+  end
 end
 

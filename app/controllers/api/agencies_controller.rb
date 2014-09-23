@@ -6,7 +6,7 @@ class Api::AgenciesController < ApplicationController
     @agencies = Agency.all
     respond_with(@agencies)
   end
-
+  
   def show
     @agency = Agency.find(params[:id])
     respond_with(@agency)
