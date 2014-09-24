@@ -1,0 +1,11 @@
+<div id="chart"></div>
+<form class="pure-form">
+  <select placeholder="Choose a Government Department/Agency" class="chosen-select">
+    <% @agencies.each do |agency| %>
+    <option value="<%=agency.id%>"><%= agency.name %></option>
+    <% end %>
+  </select>
+  <input placeholder="Search by Vendor"></input>
+  <button type="submit">Submit</button>
+</form>
+<%= button_to "Download Data", contracts_download_path(format: "csv"), method: :get %>

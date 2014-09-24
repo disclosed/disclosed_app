@@ -20,4 +20,6 @@ var handlers = {
 $(function(){
   console.log("hi");
   handlers.requestJSON();
+
+  $(".chosen-select").chosen();
 });

@@ -19,3 +19,4 @@
 //= require c3
 //= require ./chart
 //= require ./home
+//= require chosen.jquery.js
