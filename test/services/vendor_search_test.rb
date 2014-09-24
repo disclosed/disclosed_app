@@ -1,6 +1,16 @@
 require "test_helper"
 
-describe ContractSearch do
-  describe "VendorSearch" do 
-    it "must be valid" do 
-      Fabricate(:contract)
+describe VendorSearch do
+  describe "#search" do
+    focus
+    it "should return contract data for a vendor" do
+      agency1 = Fabricate(:agency, name: "Test agency 1", abbr: "ta1")
+      agency2 = Fabricate(:agency, name: "Test Agengy2", abbr: "ta2")
+      contract1 = Fabricate(:contract, agency: agency1, vendor_name: "Amex", value: 112345)
+      contract2 = Fabricate(:contract, agency: agency2, vendor_name: "Subway", value: 1234)
+      contract3 = Fabricate(:contract, agency: agency2, vendor_name: "Amex", value: 123)
+      search = VendorSearch.new(vendor: "Amex")
+      search.expect hash_including(ta1: [112345], ta2: [123])
+    end
+  end
+end

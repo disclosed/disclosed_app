@@ -1,3 +1,5 @@
+require 'debugger'
+
 class VendorSearch
 
   def initialize(search_params)
@@ -6,11 +8,11 @@ class VendorSearch
 
   def search
     vendor = @search_params[:vendor]
-    agencies = Agency.all.limit(5) || @search_params[:agency_id]
-    contracts = Contract.none
+    agencies = Agency.all || @search_params[:agency_id]
+    contracts = [] 
     agencies.each do |agency|
-      agency.contracts.vendor_name(vendor)
+      contracts << agency.contracts.vendor_name(vendor)
     end
-    return contracts
+    filtered_hash = Hash[contracts.map {|key, value| [key, value]}]
   end
 end

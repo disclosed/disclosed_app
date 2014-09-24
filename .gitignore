@@ -14,3 +14,6 @@
 # Ignore machine-specific config files
 /config/database.yml
 .ruby-version
+
+# Ignore vim specific files 
+*.sw?

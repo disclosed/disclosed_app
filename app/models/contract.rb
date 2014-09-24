@@ -7,8 +7,6 @@ class Contract < ActiveRecord::Base
   validates :value,          presence: true
   validates :agency,         presence: true
   
-  before_validation :extract_economic_object_code, on: :create  
-  
   scope :vendor_name, -> (vendor) do
     return none if vendor.blank?
     where("lower(vendor_name) like ?", "%#{vendor.downcase}%") 
@@ -78,8 +76,5 @@ class Contract < ActiveRecord::Base
   end
 
   # Economic object code is the numbered category for description of the services provided by vendor. 
-  def extract_economic_object_code 
-    raise "Implement me!"
-  end
 end
 
