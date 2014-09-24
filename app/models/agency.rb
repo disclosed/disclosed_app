@@ -10,6 +10,8 @@ class Agency < ActiveRecord::Base
   
   scope :agency_name, -> (agency) { where("name like ?", "%#{agency}%")}
   
+  scope :abbr, -> (abbr) { where("abbr like ?", "%#{abbr}") } 
+
   protected
   def extract_abbr
     return unless self.abbr.blank?

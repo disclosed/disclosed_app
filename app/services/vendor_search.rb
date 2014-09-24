@@ -9,10 +9,18 @@ class VendorSearch
   def search
     vendor = @search_params[:vendor]
     agencies = Agency.all || @search_params[:agency_id]
-    contracts = [] 
     agencies.each do |agency|
-      contracts << agency.contracts.vendor_name(vendor)
+      contract = agency.contracts.vendor_name(vendor)
+      contract.to_a
+      making_json(contract)
     end
-    filtered_hash = Hash[contracts.map {|key, value| [key, value]}]
+  end 
+  
+  def making_json(contract)
+    value = []
+    value = contract[7]
+    agency_abbr = Agency.abbr.where(contract[11])
+    filtered_result = [value, agency_abbr]
+    filtering_hash = Hash[filtered_result.map { |k, v| [agency_abbr, value] }]
   end
 end
