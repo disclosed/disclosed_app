@@ -8,7 +8,7 @@ class Agency < ActiveRecord::Base
 
   before_validation :extract_abbr, on: :create
   
-  scope :agency_name, -> (agency_query) { where ("name like ?", "%#{agency_query}%")}
+  scope :agency_name, -> (agency_query) { where("name like ?", "%#{agency_query}%")}
 
   scope :abbr, -> (abbr) { where("abbr like ?", "%#{abbr}") } 
 
