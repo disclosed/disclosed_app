@@ -11,8 +11,8 @@ gem 'rack-cors', require: 'rack/cors' # Enables cross-origin resource sharing fo
 
 gem 'c3-rails' # A D3 library for data visualization.
 gem 'd3_rails' # C3 is dependent on a D3 library present.
+gem 'gon'
 
-gem 'filterrific' #sorting library for ruby
 
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
