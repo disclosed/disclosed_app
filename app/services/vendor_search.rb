@@ -1,26 +1,16 @@
 require 'debugger'
 
 class VendorSearch
-
+  # Vendor Search has a 1 vendor to many agency graph. The user is able to view several agencies' contract amounts over a period of time given a searched vendor name. 
   def initialize(search_params)
     @search_params = search_params
   end
-
+  # Search method looks at the given params by the search query to return an array of a given contract.
   def search
     vendor = @search_params[:vendor]
-    agencies = Agency.all || @search_params[:agency_id]
-    agencies.each do |agency|
-      contract = agency.contracts.vendor_name(vendor)
-      contract.to_a
-      making_json(contract)
-    end
+    contracts = []
+    value = Contract.sum_values(vendor)
+    filtered_result = [vendor, value]
+    filtered_hash = Hash[filtered_result.map {|k, v| [vendor, value] }]
   end 
-  
-  def making_json(contract)
-    value = []
-    value = contract[7]
-    agency_abbr = Agency.abbr.where(contract[11])
-    filtered_result = [value, agency_abbr]
-    filtering_hash = Hash[filtered_result.map { |k, v| [agency_abbr, value] }]
-  end
 end

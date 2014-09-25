@@ -8,6 +8,8 @@ class ContractSearch
   def determine_search_type
     if @search_params[:vendor].length == 1 
       "VendorSearch"
+    #elsif @search_params[:agency].length == 1
+     # "AgencySearch"
     end
   end
   
