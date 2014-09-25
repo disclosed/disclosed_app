@@ -112,7 +112,7 @@ describe Contract do
   end
 
 
-  describe "::sum_values" do 
+  describe "::spending_per_vendor" do 
     focus
     before do
       @agency1 = Fabricate(:agency, name: "Test agency 1")
@@ -126,7 +126,7 @@ describe Contract do
     focus
     it "should display total contract sum of the given vendor for the year" do
       query = Contract.spending_per_vendor("Amex")
-      result = [112345, 1357, 12345]
+      result = [12345, 1357, 12345]
       query.must_be_same_as result
     end
   end
