@@ -8,9 +8,12 @@ class VendorSearch
   # Search method looks at the given params by the search query to return an array of a given contract.
   def search
     vendor = @search_params[:vendor]
-    contracts = []
-    value = Contract.sum_values(vendor)
-    filtered_result = [vendor, value]
-    filtered_hash = Hash[filtered_result.map {|k, v| [vendor, value] }]
+    chart_data = []
+    vendor_sum_values = []
+    results = Contract.spending_per_vendor(vendor)
+    results.each do |obj|
+      vendor_sum_values << obj.total
+    end
+    chart_data << vendor_sum_values.unshift(vendor) 
   end 
 end

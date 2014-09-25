@@ -28,8 +28,8 @@ class Contract < ActiveRecord::Base
   end
 # spending per vendor per year per all agencies
   def self.spending_per_vendor(vendor)
-    vendor_name = ActiveRecord::Base.sanitize("#{query + "%"}")
-    results = find_by_sql("SELECT SUM(value), EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name LIKE #{vendor_name} GROUP BY year ORDER BY year")
+    vendor_name = ActiveRecord::Base.sanitize(vendor +"%")
+    results = find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name LIKE #{vendor_name} GROUP BY year ORDER BY year")
   end 
 
     # date_string - the start date and end date of the contract
