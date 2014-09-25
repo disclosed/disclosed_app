@@ -1,5 +1,5 @@
 Fabricator(:contract) do
-  url              "http://www.oag-bvg.gc.ca/internet/English/contract/1234.html"
+ url              "http://www.oag-bvg.gc.ca/internet/English/contract/1234.html"
   vendor_name      "Company Inc."
   effective_date   "2014-05-24"
   reference_number { sequence(:reference_number) { |i| "P485984#{i}" } } 

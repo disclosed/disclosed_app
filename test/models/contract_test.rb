@@ -19,27 +19,28 @@ describe Contract do
   end
   
   describe "scopes" do
-    focus
-    agency1 = Fabricate(:agency, name: "Test agency 1", abbr: "ug4")
-    agency2 = Fabricate(:agency, name: "Test Agengy2", abbr: "ig2")
-    contract1 = Fabricate(:contract, agency: agency1, vendor_name: "Amex", value: 112345, effective_date: "2006-01-01", description: "money")
-    contract2 = Fabricate(:contract, agency: agency2, vendor_name: "Subway", value: 1234, effective_date: "2007-02-02", description: "cooking") 
-    contract3 = Fabricate(:contract, agency: agency2, vendor_name: "Amex", value: 123, effective_date: "2008-03-03", description: "money")
+    before do 
+      @agency1 = Fabricate(:agency, name: "Test agency 1")
+      @agency2 = Fabricate(:agency, name: "Test Agengy2")
+      @contract1 = Fabricate(:contract, agency: @agency1, vendor_name: "Amex", value: 112345, effective_date: "2006-01-01", description: "money")
+      @contract2 = Fabricate(:contract, agency: @agency2, vendor_name: "Subway", value: 1234, effective_date: "2007-02-02", description: "cooking") 
+      @contract3 = Fabricate(:contract, agency: @agency2, vendor_name: "Amex", value: 123, effective_date: "2008-03-03", description: "money")
+    end 
 
     it "should return contracts given the vendor name" do
-      Contract.vendor_name("Amex").must_equal [contract1, contract2]
+      Contract.vendor_name("Amex").must_equal [@contract1, @contract3]
     end
     
     it "should return contracts given the effective date" do
-      Contract.effective_date("2007-02-02").must_equal [contract2]
+      Contract.effective_date("2007-02-02").must_equal [@contract2]
     end
 
     it "should return contracts given the description" do
-      Contract.description("cooking").must_equal [contract2]
+      Contract.description("cooking").must_equal [@contract2]
     end
 
     it "should return contracts given the value of the contract" do
-      Contract.value("123").must_equal [contract3]
+      Contract.value("123").must_equal [@contract3]
     end
 
   end
@@ -110,19 +111,23 @@ describe Contract do
     end
   end
 
+
   describe "::sum_values" do 
+    focus
+    before do
+      @agency1 = Fabricate(:agency, name: "Test agency 1")
+      @agency2 = Fabricate(:agency, name: "Test Agengy2")
+      @contract1 = Fabricate(:contract, agency: @agency1, vendor_name: "Amex", value: 112345, effective_date: "2006-01-01")
+      @contract2 = Fabricate(:contract, agency: @agency2, vendor_name: "Subway", value: 1234, effective_date: "2007-02-02") 
+      @contract3 = Fabricate(:contract, agency: @agency2, vendor_name: "Amex", value: 123, effective_date: "2008-03-03")
+      @contract4 = Fabricate(:contract, agency: @agency2, vendor_name: "Amex", value: 1234, effective_date: "2008-04-04")
+      @contract5 = Fabricate(:contract, agency: @agency2, vendor_name: "Amex", value: 12345, effective_date: "2009-05-05")
+    end
+    focus
     it "should display total contract sum of the given vendor for the year" do
-      agency1 = Fabricate(:agency, name: "Test agency 1", abbr: "ta1")
-      agency2 = Fabricate(:agency, name: "Test Agengy2", abbr: "ta2")
-      contract1 = Fabricate(:contract, agency: agency1, vendor_name: "Amex", value: 112345, effective_date: "2006-01-01")
-      contract2 = Fabricate(:contract, agency: agency2, vendor_name: "Subway", value: 1234, effective_date: "2007-02-02") 
-      contract3 = Fabricate(:contract, agency: agency2, vendor_name: "Amex", value: 123, effective_date: "2008-03-03")
-      contract4 = Fabricate(:contract, agency: agency2, vendor_name: "Amex", value: 1234, effective_date: "2008-04-04")
-      contract5 = Fabricate(:contract, agency: agency2, vendor_name: "Amex", value: 12345, effective_date: "2009-05-05")
-      query = Contract.sum_values("Amex")
+      query = Contract.spending_per_vendor("Amex")
       result = [112345, 1357, 12345]
       query.must_be_same_as result
     end
   end
 end
-
