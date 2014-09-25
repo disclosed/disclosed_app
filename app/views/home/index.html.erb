@@ -1,5 +1,5 @@
 <div id="chart"></div>
-<form class="pure-form">
+<form class="pure-form" action='/home/index' method='get'>
   <select placeholder="Choose a Government Department/Agency" class="chosen-select">
     <% @agencies.each do |agency| %>
     <option value="<%=agency.id%>"><%= agency.name %></option>
