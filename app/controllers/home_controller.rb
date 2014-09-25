@@ -15,7 +15,7 @@ class HomeController < ApplicationController
       end_date: params[:end_date]
     }
 
-    search = ContractSearch.new(search_params)
-    results = search.perform
+    #search = ContractSearch.new(search_params)
+    #results = search.perform
   end
 end
