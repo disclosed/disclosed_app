@@ -4,13 +4,13 @@ class HomeController < ApplicationController
     
     if params[:vendor]
       search_params = { 
-      vendor: params[:vendor]
+      vendor: params[:vendor],
       agency: params[:name]
     }
     else
       search_params = {
         vendor: "Logistics"
-      }
+    }
     end
 
     search = ContractSearch.new(search_params)
