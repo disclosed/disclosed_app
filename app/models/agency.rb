@@ -8,10 +8,20 @@ class Agency < ActiveRecord::Base
 
   before_validation :extract_abbr, on: :create
   
-  scope :agency_name, -> (agency_query) { where("name like ?", "%#{agency_query}%")}
+  scope :agency_name, -> (agenc) do 
+   return none if agency.blank? 
+   where("name like ?", "%#{agency}%")
+  end 
 
-  scope :abbr, -> (abbr) { where("abbr like ?", "%#{abbr}") } 
+  scope :abbr, -> (abbr) do 
+    return non if abbr.blank?
+    where("abbr like ?", "%#{abbr}") } 
+  end
 
+  def self.spending_per_agency(agency)
+    agency_name = ActiveRecord::Base.sanitize(agency)
+    find_by_sql("SELECT SUM(value) AS total")
+  end
   protected
   def extract_abbr
     return unless self.abbr.blank?
