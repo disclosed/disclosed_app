@@ -11,9 +11,10 @@ class VendorSearch
     chart_data = []
     vendor_sum_values = []
     results = Contract.spending_per_vendor(vendor)
+    matched_name = Contract.vendor_name(vendor)[0].vendor_name
     results.each do |obj|
       vendor_sum_values << obj.total
     end
-    chart_data << vendor_sum_values.unshift(vendor) 
+    chart_data << vendor_sum_values.unshift(matched_name) 
   end 
 end
