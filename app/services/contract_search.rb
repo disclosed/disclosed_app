@@ -16,7 +16,6 @@ class ContractSearch
   end
   
   def perform
-    #debugger
     search_object = @search_type.classify.constantize.new(@search_params)
     search_object.search
   end
