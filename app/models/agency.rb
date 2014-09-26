@@ -8,19 +8,19 @@ class Agency < ActiveRecord::Base
 
   before_validation :extract_abbr, on: :create
   
-  scope :agency_name, -> (agency_query) do 
-   return none if agency_query.blank? 
-   where("name like ?", "%#{agency_query}%")
+  scope :agency_name, -> (agency_id) do 
+   return none if agency_id.blank? 
+   where("id ?", "#{agency_id}")
   end 
-
+ 
   scope :abbr, -> (abbr) do 
     return none if abbr.blank?
     where("abbr like ?", "%#{abbr}") 
   end
 
   def self.spending_per_agency(agency)
-    agency_name = ActiveRecord::Base.sanitize(agency)
-    find_by_sql("SELECT SUM(value) AS total, SELECT(year FROM contracts.effective_date) AS year FROM contracts INNER JOIN agencies ON(contracts.agency_id = agencies.id) WHERE contracts.vendor_name ILIKE #{agency_name} GROUP BY year ORDER BY year")
+    agency_id = ActiveRecord::Base.sanitize(agency)
+    find_by_sql("SELECT SUM(value) AS total,EXTRACT(year FROM contracts.effective_date) AS year FROM contracts INNER JOIN agencies ON(contracts.agency_id = agencies.id) WHERE agencies.id = #{agency_id} GROUP BY year ORDER BY year")
   end
 
   protected
