@@ -5,7 +5,7 @@
     <option value="<%=agency.id%>"><%= agency.name %></option>
     <% end %>
   </select>
-  <input placeholder="Search by Vendor"></input>
+  <input placeholder="Search by Vendor" name="vendor"></input>
   <button type="submit">Submit</button>
 </form>
 <%= button_to "Download Data", contracts_download_path(format: "csv"), method: :get %>
