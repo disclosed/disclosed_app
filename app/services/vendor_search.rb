@@ -15,9 +15,9 @@ class VendorSearch
   end 
 
   def format_output(results, matched_name)
-    results.each do |obj|
-      @vendor_sum_values << obj.total
-      @dates << obj.year
+    results.each do |contract|
+      @vendor_sum_values << contract.total
+      @dates << "#{contract.year.round(0)}-01-01"
     end
     @chart_data << @dates.unshift("Date")
     @chart_data << @vendor_sum_values.unshift(matched_name) 

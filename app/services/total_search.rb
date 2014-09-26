@@ -13,9 +13,9 @@ class TotalSearch
   end
 
   def format_output(results)
-    results.each do |obj|
-      @total << obj.total
-      @dates << obj.year
+    results.each do |contract|
+      @total << contract.total
+      @dates << "#{contract.year.round(0)}-01-01"
     end
     @chart_data << @dates.unshift("Date")
     @chart_data << @total.unshift("Total Contract Spending")
