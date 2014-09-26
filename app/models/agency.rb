@@ -8,9 +8,9 @@ class Agency < ActiveRecord::Base
 
   before_validation :extract_abbr, on: :create
   
-  scope :agency_name, -> (agency) do 
-   return none if agency.blank? 
-   where("name like ?", "%#{agency}%")
+  scope :agency_name, -> (agency_query) do 
+   return none if agency_query.blank? 
+   where("name like ?", "%#{agency_query}%")
   end 
 
   scope :abbr, -> (abbr) do 

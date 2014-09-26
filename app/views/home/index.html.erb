@@ -2,7 +2,7 @@
 <form class="pure-form" action='/home/index' method='get'>
   <select placeholder="Choose a Government Department/Agency" class="chosen-select">
     <% @agencies.each do |agency| %>
-    <option value="<%=agency.id%>"><%= agency.name %></option>
+      <option value="<%=agency.id%>" name="agency_query"><%= agency.name %></option>
     <% end %>
   </select>
   <input placeholder="Search by Vendor" name="vendor"></input>

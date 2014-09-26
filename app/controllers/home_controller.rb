@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     if params[:vendor]
       search_params = { 
       vendor: params[:vendor],
-      agency: params[:name]
+      agency: params[:agency_query]
     }
     else
       search_params = {

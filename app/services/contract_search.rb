@@ -6,9 +6,9 @@ class ContractSearch
   end
 
   def determine_search_type
-    if @search_params[:vendor].length == 1
+    if @search_params[:vendor].has_key?
       "VendorSearch"
-    elsif @search_params[:agency].length == 1
+    elsif @search_params[:agency].has_key?
       "AgencySearch"
     else
 
