@@ -24,7 +24,5 @@ class ContractSearch
     search_object.search
   end
 
-  def count_params?
-  end
 end
 
