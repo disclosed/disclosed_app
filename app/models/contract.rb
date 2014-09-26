@@ -36,6 +36,10 @@ class Contract < ActiveRecord::Base
     find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts GROUP BY year ORDER BY year")
   end
 
+   def self.spending_per_agency(agency)
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE agency_id = #{agency} GROUP BY year ORDER BY year")
+  end
+
     # date_string - the start date and end date of the contract
   # Most contracts seem to look like this...
   #             ex: 2013-10-18 to 2013-10-20
