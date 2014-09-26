@@ -17,7 +17,7 @@ class AgencySearch
   def format_output(results, matched_name)
     results.each do |agency|
       @agency_sum_values << agency.total
-      @dates << agency.year
+      @dates << "#{agency.year.round(0)}-01-01"
     end
     @chart_data << @dates.unshift("Date")
     @chart_data << @agency_sum_values.unshift(matched_name)
