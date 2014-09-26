@@ -1,5 +1,3 @@
-require 'debugger'
-
 class VendorSearch
   # Vendor Search has a 1 vendor to many agency graph. The user is able to view several agencies' contract amounts over a period of time given a searched vendor name. 
   def initialize(search_params)

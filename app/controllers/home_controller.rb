@@ -1,5 +1,3 @@
-require 'debugger'
-
 class HomeController < ApplicationController
   def index
     @agencies = Agency.all
@@ -7,6 +5,7 @@ class HomeController < ApplicationController
     if params[:vendor]
       search_params = { 
       vendor: params[:vendor]
+      agency: params[:name]
     }
     else
       search_params = {
