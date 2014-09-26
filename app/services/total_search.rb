@@ -2,6 +2,9 @@ class TotalSearch
 
   def initialize(search_params)
     @search_params = search_params
+    @chart_data = []
+    @dates = []
+    @total = []
   end
 
   def search
