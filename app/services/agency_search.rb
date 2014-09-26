@@ -9,17 +9,17 @@ class AgencySearch
   end
   
   def search
-    results = Agency.spending_per_agency(@agency)
-    matched_name = Agency.agency_name(@agency)
+    results = Contract.spending_per_agency(@agency)
+    matched_name = Agency.find(@agency).name
     format_output(results, matched_name)
   end
 
-  def format_ouput(results, matched_name)
-    results.each do |contract|
-      @agency_sum_values << contract.total
-      @dates << contract.year
+  def format_output(results, matched_name)
+    results.each do |agency|
+      @agency_sum_values << agency.total
+      @dates << agency.year
     end
     @chart_data << @dates.unshift("Date")
-    @chart_data << @vendor_sum_values.unshift(matched_name)
+    @chart_data << @agency_sum_values.unshift(matched_name)
   end
 end
