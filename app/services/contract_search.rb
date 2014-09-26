@@ -1,15 +1,19 @@
 class ContractSearch
   
-  def initialize(*search_params)
-    @search_params = search_params
+  def initialize(params)
+    @search_params = { 
+      vendor: params[:vendor],
+      agency: params[:agency_query],
+      effective_date: params[:effective_date]
+    }
     @search_type = determine_search_type 
   end
 
   def determine_search_type
-    if @search_params[:vendor].kind_of? String
+    if !@search_params[:vendor].blank?
       "VendorSearch"
-    #elsif @search_params[:agency].length == 1
-    #  "AgencySearch"
+    elsif !@search_params[:agency].blank?
+      "AgencySearch"
     else
       "TotalSearch"
     end
@@ -19,5 +23,6 @@ class ContractSearch
     search_object = @search_type.classify.constantize.new(@search_params)
     search_object.search
   end
+
 end
 
