@@ -3,7 +3,7 @@ class ContractSearch
   def initialize(params)
     @search_params = { 
       vendor: params[:vendor],
-      agency: params[:agency_query],
+      agency: params[:agencies],
       effective_date: params[:effective_date]
     }
     @search_type = determine_search_type 
