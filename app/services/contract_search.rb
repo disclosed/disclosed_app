@@ -1,6 +1,6 @@
 class ContractSearch
   
-  def initialize(search_params)
+  def initialize(*search_params)
     @search_params = search_params
     @search_type = determine_search_type 
   end
@@ -9,12 +9,13 @@ class ContractSearch
     if @search_params[:vendor].kind_of? String
       "VendorSearch"
     #elsif @search_params[:agency].length == 1
-     # "AgencySearch"
+    #  "AgencySearch"
+    else
+      "TotalSearch"
     end
   end
   
   def perform
-    #debugger
     search_object = @search_type.classify.constantize.new(@search_params)
     search_object.search
   end

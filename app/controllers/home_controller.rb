@@ -8,14 +8,14 @@ class HomeController < ApplicationController
       search_params = { 
       vendor: params[:vendor]
     }
+    @search = ContractSearch.new(search_params)
     else
       search_params = {
         vendor: "Logistics"
       }
     end
 
-    search = ContractSearch.new(search_params)
-    results = search.perform
+    results = @search.perform
     gon.results = results
     gon.chart_data = results
   end

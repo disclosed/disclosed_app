@@ -30,7 +30,11 @@ class Contract < ActiveRecord::Base
   def self.spending_per_vendor(vendor)
     vendor_name = ActiveRecord::Base.sanitize(vendor + "%")
     results = find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name ILIKE #{vendor_name} GROUP BY year ORDER BY year")
-  end 
+  end
+
+  def self.total_spending
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts GROUP BY year ORDER BY year")
+  end
 
     # date_string - the start date and end date of the contract
   # Most contracts seem to look like this...
