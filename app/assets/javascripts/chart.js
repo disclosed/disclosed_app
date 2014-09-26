@@ -3,16 +3,17 @@ $(function(){
     bindto: '#chart',
     data: {
       x: gon.chart_data[0][0],
-      xFormat: '%Y',
+      format: '%Y',
       columns: gon.chart_data
     },
     axis: {
         x: {
             type: 'timeseries',
             tick: {
-                format: '%Y'
-            }
+               format: '%Y'
+            } 
         }
     }
   });
+  console.log(gon.chart_data);
 });
