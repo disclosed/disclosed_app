@@ -6,7 +6,7 @@ class ContractSearch
   end
 
   def determine_search_type
-    if @search_params[:vendor].length == 1 
+    if @search_params[:vendor].kind_of? String
       "VendorSearch"
     #elsif @search_params[:agency].length == 1
      # "AgencySearch"
@@ -14,7 +14,8 @@ class ContractSearch
   end
   
   def perform
-    search_object = @search_type.classify.new(@search_params)
+    #debugger
+    search_object = @search_type.classify.constantize.new(@search_params)
     search_object.search
   end
 end
