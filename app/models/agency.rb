@@ -7,11 +7,6 @@ class Agency < ActiveRecord::Base
   validates :abbr, presence: true, uniqueness: true
 
   before_validation :extract_abbr, on: :create
-  
-  scope :agency_name, -> (agency_id) do 
-   return none if agency_id.blank? 
-   where("id ?", "#{agency_id}")
-  end 
  
   scope :abbr, -> (abbr) do 
     return none if abbr.blank?
