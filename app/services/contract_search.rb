@@ -6,7 +6,6 @@ class ContractSearch
       agencies: params[:agencies],
       effective_date: params[:effective_date]
     }
-    #debugger
     @search_type = determine_search_type 
   end
 
