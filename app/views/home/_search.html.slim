@@ -1,0 +1,9 @@
+div class="hidden-form"
+  fieldset 
+    form class="pure-formi pure-form-stacked" action='/home/index' method='get'
+    select placeholder="Choose a Government Department/Agency" class="chosen-select pure-input-1-3" name="agency_query"
+     - @agencies.each do |agency| 
+       option value = agency.id = agency.name 
+    input placeholder="Search by Vendor" name="vendor"
+      button type="submit" class="pure-button" Submit
+  - button_to "Download Data", contracts_download_path(format: "csv"), method: :get
