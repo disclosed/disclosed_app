@@ -1,0 +1,9 @@
+div class="splash" id="chart"
+form class="pure-form" action='/home/index' method='get'
+  select placeholder="Choose a Government Department/Agency" class="chosen-select" name="agency_query"
+   - @agencies.each do |agency| 
+     option value = agency.id = agency.name 
+  input placeholder="Search by Vendor" name="vendor"
+    button type="submit"
+      | Submit
+  - button_to "Download Data", contracts_download_path(format: "csv"), method: :get
