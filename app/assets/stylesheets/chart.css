@@ -1,6 +1,8 @@
 #chart {
     width: 100%;
-    height: auto;
-    margin-top: 20%;
+    height: 60%;
+    margin-top: 10%;
+    float: left; 
 }
+
 
