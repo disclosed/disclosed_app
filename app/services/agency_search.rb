@@ -19,21 +19,6 @@ class AgencySearch
     Contract.spending_per_agency(agency)
   end
 
-  # def find_aggregate_dates
-  #   @agencies.each do |agency|
-  #     agency_results = Contract.spending_per_agency(agency)
-  #     @chart_data << format_date_results(agency_results)
-  #   end
-  # end
-
-  # def find_aggregate_values
-  #   @agencies.each do |agency|
-  #     agency_results = Contract.spending_per_agency(agency)
-  #     matched_name = Agency.find(agency).name
-  #     @chart_data << format_value_results(agency_results, matched_name)
-  #   end
-  # end
-
   def format_date_results(agency_match)
     dates = []
     agency_match.each do |agency_spending_for_year|
