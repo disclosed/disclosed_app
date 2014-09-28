@@ -6,7 +6,12 @@ class ContractSearch
       agencies: params[:agencies],
       effective_date: params[:effective_date]
     }
-    @search_type = determine_search_type 
+    remove_empty_searchbox_queries if params[:vendors]
+    @search_type = determine_search_type
+  end
+
+  def remove_empty_searchbox_queries
+    @search_params[:vendors].delete("")
   end
 
   def determine_search_type
