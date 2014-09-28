@@ -1,8 +1,8 @@
 div class="splash-container"
-div class="splash-container"
   div class="splash"
     div id="chart"
-    button class="pure-button pure-button-primary search-form"
-      | Advanced Search
-    = button_to "Download Data", contracts_download_path(format: "csv"), method: :get, class: "pure-button pure-button-primary"
+    div class="buttons"  
+       button class="pure-button pure-button-primary search-form"
+         | Advanced Search
+       = button_to "Download CSV", contracts_download_path(format: "csv"), method: :get, class: "pure-button pure-button-primary csv"
   == render 'home/search'
