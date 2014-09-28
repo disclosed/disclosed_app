@@ -29,7 +29,7 @@ class Contract < ActiveRecord::Base
 # spending per vendor per year per all agencies
   def self.spending_per_vendor(vendor)
     vendor_name = ActiveRecord::Base.sanitize(vendor + "%")
-    results = find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name ILIKE #{vendor_name} GROUP BY year ORDER BY year")
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name ILIKE #{vendor_name} GROUP BY year ORDER BY year")
   end
 
   def self.total_spending
