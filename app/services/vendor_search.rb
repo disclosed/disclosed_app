@@ -9,9 +9,13 @@ class VendorSearch
   def search
     @vendors.each do |vendor|
       vendor_match = match(vendor)
-      matched_name = Contract.vendor_name(vendor).first.vendor_name
-      @chart_data << format_date_results(vendor_match)
-      @chart_data << format_value_results(vendor_match, matched_name)
+      if !vendor_match.empty?
+        matched_name = Contract.vendor_name(vendor).first.vendor_name
+        @chart_data << format_date_results(vendor_match)
+        @chart_data << format_value_results(vendor_match, matched_name)
+      else
+        puts "No matching vendor found for \"#{vendor}\""
+      end
     end
     @chart_data
   end
