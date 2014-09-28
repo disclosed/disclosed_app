@@ -1,26 +1,46 @@
 class VendorSearch
-  # Vendor Search has a 1 vendor to many agency graph. The user is able to view several agencies' contract amounts over a period of time given a searched vendor name. 
-  def initialize(search_params)
-    @search_params = search_params
-    @chart_data = []
-    @vendor_sum_values = []
-    @dates = []
-    @vendor = @search_params[:vendor]
-  end
-  # Search method looks at the given params by the search query to return an array of a given contract.
-  def search
-    results = Contract.spending_per_vendor(@vendor)
-    matched_name = Contract.vendor_name(@vendor).first.vendor_name
-    format_output(results, matched_name)    
-  end 
 
-  def format_output(results, matched_name)
-    results.each do |contract|
-      @vendor_sum_values << contract.total
-      @dates << "#{contract.year.round(0)}-01-01"
+  def initialize(search_params)
+    search_params[:vendors].delete("")
+    @vendors = search_params[:vendors]
+    @chart_data = []
+  end
+
+  def search
+    find_aggregate_dates
+    find_aggregate_values
+    @chart_data
+  end
+
+  def find_aggregate_dates
+    @vendors.each do |vendor|
+      vendor_results = Contract.spending_per_vendor(vendor)
+      @chart_data << format_date_results(vendor_results)
     end
-    @chart_data << @dates.unshift("Date")
-    @chart_data << @vendor_sum_values.unshift(matched_name) 
+  end
+
+  def find_aggregate_values
+    @vendors.each do |vendor|
+      vendor_results = Contract.spending_per_vendor(vendor)
+      matched_name = Contract.vendor_name(vendor).first.vendor_name
+      @chart_data << format_value_results(vendor_results, matched_name)
+    end
+  end
+
+  def format_date_results(vendor_results)
+    dates = []
+    vendor_results.each do |vendor_spending_for_year|
+      dates << "#{vendor_spending_for_year.year.round(0)}-01-01"
+    end
+    dates.unshift("Date")
+  end
+
+  def format_value_results(vendor_results, matched_name)
+    vendor_sum_values =[]
+    vendor_results.each do |vendor_spending_for_year|
+      vendor_sum_values << vendor_spending_for_year.total
+    end
+    vendor_sum_values.unshift(matched_name)
   end
 
 end
