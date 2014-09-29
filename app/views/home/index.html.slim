@@ -1,7 +1,14 @@
 div class="splash"
   div id="chart"
-  div class="buttons"  
-     button class="pure-button search-form"
-       | advanced search
-     = button_to "download CSV", contracts_download_path(format: "csv"), method: :get, class: "pure-button pure-button-primary csv"
+  div class="links"  
+    div id="advanced-search"
+      div class="icon"
+        i class="fa fa-search fa-4"
+      div class="icon-word"    
+        p  advanced search
+    div id="advanced-search"
+      div class="icon"
+        i class="fa fa-file-excel-o fa-4"
+      div class="icon-word"    
+        = link_to "download CSV", contracts_download_path(format: "csv"), method: :get, class: "csv"    
 == render 'home/search'

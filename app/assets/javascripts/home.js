@@ -8,5 +8,6 @@ $(document).on("page:change", function(){
   $('.search-form').on('click', function(event){
     event.preventDefault();
     $(this).next('.hidden-form').show();
+    $(this).toggle_to
   });
 });
