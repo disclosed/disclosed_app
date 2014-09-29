@@ -10,4 +10,6 @@
   <input placeholder="Search by Vendor" name="vendors[]"></input>
   <button type="submit">Submit</button>
 </form>
-<%= button_to "Download Data", contracts_download_path(format: "csv"), method: :get %>
+<form action="<%=contracts_download_url(@params, format: "csv", contracts: @params)%>" method='get'>
+<button>Download Data</button>
+</form>

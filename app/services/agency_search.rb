@@ -5,7 +5,7 @@ class AgencySearch
     @chart_data = []
   end
   
-  def search
+  def get_aggregate_chart_data
     @agencies.each do |agency|
       agency_match = match(agency)
       matched_name = Agency.find(agency).name
@@ -13,6 +13,16 @@ class AgencySearch
       @chart_data << format_value_results(agency_match, matched_name)
     end
     @chart_data
+  end
+
+  def get_full_contract_report
+    report_data = []
+    @agencies.each do |agency|
+      Agency.find(agency).contracts.each do |contract|
+        report_data << contract
+      end
+    end
+    report_data
   end
 
   def match(agency)

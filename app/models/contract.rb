@@ -9,7 +9,7 @@ class Contract < ActiveRecord::Base
   
   scope :vendor_name, -> (vendor) do
     return none if vendor.blank?
-    where("lower(vendor_name) like ?", "%#{vendor.downcase}%") 
+    where("vendor_name ILIKE ?", "#{vendor}%") 
   end
 
   scope :effective_date, -> (effective_date) do

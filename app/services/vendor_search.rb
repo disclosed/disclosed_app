@@ -6,7 +6,7 @@ class VendorSearch
     @chart_data = []
   end
 
-  def search
+  def get_aggregate_chart_data
     @vendors.each do |vendor|
       vendor_match = match(vendor)
       if !vendor_match.empty?
@@ -18,6 +18,19 @@ class VendorSearch
       end
     end
     @chart_data
+  end
+
+  def get_full_contract_report
+    report_data = []
+    @vendors.each do |vendor|
+      vendor_results = Contract.vendor_name(vendor)
+      if !vendor_results.empty?
+        vendor_results.each do |result|
+          report_data << result
+        end
+        report_data
+      end
+    end
   end
 
   def match(vendor)

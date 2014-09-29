@@ -3,22 +3,32 @@ class TotalSearch
   def initialize(search_params)
     @search_params = search_params
     @chart_data = []
-    @dates = []
-    @total = []
   end
 
-  def search
+  def get_aggregate_chart_data
     results = Contract.total_spending
-    format_output(results)
+    format_results(results)
   end
 
-  def format_output(results)
-    results.each do |contract|
-      @total << contract.total
-      @dates << "#{contract.year.round(0)}-01-01"
+  def get_full_contract_report
+    report_data = []
+    Agency.all.each do |agency|
+      Agency.find(agency).contracts.each do |contract|
+        report_data << contract
+      end
     end
-    @chart_data << @dates.unshift("Date")
-    @chart_data << @total.unshift("Total Contract Spending")
+    report_data
+  end
+
+  def format_results(results)
+    totals = []
+    dates = []
+    results.each do |contract|
+      totals << contract.total
+      dates << "#{contract.year.round(0)}-01-01"
+    end
+    @chart_data << dates.unshift("Date")
+    @chart_data << totals.unshift("Total Contract Spending")
   end
 
 end

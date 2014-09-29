@@ -17,9 +17,12 @@ class Api::ContractsController < ApplicationController
   end
 
   def download
-    @contracts = Contract.all.limit(25)
+    search = ContractSearch.new(params)
+    contracts = search.execute_report_search
+    debugger
+    # Do a separate search here based on the params passed in (recycled from search query)
     respond_to do |format|
-      format.csv { send_data(@contracts.to_csv, disposition: "attachment; filename=federal_contracts.csv") }
+      format.csv { send_data(contracts.to_csv, disposition: "attachment; filename=federal_contracts.csv") }
     end
   end
 end
