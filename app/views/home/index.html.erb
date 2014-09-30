@@ -10,6 +10,4 @@
   <input placeholder="Search by Vendor" name="vendors[]"></input>
   <button type="submit">Submit</button>
 </form>
-<form action="<%=report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors])%>" method='get'>
-<button>Download Data</button>
-</form>
+<%= link_to("Download Data", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class:"download-button")%>

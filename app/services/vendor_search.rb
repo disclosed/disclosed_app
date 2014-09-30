@@ -28,9 +28,11 @@ class VendorSearch
         vendor_results.each do |result|
           report_data << result
         end
-        report_data
+      else
+        puts "No matching vendor found for \"#{vendor}\""
       end
     end
+    report_data
   end
 
   private
