@@ -1,6 +1,6 @@
 class Api::ContractsController < ApplicationController
 
-  respond_to :json, :csv
+  respond_to :json
 
   def index
     @contracts = Contract.all.limit(25)
@@ -16,10 +16,4 @@ class Api::ContractsController < ApplicationController
     @contract = Contract.new(contract_params)
   end
 
-  def download
-    @contracts = Contract.all.limit(25)
-    respond_to do |format|
-      format.csv { send_data(@contracts.to_csv, disposition: "attachment; filename=federal_contracts.csv") }
-    end
-  end
 end

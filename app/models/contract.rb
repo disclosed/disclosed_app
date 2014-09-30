@@ -9,7 +9,7 @@ class Contract < ActiveRecord::Base
   
   scope :vendor_name, -> (vendor) do
     return none if vendor.blank?
-    where("lower(vendor_name) like ?", "%#{vendor.downcase}%") 
+    where("vendor_name ILIKE ?", "#{vendor}%") 
   end
 
   scope :effective_date, -> (effective_date) do
@@ -29,7 +29,7 @@ class Contract < ActiveRecord::Base
 # spending per vendor per year per all agencies
   def self.spending_per_vendor(vendor)
     vendor_name = ActiveRecord::Base.sanitize(vendor + "%")
-    results = find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name ILIKE #{vendor_name} GROUP BY year ORDER BY year")
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name ILIKE #{vendor_name} GROUP BY year ORDER BY year")
   end
 
   def self.total_spending
@@ -88,6 +88,5 @@ class Contract < ActiveRecord::Base
     end
   end
 
-  # Economic object code is the numbered category for description of the services provided by vendor. 
 end
 

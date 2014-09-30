@@ -1,25 +1,50 @@
 class AgencySearch
   
   def initialize(search_params)
-    @search_params = search_params
-    @chart_data = []
-    @agency_sum_values= []
-    @dates = []
-    @agency = @search_params[:agency]
+    @agencies = search_params[:agencies]
   end
   
-  def search
-    results = Contract.spending_per_agency(@agency)
-    matched_name = Agency.find(@agency).name
-    format_output(results, matched_name)
+  def get_aggregate_chart_data
+    chart_data = []
+    @agencies.each do |agency|
+      agency_match = match(agency)
+      matched_name = Agency.find(agency).name
+      chart_data << format_date_results(agency_match)
+      chart_data << format_value_results(agency_match, matched_name)
+    end
+    chart_data
   end
 
-  def format_output(results, matched_name)
-    results.each do |agency|
-      @agency_sum_values << agency.total
-      @dates << "#{agency.year.round(0)}-01-01"
+  def get_full_contract_report
+    report_data = []
+    @agencies.each do |agency|
+      Agency.find(agency).contracts.each do |contract|
+        report_data << contract
+      end
     end
-    @chart_data << @dates.unshift("Date")
-    @chart_data << @agency_sum_values.unshift(matched_name)
+    report_data
   end
+
+  private
+
+  def match(agency)
+    Contract.spending_per_agency(agency)
+  end
+
+  def format_date_results(agency_match)
+    dates = []
+    agency_match.each do |agency_spending_for_year|
+      dates << "#{agency_spending_for_year.year.round(0)}-01-01"
+    end
+    dates.unshift("Date")
+  end
+
+  def format_value_results(agency_match, matched_name)
+    agency_sum_values= []
+    agency_match.each do |agency_spending_for_year|
+      agency_sum_values << agency_spending_for_year.total
+    end
+    agency_sum_values.unshift(matched_name)
+  end
+
 end
