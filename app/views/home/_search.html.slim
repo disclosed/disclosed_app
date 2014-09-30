@@ -10,7 +10,7 @@ div class="form"
           div class="pure-u-1 pure-u-md-1-3"
             label for="agency-query" choose a government department.   
             div class="search-boxes"
-              select class="chosen-select pure-u-md-1-3" name="agency_query"
+              select class="chosen-select pure-u-md-1-3" multiple="multiple" name="agencies[]"
                 option value=""
                 - @agencies.each do |agency| 
                   option value="#{agency.id}"
