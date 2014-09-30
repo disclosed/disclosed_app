@@ -7,6 +7,7 @@ class VendorSearch
 
   def get_aggregate_chart_data
     chart_data = []
+    errors = []
     @vendors.each do |vendor|
       vendor_match = match(vendor)
       if !vendor_match.empty?
@@ -14,7 +15,7 @@ class VendorSearch
         chart_data << format_date_results(vendor_match)
         chart_data << format_value_results(vendor_match, matched_name)
       else
-        puts "No matching vendor found for \"#{vendor}\""
+        errors << "No matching vendor found for \"#{vendor}\""
       end
     end
     chart_data
@@ -28,8 +29,6 @@ class VendorSearch
         vendor_results.each do |result|
           report_data << result
         end
-      else
-        puts "No matching vendor found for \"#{vendor}\""
       end
     end
     report_data
