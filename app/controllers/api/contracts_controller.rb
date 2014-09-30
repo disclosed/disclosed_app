@@ -1,6 +1,6 @@
 class Api::ContractsController < ApplicationController
 
-  respond_to :json, :csv
+  respond_to :json
 
   def index
     @contracts = Contract.all.limit(25)

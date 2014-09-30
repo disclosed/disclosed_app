@@ -88,6 +88,5 @@ class Contract < ActiveRecord::Base
     end
   end
 
-  # Economic object code is the numbered category for description of the services provided by vendor. 
 end
 
