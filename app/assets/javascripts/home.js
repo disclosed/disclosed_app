@@ -2,6 +2,12 @@
 // All this logic will automatically be available in application.js.
 
 $(document).on("page:change", function(){
-
-    $(".chosen-select").chosen();
+  
+  $(".chosen-select").chosen();
+  
+  $('.search-form').on('click', function(event){
+    event.preventDefault();
+    $(this).next('.hidden-form').show();
+    $(this).toggle_to
+  });
 });
