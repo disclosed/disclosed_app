@@ -5,12 +5,13 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
 }
 
 body {
     line-height: 1.7em;
     color: #7f8c8d;
-    font-size: 13px;
+    font-size: 1em;
 }
 
 h1,
@@ -20,7 +21,8 @@ h4,
 h5,
 h6,
 label {
-    color: #34495e;
+    color: #333333;
+    font-weight: none;
 }
 
 .is-center {
@@ -30,55 +32,86 @@ label {
 .home-menu {
     padding: 0.5em;
     text-align: center;
+    font-size: 1.2em;
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
-    border-bottom: 5px #674172;
+    border-bottom: 0.1em solid #d35400;
     z-index: 4;
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: #d35400;
 }
 .home-menu li a:hover {
     background-color: #674172;
-    border: none;
     text-decoration: none;
 }
 
-.splash-container {
-    background: #ffffff;
-    overflow: hidden;
-    width: 100%;
-    height: 88%;
-    top: 0;
-    left: 0;
-}
-
 .splash {
-    width: 50%;
-    margin: auto;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    margin: 8% 5% 5% 5%;
+    width: 100%;
+    height: 80vh;
+}
+
+.form {
+  padding: 1em;
+}
+
+.pure-form legend {
+    margin-left: 10%;
+    border-bottom: none;
+}
+
+.searching {
+    margin-left: 10%;
+}
+
+.search-boxes {
+    margin-right: 10%;
+}
+
+.submit {
+    margin-top: 5%;
+}
+
+.footer {
+    text-decoration: none;
+    border-top: 0.1em solid #D35400;
     text-align: center;
-    text-transform: uppercase;
+    font-size: 0.7em;
 }
 
-.splash-head {
-    font-size: 20px;
-    font-weight: bold;
-    color: #674172;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em; 
-
+.fa-file-excel-o {
+    font-size: 6em;
 }
 
-.footer ul li a {
-  text-decoration: none;
+.links i.fa {
+    color: #d35400;
+}
+
+.links {
+    margin-top: 37%;
+}
+
+.advanced-search {
+    float: right;
+    border-bottom: 1px dashed #d35400;
+    text-decoration: none;
+}
+
+.fa-2 {
+   color: #d35400;
+   text-decoration: none;
 }
 
 .pure-menu li a:hover {
-  background: none; 
-  color: #34495E;
+   background: none;
+   color: #34495E;
+}
+
+.pure-button {
+   background-color: #D35400;
+   color: #ffffff;
 }
 
 /*
@@ -102,18 +135,13 @@ label {
             float: right;
         }
 
-/*    .splash-container {
-        height: 500px;
-    }*/
-
     .splash {
-        width: 50%;
+        width: 85%;
     }
 
     .splash-head {
         font-size: 250%;
     }
-
 
     .l-box-lrg {
         border: none;
