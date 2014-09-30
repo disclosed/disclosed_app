@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api, path: "", constraints: { subdomain: "api" }, defaults: { format: :json } do
     resources :contracts, :agencies, only: [:create, :show, :index]
   end
-  get '/contracts/download', to: 'api/contracts#download'
+  get '/home/download', to: 'home#download', as: 'report_download'
   get 'home/index'
   root 'home#index'
   
