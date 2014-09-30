@@ -1,14 +1,13 @@
-div class="splash"
-  div id="chart"
-  div class="links"  
-    div id="advanced-search"
-      div class="icon"
+div.splash.pure-g
+  div#chart.pure-u-5-6
+  div.links.pure-u-1-6
+    //div.advanced-search
+      div.icon
         i class="fa fa-search fa-4"
-      div class="icon-word"    
-        p  advanced search
-    div id="advanced-search"
-      div class="icon"
+        | advanced search
+    div.advanced-search
+      div.icon
         i class="fa fa-file-excel-o fa-4"
-      div class="icon-word"    
-        = link_to "download CSV", contracts_download_path(format: "csv"), method: :get, class: "csv"    
+        |           
+        = link_to "download CSV", contracts_download_path(format: "csv"), method: :get, class: "csv"
 == render 'home/search'
