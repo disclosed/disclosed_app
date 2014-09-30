@@ -2,7 +2,6 @@ class TotalSearch
 
   def initialize(search_params)
     @search_params = search_params
-    @chart_data = []
   end
 
   def get_aggregate_chart_data
@@ -20,15 +19,18 @@ class TotalSearch
     report_data
   end
 
+  private
+
   def format_results(results)
+    chart_data = []
     totals = []
     dates = []
     results.each do |contract|
       totals << contract.total
       dates << "#{contract.year.round(0)}-01-01"
     end
-    @chart_data << dates.unshift("Date")
-    @chart_data << totals.unshift("Total Contract Spending")
+    chart_data << dates.unshift("Date")
+    chart_data << totals.unshift("Total Contract Spending")
   end
 
 end

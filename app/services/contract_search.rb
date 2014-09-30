@@ -3,8 +3,7 @@ class ContractSearch
   def initialize(params)
     @search_params = { 
       vendors: params[:vendors],
-      agencies: params[:agencies],
-      effective_date: params[:effective_date]
+      agencies: params[:agencies]
     }
     remove_empty_searchbox_queries if params[:vendors]
     @search_request = determine_search_type.classify.constantize.new(@search_params)
