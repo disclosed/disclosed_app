@@ -1,16 +1,16 @@
 div class="form"
-  form class="pure-form" action='/home/index' method='get'
+  form.pure-form action='/home/index' method='get'
    
     fieldset 
       
       legend enter your query.
-      div class="searching" 
+      div.searching 
 
         div.pure-g
           div.pure-u-1-2
             label for="agency-query" choose a government department.   
             div.search-boxes
-              select class="chosen-select pure-u-1-2" multiple="multiple" name="agencies[]"
+              select.chosen-select.pure-u-1-2 multiple="multiple" name="agencies[]"
                 option value=""
                 - @agencies.each do |agency| 
                   option value="#{agency.id}"
@@ -23,4 +23,5 @@ div class="form"
 
         div.pure-g
           div.search-boxes
-            button type="submit" class="pure-button submit" submit   
+            button.pure-button.submit type="submit" submit   
+            
