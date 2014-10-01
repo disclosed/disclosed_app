@@ -4,7 +4,13 @@ class HomeController < ApplicationController
     @agencies = Agency.all
     @params = params
     search = ContractSearch.new(params)
-    gon.chart_data = search.execute_chart_search
+    results = search.execute_chart_search
+    if results.class == Hash
+      gon.chart_data = results[:chart_data]
+      @messages = results[:messages]
+    else
+      gon.chart_data = results
+    end
   end
 
   def download
