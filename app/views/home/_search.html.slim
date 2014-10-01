@@ -1,27 +1,19 @@
-div class="form"
-  form.pure-form action='/home/index' method='get'
-   
-    fieldset 
-      
-      legend enter your query.
-      div.searching 
+form.pure-form.pure-form-stacked action='/home/index' method='get'
+fieldset 
+  legend
+    | enter your query.
+    div.pure-g 
+      div.pure-u-1-2
+        label for="agency-query" 
+          | choose a government department.   
+        select.chosen-select multiple="multiple" name="agencies[]"
+            option value=""
+            - @agencies.each do |agency| 
+              option value="#{agency.id}"
+                | #{agency.name}
+      div.pure-u-1-2
+        label for="vendor" choose a vendor.   
+        input.pure-input-1-3 name="vendors[]"
 
-        div.pure-g
-          div.pure-u-1-2
-            label for="agency-query" choose a government department.   
-            div.search-boxes
-              select.chosen-select.pure-u-1-2 multiple="multiple" name="agencies[]"
-                option value=""
-                - @agencies.each do |agency| 
-                  option value="#{agency.id}"
-                    | #{agency.name}
-        div.pure-g 
-          div.pure-u-1-2
-            label for="vendor" choose a vendor.   
-            div.search-boxes
-              input.pure-input-1-3 name="vendors[]"
-
-        div.pure-g
-          div.search-boxes
-            button.pure-button.submit type="submit" submit   
-            
+  button.pure-button.submit type="submit" submit   
+          
