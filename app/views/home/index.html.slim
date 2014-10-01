@@ -1,13 +1,24 @@
-div.splash.pure-g
-  div#chart.pure-u-5-6
-  div.links.pure-u-1-6
+div.pure-g
+  div#chart.pure-u-3-4
+  div.links.pure-u-1-4
     div.advanced-search
-      div.icon
-        i class="fa fa-search fa-4"
-        | advanced search
-    div.advanced-search
-      div.icon
+      form.pure-form action='/home/index' method='get'
+        fieldset 
+          legend 
+            | enter your query.
+            div.pure-u-1
+              label for="agency-query" choose a government department.   
+              select.pure-u-1.chosen-select  multiple="multiple" name="agencies[]"
+                  option value=""
+                  - @agencies.each do |agency| 
+                    option value="#{agency.id}"
+                      | #{agency.name}
+            div.pure-u-1
+              label for="vendor" choose a vendor.   
+              input.pure-input-1 name="vendors[]"
+
+        button.pure-button.submit type="submit" submit   
+    div#csv-download.advanced-search.pure-u-1
         i class="fa fa-file-excel-o fa-4"
         |           
         = link_to "download CSV", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
-== render 'home/search'
