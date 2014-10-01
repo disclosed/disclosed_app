@@ -1,13 +1,10 @@
-div.splash.pure-g
-  div#chart.pure-u-5-6
-  div.links.pure-u-1-6
-    div.advanced-search
-      div.icon
-        i class="fa fa-search fa-4"
-        | advanced search
-    div.advanced-search
+div.pure-g
+  div#chart.pure-u-4-5
+  div.links.pure-u-1-5
+    div.advanced-search.pure-u-1-5
+      == render 'home/search'
+    div.advanced-search.pure-u-1-5
       div.icon
         i class="fa fa-file-excel-o fa-4"
         |           
         = link_to "download CSV", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
-== render 'home/search'
