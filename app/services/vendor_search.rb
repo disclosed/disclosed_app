@@ -6,19 +6,18 @@ class VendorSearch
   end
 
   def get_aggregate_chart_data
-    chart_data = []
-    no_match_msgs = []
+    results = { chart_data: [], messages: [] }
     @vendors.each do |vendor|
       vendor_match = match(vendor)
       if !vendor_match.empty?
         matched_name = Contract.vendor_name(vendor).first.vendor_name
-        chart_data << format_date_results(vendor_match)
-        chart_data << format_value_results(vendor_match, matched_name)
+        results[:chart_data] << format_date_results(vendor_match)
+        results[:chart_data] << format_value_results(vendor_match, matched_name)
       else
-        no_match_msgs << "No matching vendor found for \"#{vendor}\""
+        results[:messages] << "No matching vendor found for \"#{vendor}\". Try searching for another vendor (eg: )."
       end
     end
-    return chart_data, no_match_msgs
+    results
   end
 
   def get_full_contract_report

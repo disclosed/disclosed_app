@@ -16,6 +16,8 @@ div.pure-g
             div.pure-u-1
               label for="vendor" choose a vendor.   
               input.pure-input-1 name="vendors[]"
+              - @messages.each do |message| 
+                    li #{message}
 
         button.pure-button.submit type="submit" submit   
     div#csv-download.advanced-search.pure-u-1
