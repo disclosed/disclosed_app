@@ -9,11 +9,24 @@ $(function(){
     axis: {
         x: {
             type: 'timeseries',
+            label: 'year',
             tick: {
                format: '%Y'
             } 
+        },
+        y: {
+           label: 'value'
         }
+    },
+    color: {
+      pattern: ['#D35400', '#F62459', '#674172', '#EF4836', '#336E7B','#1E8BC3', '#26A65B', '#1BA39C']
+    },
+    transition: {
+      duration: 1000
     }
   });
-  console.log(gon.chart_data);
+  setTimeout(function(){
+    chart.load({
+    });
+  }, 2000);
 });
