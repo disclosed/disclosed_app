@@ -18,7 +18,7 @@ class VendorSearch
         no_match_msgs << "No matching vendor found for \"#{vendor}\""
       end
     end
-    chart_data
+    return chart_data, no_match_msgs
   end
 
   def get_full_contract_report

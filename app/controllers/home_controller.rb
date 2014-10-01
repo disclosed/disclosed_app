@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @agencies = Agency.all
     @params = params
     search = ContractSearch.new(params)
-    gon.chart_data = search.execute_chart_search
+    gon.chart_data, @messages = search.execute_chart_search
   end
 
   def download
