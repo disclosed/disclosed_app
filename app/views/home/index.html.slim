@@ -6,6 +6,8 @@ div.banner
       | people want to know where their government spends money
     div.pure-u-1-4.description
       | ... so, go on, the search is on. 
+  button.pure-button#scroll-to explore
+
 div.pure-g
   div#chart.pure-u-3-4
   div.links.pure-u-1-4
@@ -22,8 +24,8 @@ div.pure-g
                     option value="#{agency.id}"
                       | #{agency.name}
             div.pure-u-1
-              label for="vendor" choose a vendor. eg. Aim Health Group   
-              input.pure-u-1 name="vendors"
+              label for="vendor" choose a vendor. 
+              input.pure-u-1 name="vendors" placeholder="eg. aim health group, deloitte"
 
                 //- @messages.each do |message| 
                     li #{message}
@@ -32,4 +34,4 @@ div.pure-g
     div#csv-download.advanced-search.pure-u-1
         i class="fa fa-file-excel-o"
         |           
-        = link_to "download CSV", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
+        = link_to "download csv", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"

@@ -5,9 +5,13 @@ $(document).on("page:change", function(){
   
   $(".chosen-select").chosen();
   
-  $('.search-form').on('click', function(event){
-    event.preventDefault();
-    $(this).next('.hidden-form').show();
-    $(this).toggle_to
+  $('.scroll-to').on('click', function(event) {
+      event.preventDefault();
+      $.scrollTo($('.pure-g'), 2000); 
+  });
+  $("#scroll-to").click(function() {
+      $('html, body').animate({
+              scrollTop: $(".pure-g").offset().top
+      }, 1500);
   });
 });

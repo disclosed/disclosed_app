@@ -50,14 +50,16 @@ label {
   background: url("city_scape.jpg") fixed no-repeat center;
 }
 
-div.disclosed {
-    margin: 50vh auto;
+.disclosed {
+    margin: 40vh auto;
     display: inline-block;
     overflow: hidden;
+    line-height: normal;
 }
 
-div.description {
+.description {
     text-align: center;
+    line-height: 5em;
     color: #22313F;
     text-align: middle;
     background-color: #D2D7D3;
@@ -67,12 +69,13 @@ div.description {
     opacity: 0.8;
 }
 
-.pure-g {
-    margin-top: 8%;
+.scroll-to {
+    margin-top: 20vh;
 }
 
-.form {
-  padding: 1em;
+.pure-g {
+    margin-top: 8%;
+    padding: 1em;
 }
 
 .pure-form legend {
@@ -102,6 +105,7 @@ div.description {
 }
 
 .links {
+    padding: 2em;
     margin-top: 6%;
 }
 
@@ -114,9 +118,10 @@ div.description {
 #csv-download {
     text-decoration: none;
     border-bottom: 1px dashed #d35400; 
+    margin-top: 22%;
 }
 #csv-download i {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .csv:hover {
@@ -126,8 +131,15 @@ div.description {
     text-decoration: none;
     color: #d35400;
 }
-.chosen-select {
+
+select.chosen-select {
+    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
     font-size: 0.9em;
+}
+
+div input.pure-u-1 {
+    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+    font-size: 0.8em;
 }
 
 .fa-2 {
