@@ -45,12 +45,41 @@ label {
     text-decoration: none;
 }
 
-.pure-g {
-    margin-top: 6%;
+.banner {
+  height: 100vh;
+  background: url("city_scape.jpg") fixed no-repeat center;
 }
 
-.form {
-  padding: 1em;
+.intro-block {
+  max-height: 40em;
+  width: auto;
+}
+
+.disclosed {
+    margin: 40vh auto;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.description {
+    text-align: center;
+    line-height: 5em;
+    color: #22313F;
+    font-weight: 20px;
+    text-align: middle;
+    background-color: #D2D7D3;
+    margin-right: 4%;
+    margin-left: 4%;
+    opacity: 0.9;
+}
+
+#scroll-to {
+    margin-right: 41%;
+}
+
+.pure-g {
+    margin-top: 8%;
+    padding: 1em;
 }
 
 .pure-form legend {
@@ -68,6 +97,7 @@ label {
     border-top: 0.1em solid #D35400;
     text-align: center;
     font-size: 0.7em;
+    max-height: 5vh;
 }
 
 .fa-file-excel-o {
@@ -79,6 +109,7 @@ label {
 }
 
 .links {
+    padding: 2em;
     margin-top: 6%;
 }
 
@@ -91,15 +122,38 @@ label {
 #csv-download {
     text-decoration: none;
     border-bottom: 1px dashed #d35400; 
+    margin-top: 22%;
+}
+#csv-download i {
+    font-size: 4em;
 }
 
-.chosen-select {
+.csv:hover {
+    text-decoration: none;
+}
+.csv {
+    text-decoration: none;
+    color: #d35400;
+}
+
+select.chosen-select {
+    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
     font-size: 0.9em;
+}
+
+div input.pure-u-1 {
+    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+    font-size: 0.8em;
 }
 
 .fa-2 {
    color: #d35400;
    text-decoration: none;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #d35400;
 }
 
 .pure-menu li a:hover {
