@@ -15,7 +15,7 @@ $(function(){
             } 
         },
         y: {
-           label: 'value'
+           label: 'contract value ($)'
         }
     },
     color: {

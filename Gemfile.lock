@@ -14,8 +14,6 @@ GEM
       activesupport (= 4.1.1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active_median (0.1.1)
-      activerecord
     activemodel (4.1.1)
       activesupport (= 4.1.1)
       builder (~> 3.1)
@@ -255,7 +253,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_median
   bootstrap_form
   c3-rails
   chronic

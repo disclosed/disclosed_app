@@ -28,12 +28,9 @@ class TotalSearch
     dates = []
     results.each do |contract|
       totals << contract.total
-      median_spending << contract.median(:total)
       dates << "#{contract.year.round(0)}-01-01"
     end
     chart_data << dates.unshift("Date")
-    chart_data << median_spending.unshift("Median Contract Spending")
     chart_data << totals.unshift("Total Contract Spending")
   end
-
 end
