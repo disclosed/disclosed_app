@@ -13,7 +13,7 @@ div.pure-g
   div#chart.pure-u-3-4
   div.links.pure-u-1-4
     div.advanced-search
-      form.pure-form action='/home/index' method='get'
+      form.pure-form action='/home/index#chart' method='get'
         fieldset 
           legend 
             | enter your query.
@@ -28,7 +28,7 @@ div.pure-g
               label for="vendor" choose a vendor. 
               input.pure-u-1 name="vendors" placeholder="eg. aim health group, deloitte"
 
-                //- @messages.each do |message| 
+                - @messages.each do |message| 
                     li #{message}
 
         button.pure-button.submit type="submit" submit   

@@ -9,13 +9,13 @@ $(function(){
     axis: {
         x: {
             type: 'timeseries',
-            label: 'year',
+            label: 'Year',
             tick: {
                format: '%Y'
             } 
         },
         y: {
-           label: 'value'
+           label: 'Contract Value ($)'
         }
     },
     color: {
