@@ -23,6 +23,7 @@ class TotalSearch
 
   def format_results(results)
     chart_data = []
+    median_spending = []
     totals = []
     dates = []
     results.each do |contract|
@@ -32,5 +33,4 @@ class TotalSearch
     chart_data << dates.unshift("Date")
     chart_data << totals.unshift("Total Contract Spending")
   end
-
 end
