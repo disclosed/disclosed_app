@@ -1,3 +1,11 @@
+div.banner
+  div.disclosed
+    div.pure-u-1-4.description
+      | transparency is the new zeitgeist
+    div.pure-u-1-4.description
+      | people want to know where their government spends money
+    div.pure-u-1-4.description
+      | ... so, go on, the search is on. 
 div.pure-g
   div#chart.pure-u-3-4
   div.links.pure-u-1-4
@@ -22,6 +30,6 @@ div.pure-g
 
         button.pure-button.submit type="submit" submit   
     div#csv-download.advanced-search.pure-u-1
-        i class="fa fa-file-excel-o fa-4"
+        i class="fa fa-file-excel-o"
         |           
         = link_to "download CSV", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
