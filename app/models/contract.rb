@@ -1,5 +1,6 @@
 class Contract < ActiveRecord::Base
   belongs_to :agency
+  belongs_to :vendor
 
   validates :reference_number, presence: true, uniqueness: true
   validates :url,            presence: true

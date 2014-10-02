@@ -14,11 +14,10 @@ div.pure-g
                     option value="#{agency.id}"
                       | #{agency.name}
             div.pure-u-1
-              label for="vendor" choose a vendor.   
-              input.pure-input-1 name="vendors[]"
-              input.pure-input-1 name="vendors[]"
-              input.pure-input-1 name="vendors[]"
-              - @messages.each do |message| 
+              label for="vendor" choose a vendor. eg. Aim Health Group   
+              input.pure-u-1 name="vendors"
+
+                //- @messages.each do |message| 
                     li #{message}
 
         button.pure-button.submit type="submit" submit   

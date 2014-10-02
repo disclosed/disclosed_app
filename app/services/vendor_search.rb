@@ -2,7 +2,7 @@ class VendorSearch
 
   def initialize(search_params)
     search_params[:vendors].delete("")
-    @vendors = search_params[:vendors]
+    @vendors = search_params[:vendors].split(/,\s*/)
   end
 
   def get_aggregate_chart_data
@@ -38,8 +38,6 @@ class VendorSearch
   def match(vendor)
     Contract.spending_per_vendor(vendor)
   end
-
-  private
 
   def format_date_results(vendor_match)
     dates = []
