@@ -10,6 +10,7 @@ class HomeController < ApplicationController
       @messages = results[:messages]
     else
       gon.chart_data = results
+      @messages = []
     end
   end
 
