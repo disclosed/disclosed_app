@@ -8,6 +8,11 @@
     font-family: "Lucida Console", monospace;
 }
 
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+}
+
 body {
     line-height: 1.7em;
     color: #7f8c8d;
@@ -53,9 +58,16 @@ label {
 }
 
 div.text-boxes {
-    margin: 30vh;
+    margin: 30vh 10vh;
     display: inline-block;
     overflow: hidden;
+}
+
+div.text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .description {
@@ -83,6 +95,10 @@ div.call-to-action {
 .title {
     font-size: 2.2em;
     margin-left: 25%;
+}
+
+#chart {
+    height: 75vh;
 }
 
 .explore {
@@ -144,14 +160,22 @@ div.call-to-action {
     color: #d35400;
 }
 
-select.chosen-select {
+select.pure-u-1.chosen-select {
     font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
-    font-size: 0.9em;
+}
+
+.chosen-container.chosen-container-multi ul.chosen-choices> li.search-field > input.default {
+    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+}
+
+.chosen-container .chosen-results li.highlighted {  
+  color: #ffffff;
+  background-color: #d35400;
 }
 
 div input.pure-u-1 {
     font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 .fa-2 {

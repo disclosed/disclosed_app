@@ -15,4 +15,11 @@ $(document).on("page:change", function(){
               scrollTop: $(".pure-g.explore").offset().top
       }, 1500);
   });
+  $("#newsletter-signup").click(function() {
+      $('html, body').animate({
+              scrollTop: $(".pure-g.newsletter").offset().top
+      }, 1500);
+  });
 });
+
+

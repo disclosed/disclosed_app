@@ -1,19 +1,31 @@
-form.pure-form.pure-form-stacked action='/home/index' method='get'
-fieldset 
-  legend
-    | enter your query.
-    div.pure-g 
-      div.pure-u-1-2
-        label for="agency-query" 
-          | choose a government department.   
-        select.chosen-select multiple="multiple" name="agencies[]"
-            option value=""
-            - @agencies.each do |agency| 
-              option value="#{agency.id}"
-                | #{agency.name}
-      div.pure-u-1-2
-        label for="vendor" choose a vendor.   
-        input.pure-input-1-3 name="vendors[]"
-
-  button.pure-button.submit type="submit" submit   
-          
+div.pure-g.newsletter
+   #mc_embed_signup
+      form#mc-embedded-subscribe-form.validate.pure-form.pure-form-stacked action="//disclosed.us9.list-manage.com/subscribe/post?u=ab324b8b4979cd8c394d13f06&amp;id=4059ff0fc3" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank" 
+       #mc_embed_signup_scroll
+          legend Subscribe to our mailing list
+          div.pure-g.inline
+            .indicates-required
+              span.asterisk *
+              | indicates required
+            .mc-field-group
+              label for="mce-EMAIL" 
+                | Email Address
+                span.asterisk *
+              input#mce-EMAIL.required.email name="EMAIL" type="email" value="" 
+            .mc-field-group
+              label for="mce-FNAME"  First Name
+              input#mce-FNAME name="FNAME" type="text" value="" 
+            .mc-field-group
+              label for="mce-LNAME"  Last Name
+              input#mce-LNAME name="LNAME" type="text" value="" 
+            #mce-responses.clear
+              #mce-error-response.response style="display:none" 
+              #mce-success-response.response style="display:none" 
+            //div 
+             input name="b_ab324b8b4979cd8c394d13f06_4059ff0fc3" tabindex="-1" type="text" value="" /
+            .clear
+                input#mc-embedded-subscribe.button name="subscribe" type="submit" value="Subscribe" /
+   script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" type="text/javascript"
+   javascript:
+     (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+      
