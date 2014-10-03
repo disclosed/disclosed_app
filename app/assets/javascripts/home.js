@@ -7,19 +7,23 @@ $(document).on("page:change", function(){
   
   $("#scroll-to").click(function() {
       $('html, body').animate({
-              scrollTop: $(".pure-g.explore").offset().top
-      }, 1500);
+              scrollTop: $(".title.pure-u-1").offset().top
+      }, 1000);
   });
   $("#magnifying-glass").click(function() {
       $('html, body').animate({
               scrollTop: $(".pure-g.explore").offset().top
-      }, 1500);
+      }, 1000);
   });
   $("#newsletter-signup").click(function() {
       $('html, body').animate({
               scrollTop: $(".pure-g.newsletter").offset().top
-      }, 1500);
+      }, 1000);
   });
+  $("#mc-embedded-subscribe.pure-button").click(function(){
+    submitHandler:
+      $('.validate.pure-form').reset();
+  })
 });
 
 
