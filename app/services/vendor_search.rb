@@ -41,7 +41,9 @@ class VendorSearch
 
   def format_date_results(vendor_match)
     dates = []
+
     vendor_match.each do |vendor_spending_for_year|
+      next if vendor_spending_for_year.year.nil?
       dates << "#{vendor_spending_for_year.year.round(0)}-01-01"
     end
     dates.unshift("Date")
