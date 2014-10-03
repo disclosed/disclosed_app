@@ -20,9 +20,8 @@ $(document).on("page:change", function(){
               scrollTop: $(".pure-g.newsletter").offset().top
       }, 1000);
   });
-  $("#mc-embedded-subscribe.pure-button").click(function(){
-    submitHandler:
-      $('.validate.pure-form').reset();
+  $('.validate.pure-form.pure-form-stacked').bind('click', function(){
+      $(this).closest('form').find('input:text, input:email, select, textarea').val('');
   })
 });
 
