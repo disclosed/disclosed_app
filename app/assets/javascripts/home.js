@@ -5,23 +5,28 @@ $(document).on("page:change", function(){
   
   $(".chosen-select").chosen();
   
-  $("#scroll-to").click(function() {
-      $('html, body').animate({
-              scrollTop: $(".title.pure-u-1").offset().top
-      }, 1000);
+  $("#scroll-to").on('click', function() {
+    $('html, body').animate({
+      scrollTop: $("#wrap_div").offset().top
+    }, 1000);
   });
-  $("#magnifying-glass").click(function() {
-      $('html, body').animate({
-              scrollTop: $(".pure-g.explore").offset().top
-      }, 1000);
+  $('.site-name').on('click', function(){
+    $('html, body').animate({
+      scrollTop: $(".pure-g.banner").offset().top
+    }, 1000);
   });
-  $("#newsletter-signup").click(function() {
-      $('html, body').animate({
-              scrollTop: $(".pure-g.newsletter").offset().top
-      }, 1000);
+  $("#magnifying-glass").on('click', function() {
+    $('html, body').animate({
+      scrollTop: $("#chart-area").offset().top
+    }, 1000);
+  });
+  $("#newsletter-signup").on('click', function() {
+    $('html, body').animate({
+      scrollTop: $(".pure-g.newsletter").offset().top
+    }, 1000);
   });
   $('.validate.pure-form.pure-form-stacked').bind('click', function(){
-      $(this).closest('form').find('input:text, input:email, select, textarea').val('');
+    $(this).closest('form').find('input:text, input:email, select, textarea').val('');
   })
 });
 
