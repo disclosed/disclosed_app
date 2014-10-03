@@ -27,6 +27,7 @@ class TotalSearch
     totals = []
     dates = []
     results.each do |contract|
+      next if contract.year.nil?
       totals << contract.total
       dates << "#{contract.year.round(0)}-01-01"
     end
