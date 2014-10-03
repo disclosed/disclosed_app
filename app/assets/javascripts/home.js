@@ -17,7 +17,7 @@ $(document).on("page:change", function(){
   });
   $("#magnifying-glass").on('click', function() {
     $('html, body').animate({
-      scrollTop: $("#chart-area").offset().top
+      scrollTop: $("#wrap_div").offset().top
     }, 1000);
   });
   $("#newsletter-signup").on('click', function() {
