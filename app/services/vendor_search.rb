@@ -14,7 +14,7 @@ class VendorSearch
         results[:chart_data] << format_date_results(vendor_match)
         results[:chart_data] << format_value_results(vendor_match, matched_name)
       else
-        results[:messages] << "No matching vendor found for \"#{vendor}\". Try searching for another vendor (eg: )."
+        results[:messages] << "no matching vendor found for \"#{vendor}\". try searching for another vendor (eg: bonanza)."
       end
     end
     results
