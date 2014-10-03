@@ -17,7 +17,7 @@ div.pure-g.explore
     h1 government spending on contracts.
   div#chart.pure-u-3-4
   div.links.pure-u-1-4
-    div.advanced-search
+    div.advanced-search.advanced-search-form
       form.pure-form action='/home/index#chart' method='get'
         fieldset 
           legend 
@@ -34,7 +34,7 @@ div.pure-g.explore
               input.pure-u-1 name="vendors" placeholder="eg. aim health group, deloitte"
 
                 - @messages.each do |message| 
-                    li #{message}
+                    li.error-message #{message}
 
         button.pure-button.submit type="submit" generate   
     div#csv-download.advanced-search.pure-u-1
