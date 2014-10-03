@@ -5,13 +5,14 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+    font-family: "Lucida Console", monospace;
 }
 
 body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 1em;
+    font-family: "Lucida Console", monospace;
     padding: 0.3em;
 }
 
@@ -48,35 +49,38 @@ label {
 .banner {
   height: 100vh;
   background: url("city_scape.jpg") fixed no-repeat center;
+  font-weight: 2em;
 }
 
-.intro-block {
-  max-height: 40em;
-  width: auto;
-}
-
-.disclosed {
-    margin: 40vh auto;
+div.text-boxes {
+    margin: 30vh;
     display: inline-block;
     overflow: hidden;
 }
 
 .description {
     text-align: center;
-    line-height: 5em;
+    height: 12em;
     color: #22313F;
-    text-align: middle;
     background-color: #D2D7D3;
     margin-right: 4%;
     margin-left: 4%;
     opacity: 0.9;
+    font-family: "Lucida Console", monospace;
+    padding: 0.3em;
 }
 
-#scroll-to {
-    margin-right: 41%;
+div.call-to-action {
+   margin-left: 39%;
+   margin-top: -20vh;
 }
 
-.pure-g {
+.pure-button#scroll-to {
+    height: 12%;
+    width: 35%;
+}
+
+.explore {
     margin-top: 8%;
     padding: 1em;
 }

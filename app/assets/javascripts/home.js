@@ -5,13 +5,14 @@ $(document).on("page:change", function(){
   
   $(".chosen-select").chosen();
   
-  $('.scroll-to').on('click', function(event) {
-      event.preventDefault();
-      $.scrollTo($('.pure-g'), 2000); 
-  });
   $("#scroll-to").click(function() {
       $('html, body').animate({
-              scrollTop: $(".pure-g").offset().top
+              scrollTop: $(".pure-g.explore").offset().top
+      }, 1500);
+  });
+  $("#magnifying-glass").click(function() {
+      $('html, body').animate({
+              scrollTop: $(".pure-g.explore").offset().top
       }, 1500);
   });
 });

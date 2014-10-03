@@ -9,7 +9,7 @@ $(function(){
     axis: {
         x: {
             type: 'timeseries',
-            label: 'Year',
+            label: 'year',
             tick: {
                format: '%Y'
             } 
