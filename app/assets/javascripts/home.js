@@ -26,7 +26,8 @@ $(document).on("page:change", function(){
     }, 1000);
   });
   $('.validate.pure-form.pure-form-stacked').bind('click', function(){
-    $(this).closest('form').find('input:text, input:email, select, textarea').val('');
+    (this).reset();
+    $(this).closest('form').find('input:text, input:email select, textarea').val('');
   })
 });
 
