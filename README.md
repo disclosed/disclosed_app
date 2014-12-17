@@ -8,20 +8,22 @@ HEADS UP: This is the readme for a future release.
 
 Disclosed.ca is an open data initiative for the Canadian Government. 
 
-This project scrapes third-party contract information from the websites of all 64 government agencies. The Proactive Disclosure
+This project scrapes third-party contract information from the Proactive Disclosure websites of all 64 government agencies.
 
-The goal is to promote transparency and accountability in the Canadian Government. We make it easy for journalists and academics to access third party contract information. There are 3 ways to access the data:
+The goal is to promote transparency and accountability in the Canadian Government. We make it easy for journalists and academics to access third party contract information, by aggregating the proactive disclosure data on one website.
+
+There are 3 ways to access the data:
 
 - Search engine: http://disclosed.ca
-- CSV downloads: http://disclosed.ca/datasets
-- JSON API: http://api.disclosed.ca
+- CSV downloads (coming soon): http://disclosed.ca/datasets
+- JSON API (coming soon): http://api.disclosed.ca
 
 
 ### What data is available?
 
-We currently publish third party contract data.
+We currently scrape third party contract data.
 
-In 2004 the Government announced a new policy on the mandatory publication of contracts over $10,000. Every single government agency is required to make this data available on a quarterly basis on their website. Here is an example for Environment Canada: http://www.ec.gc.ca/contracts-contrats/index.cfm?lang=En&state=reports.
+In 2004 the Government announced a new policy on the mandatory publication of contracts over $10,000. Each government agency publishes this data on a quarterly basis. Here is an example for Environment Canada: http://www.ec.gc.ca/contracts-contrats/index.cfm?lang=En&state=reports.
 
 The format of the contract data is dictated by these [guidelines](http://www.tbs-sct.gc.ca/pd-dp/dc/index-eng.asp)
 
