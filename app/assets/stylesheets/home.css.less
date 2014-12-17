@@ -1,250 +1,128 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Less here: http://lesscss.org/
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: "Lucida Console", monospace;
-}
-
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-  font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
-}
-
-body {
-    line-height: 1.7em;
-    color: #7f8c8d;
-    font-size: 1em;
-    font-family: "Lucida Console", monospace;
-    padding: 0.3em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: #333333;
-    font-size: 0.7em;
-    font-weight: 0.1em;
-}
-
+/*
+ * Styles for the home page
+ */
 .home-menu {
     padding: 0.5em;
-    text-align: center;
+    margin-bottom: 1em;
     font-size: 1.2em;
-}
-.pure-menu.pure-menu-open.pure-menu-fixed {
-    border-bottom: 0.1em solid #d35400;
-    z-index: 4;
-}
-
-.home-menu a {
-    color: #d35400;
-}
-.home-menu li a:hover {
-    background-color: #674172;
-    text-decoration: none;
+    border-bottom: 2px solid #d35400;
+    a { 
+      color: #d35400;
+      text-decoration: none;
+    }
+    span.tagline {
+      margin-left: 1em;
+    }
 }
 
-.banner {
-  height: 100vh;
-  background: url("city_scape.jpg") fixed no-repeat center;
-  font-weight: 2em;
-}
-
-.newsletter-banner {
-  height: 40vh;
-  background: url("city_sky.jpg") fixed no-repeat;
-}
-
-div.text-boxes {
-    margin: 30vh 10vh;
-    display: inline-block;
-    overflow: hidden;
-}
-
-div.text {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.description {
-    text-align: center;
-    height: 12em;
-    color: #22313F;
-    background-color: #D2D7D3;
-    margin-right: 4%;
-    margin-left: 4%;
-    opacity: 0.9;
-    font-family: "Lucida Console", monospace;
-    padding: 0.3em;
-}
-
-div.call-to-action {
-   margin-left: 39%;
-   margin-top: -20vh;
-}
-
-.pure-button#scroll-to {
-    height: 12%;
-    width: 35%;
-}
-
-#site-name {
-  float: left;
-  text-align: left;
-}
-
-.tagline {
-  color: #2c3e50;
-  vertical-align: text-bottom;
-}
-
-
-.title {
+#chart-area {
+  .title {
+    margin-left: 25%;
+    margin-bottom: 30px;
     font-size: 1.3em;
     color: #2c3e50;
-    margin-left: 25%;
-}
+  }
 
-.error-message {
-    font-size: 0.5em;
-    list-style: none;
-    color: #F22613;
-}
+  #search {
+    input.vendor {
+      border-radius: 0;
+      border-color: #aaa;
+      height: 29px;
+      font-size: 13px;
+      &::-webkit-input-placeholder {
+        color: #bbb;
+        font-weight: 100;
+      }
+    }
+    .error-message {
+      font-size: 0.5em;
+      list-style: none;
+      color: #F22613;
+    }
+  }
 
-.validate.pure-form {
-    margin-right: 41%;
-    margin-left: 41%; 
-}
-
-#chart {
-    height: 75vh;
-}
-
-.explore {
-    padding: 8em;
-}
-
-.newsletter {
-    padding: 1em;
-}
-
-.inline {
-    display: inline-block;
-}
-
-.indicates-required {
-    font-size: 0.8em;
-}
-
-.pure-form legend {
-    font-size: 1.2em;
-    border-bottom: none;
-}
-
-div.pure-g.newsletter {
-  letter-spacing: 0.01em;
-}
-
-div.pure-g.inline {
-  letter-spacing: 0.01em;
-}
-
-.submit {
-    font-size: 0.9em;
-    margin-top: 8%;
-}
-
-.footer {
-    text-decoration: none;
-    border-top: 0.1em solid #D35400;
-    text-align: center;
-    font-size: 0.7em;
-    max-height: 5vh;
-}
-
-.fa-file-excel-o {
-    font-size: 6em;
-}
-
-.links i.fa {
-    color: #d35400;
-}
-
-.links {
-    padding: 2em;
-    margin-top: 6%;
-}
-
-.advanced-search {
-    float: right;
-    display: block;
-}
-
-#csv-download {
+  #csv-download {
+    margin-top: 10%;
     text-decoration: none;
     border-bottom: 1px dashed #d35400; 
-    margin-top: 10%;
-}
-#csv-download i {
-    font-size: 4em;
+    .fa-file-excel-o {
+      color: #d35400;
+      font-size: 1em;
+      margin-right: 0.4em;
+    }
+    a {
+        text-decoration: none;
+        color: #d35400;
+    }
+  }
+
+
+  select.pure-u-1.chosen-select {
+      font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+  }
+
+  .chosen-container.chosen-container-multi ul.chosen-choices> li.search-field > input.default {
+      font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+  }
+
+  .chosen-container .chosen-results li.highlighted {  
+    color: #ffffff;
+    background-color: #d35400;
+  }
+
+  div input.pure-u-1 {
+      font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+      font-size: 0.6em;
+  }
+
 }
 
-.csv:hover {
-    text-decoration: none;
-}
-.csv {
-    text-decoration: none;
-    color: #d35400;
+#about {
+  margin: 1.5em 0;
 }
 
-select.pure-u-1.chosen-select {
-    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+#newsletter {
+  .validate {
+    margin-right: 41%;
+    margin-left: 41%; 
+  }
+
+  .indicates-required { font-size: 0.8em; }
+
+  legend {
+    font-size: 1.2em;
+    border-bottom: none;
+  }
+
+  .submit {
+    font-size: 0.9em;
+    margin-top: 8%;
+  }
 }
 
-.chosen-container.chosen-container-multi ul.chosen-choices> li.search-field > input.default {
-    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
-}
 
-.chosen-container .chosen-results li.highlighted {  
-  color: #ffffff;
-  background-color: #d35400;
-}
-
-div input.pure-u-1 {
-    font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
-    font-size: 0.6em;
-}
-
-.fa-2 {
+.footer {
+  text-decoration: none;
+  border-top: 0.1em solid #d35400;
+  text-align: center;
+  font-size: 0.7em;
+  max-height: 5vh;
+  .fa-2 {
    color: #d35400;
    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+    color: #d35400;
+  }
 }
 
-.footer a {
-  text-decoration: none;
-  color: #d35400;
+.header {
+  .pure-menu li a:hover {
+     background: none;
+     color: #34495E;
+  }
 }
-
-.pure-menu li a:hover {
-   background: none;
-   color: #34495E;
-}
-
-.pure-button {
-   background-color: #D35400;
-   color: #ffffff;
-}
-
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some

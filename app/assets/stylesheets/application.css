@@ -10,10 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require twitter/bootstrap
- *= require rails_bootstrap_forms
- *= require home
+ * libraries
  *= require c3
  *= require chosen.css
+ * 
+ * custom css
+ *= require pure_overrides
+ *= require pure_custom_color
  *= require chart
+ *= require home
  */

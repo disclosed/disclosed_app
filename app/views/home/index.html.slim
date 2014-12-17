@@ -1,45 +1,58 @@
-div.pure-g.banner
-  div.pure-u-1.text-boxes
-    div.pure-u-1-4.description
-      div.text
-        | canadians want transparency
-    div.pure-u-1-4.description
-      div.text
-        | they want to know where their government spends money
-    div.pure-u-1-4.description
-      div.text
-        | ... please explore. 
-  div.pure-u-1.call-to-action
-    button.pure-button#scroll-to explore
+div.pure-g.explore#chart-area
+  div.title.pure-u-1
+    | government spending on contracts.
+  div#chart.pure-u-16-24
+  div.pure-u-2-24
+  div#search.pure-u-6-24
+    div.advanced-search-form
+      form.pure-form action='/home/index' method='get'
+        fieldset 
+          legend 
+            | search
+            div.pure-u-1
+              label for="agency-query" by agency
+              select.pure-u-1.chosen-select  multiple="multiple" name="agencies[]" data-placeholder="eg. correctional service of canada"
+                  option value=""
+                  - @agencies.each do |agency| 
+                    option value="#{agency.id}"
+                      | #{agency.name}
+            div.pure-u-1
+              label for="vendor" OR by vendor
+              input.vendor.pure-u-1 name="vendors" placeholder="eg. microsoft"
 
-div#wrap_div
-  div.pure-g.explore#chart-area
-    div.title.pure-u-1
-      | government spending on contracts.
-    div#chart.pure-u-3-4
-    div.links.pure-u-1-4
-      div.advanced-search.advanced-search-form
-        form.pure-form action='/home/index#wrap_div' method='get'
-          fieldset 
-            legend 
-              | enter your query.
-              div.pure-u-1
-                label for="agency-query" choose a government department.   
-                select.pure-u-1.chosen-select  multiple="multiple" name="agencies[]" data-placeholder="eg. correctional service of canada"
-                    option value=""
-                    - @agencies.each do |agency| 
-                      option value="#{agency.id}"
-                        | #{agency.name}
-              div.pure-u-1
-                label for="vendor" OR choose a vendor. 
-                input.pure-u-1 name="vendors" placeholder="eg. microsoft"
+                - @messages.each do |message| 
+                    li.error-message #{message}
 
-                  - @messages.each do |message| 
-                      li.error-message #{message}
+        button.pure-button.pure-button-primary type="submit" search
+    div#csv-download.pure-u-1
+        i.fa.fa-file-excel-o
+        |
+        = link_to "download full data set", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
 
-          button.pure-button.submit type="submit" generate   
-      div#csv-download.advanced-search.pure-u-1
-          i class="fa fa-file-excel-o"
-          |           
-          = link_to "download csv", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
-== render 'home/search'
+
+div.pure-g#about
+  .pure-u-1
+    h2 About
+
+    p Disclosed.ca is an open data initiative for the Canadian Government. 
+
+    p This project scrapes third-party contract information from the Proactive Disclosure websites of 64 government agencies. The data is made available through this search engine.
+
+    p The goal is to promote transparency and accountability in the Canadian Government. 
+    
+    h2 Who is it for?
+    p We make it easy for journalists, academics and curious citizens to access third party contract information, by aggregating the proactive disclosure data on one website.
+
+    h2  What data is available?
+
+    p We currently scrape third party contract data.
+
+    p
+      ' In 2004 the Government announced a new policy on the mandatory publication of contracts over $10,000. Each government agency publishes this data on a quarterly basis. Here is an example for Environment Canada: 
+      a href="http://www.ec.gc.ca/contracts-contrats/index.cfm?lang=En&state=reports" http://www.ec.gc.ca/contracts-contrats/index.cfm?lang=En&state=reports
+
+    p
+      'The format of the contract data is dictated by these Treasury Board
+      a href="http://www.tbs-sct.gc.ca/pd-dp/dc/index-eng.asp" guidelines
+
+= render 'home/newsletter'
