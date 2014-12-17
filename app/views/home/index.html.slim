@@ -22,10 +22,11 @@ div.pure-g.explore#chart-area
                     li.error-message #{message}
 
         button.pure-button.pure-button-primary type="submit" search
-    div#csv-download.pure-u-1
-        i.fa.fa-file-excel-o
-        |
-        = link_to "download full data set", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), method: 'get', class: "csv"
+    - if should_show_download_link?
+      div#csv-download.pure-u-1
+          i.fa.fa-file-excel-o
+          |
+          = link_to "download full data set", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), class: "csv", :"data-confirm" => "Are you sure you want to download the full report? This may take a while"
 
 
 div.pure-g#about

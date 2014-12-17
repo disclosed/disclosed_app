@@ -2,7 +2,6 @@ class HomeController < ApplicationController
 
   def index
     @agencies = Agency.all
-    @params = params
     search = ContractSearch.new(params)
     results = search.execute_chart_search
     if results.class == Hash
