@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   get '/home/download', to: 'home#download', as: 'report_download'
   get 'home/index'
+  resources :watchers, only: [:create]
   root 'home#index'
   
 end
