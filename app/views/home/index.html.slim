@@ -1,10 +1,57 @@
-h3.text-center Search for past contracts across Canadian government agencies
-.row
-  .col-md-12
-    = bootstrap_form_tag url: '/fill_this_out_later' do |f|
-      .row
-        .col-md-8.col-md-offset-2
-          = f.search_field :query, placeholder: "Search by agency or contractor. Ex. Environment Canada or AMEX", hide_label: true
-      .row
-        .col-md-12.text-center
-          = f.primary "Find Contracts"
+div.pure-g.explore#chart-area
+  div#chart.pure-u-16-24
+  div.pure-u-2-24
+  div#search.pure-u-6-24
+    div.advanced-search-form
+      form.pure-form action='/home/index' method='get'
+        fieldset 
+          legend 
+            | search
+            div.pure-u-1
+              label for="agency-query" by agency
+              select.pure-u-1.chosen-select  multiple="multiple" name="agencies[]" data-placeholder="eg. correctional service of canada"
+                  option value=""
+                  - @agencies.each do |agency| 
+                    option value="#{agency.id}"
+                      | #{agency.name}
+            div.pure-u-1
+              label for="vendor" OR by vendor
+              input.vendor.pure-u-1 name="vendors" placeholder="eg. microsoft"
+
+                - @messages.each do |message| 
+                    li.error-message #{message}
+
+        button.pure-button.pure-button-primary type="submit" search
+    - if should_show_download_link?
+      div#csv-download.pure-u-1
+          i.fa.fa-file-excel-o
+          |
+          = link_to "download full data set", report_download_path(format: "csv", agencies: params[:agencies], vendors: params[:vendors]), class: "csv", :"data-confirm" => "Are you sure you want to download the full report? This may take a while"
+
+
+div.pure-g#about
+  .pure-u-1
+    h2 About
+
+    p Disclosed.ca is an open data initiative for the Canadian Government. 
+
+    p This project scrapes third-party contract information from the Proactive Disclosure websites of 64 government agencies. The data is made available through this search engine.
+
+    p The goal is to promote transparency and accountability in the Canadian Government. 
+    
+    h2 Who is it for?
+    p We make it easy for journalists, academics and curious citizens to access third party contract information, by aggregating the proactive disclosure data on one website.
+
+    h2  What data is available?
+
+    p We currently scrape third party contract data.
+
+    p
+      ' In 2004 the Government announced a new policy on the mandatory publication of contracts over $10,000. Each government agency publishes this data on a quarterly basis. Here is an example from Agriculture and Agri-Food Canada
+      a href="http://www.agr.gc.ca/eng/about-us/planning-and-reporting/proactive-disclosure/disclosure-of-contracts-over-10000/aafc-disclosure-of-contract-reports/?id=1414611589000" target="_blank" http://www.agr.gc.ca/eng/about-us/planning-and-reporting/proactive-disclosure/disclosure-of-contracts-over-10000/aafc-disclosure-of-contract-reports/?id=1414611589000
+
+    p
+      'The format of the contract data is dictated by these Treasury Board
+      a href="http://www.tbs-sct.gc.ca/pd-dp/dc/index-eng.asp" guidelines
+
+= render 'home/newsletter'

@@ -14,8 +14,7 @@ describe Agency do
       agency.errors[:name].must_include "can't be blank"
       agency.errors[:abbr].must_include "can't be blank"
     end
-
-    it "must not save if the abbr has already been taken" do
+it "must not save if the abbr has already been taken" do
       Fabricate(:agency, :abbr => "moe")
       agency = Fabricate.build(:agency, :abbr => "moe")
       agency.save.must_equal false
@@ -42,6 +41,21 @@ describe Agency do
     it "should raise an error if the agency is not found" do
 
       proc {Fabricate(:agency, name: "Fooo!", abbr: nil)}.must_raise Agency::UnknownAgency
+    end
+  end
+
+  describe "Scopees" do
+    before do 
+      @agency1 = Fabricate(:agency, name: "Test agency 1")
+      @agency2 = Fabricate(:agency, name: "Test Agengy2")
+    end 
+
+    it "should return contracts given the vendor name" do
+      Agency.agency_name("Test agency 1").must_equal [@agency1]
+    end
+    
+    it "should return contracts given the abbr" do
+      Contract.abbr("ig2").must_equal [@agency2]
     end
   end
 end

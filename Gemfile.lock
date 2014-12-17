@@ -29,8 +29,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
-    bootstrap_form (2.1.1)
     builder (3.2.2)
+    c3-rails (0.3.0)
     capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -51,9 +51,10 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     columnize (0.8.9)
-    commonjs (0.2.7)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
+    d3_rails (3.4.11)
+      railties (>= 3.1.0)
     database_cleaner (1.0.1)
     debugger (1.6.8)
       columnize (>= 0.3.1)
@@ -69,6 +70,11 @@ GEM
     fabrication (2.11.2)
     ffi (1.9.3)
     formatador (0.2.5)
+    gon (5.2.0)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -86,13 +92,6 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    less (2.5.0)
-      commonjs (~> 0.2.7)
-    less-rails (2.5.0)
-      actionpack (>= 3.1)
-      less (~> 2.5.0)
-    less-rails-bootstrap (3.1.1.1)
-      less-rails (~> 2.5.0)
     libv8 (3.16.14.3)
     listen (2.7.5)
       celluloid (>= 0.15.2)
@@ -155,6 +154,7 @@ GEM
     puma (2.8.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
+    rack-cors (0.2.9)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.1)
@@ -177,6 +177,7 @@ GEM
     rb-inotify (0.9.4)
       ffi (>= 0.5.0)
     ref (1.0.5)
+    request_store (1.1.0)
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
@@ -243,14 +244,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap_form
+  c3-rails
   chronic
   codeclimate-test-reporter
+  d3_rails
   database_cleaner
   fabrication
+  gon
   guard-minitest
   jquery-rails
-  less-rails-bootstrap
   minitest-rails
   minitest-rails-capybara
   mocha
@@ -259,6 +261,7 @@ DEPENDENCIES
   pry
   pry-debugger
   puma
+  rack-cors
   rails (= 4.1.1)
   slim-rails
   spring

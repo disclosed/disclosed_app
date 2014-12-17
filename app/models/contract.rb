@@ -1,13 +1,47 @@
 class Contract < ActiveRecord::Base
   belongs_to :agency
+  belongs_to :vendor
 
   validates :reference_number, presence: true, uniqueness: true
   validates :url,            presence: true
   validates :vendor_name,    presence: true
   validates :value,          presence: true
   validates :agency,         presence: true
+  
+  scope :vendor_name, -> (vendor) do
+    return none if vendor.blank?
+    where("vendor_name ILIKE ?", "#{vendor}%") 
+  end
 
-  # date_string - the start date and end date of the contract
+  scope :effective_date, -> (effective_date) do
+   return none if effective_date.blank?
+   where effective_date: effective_date 
+  end
+
+  scope :description, -> (description) do
+    return none if description.blank?
+    where("description like ?", "%#{description}%")
+  end 
+
+  scope :value, -> (value) do 
+    return none if description.blank?
+    where("value > ?", value)
+  end
+# spending per vendor per year per all agencies
+  def self.spending_per_vendor(vendor)
+    vendor_name = ActiveRecord::Base.sanitize(vendor + "%")
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE vendor_name ILIKE #{vendor_name} GROUP BY year ORDER BY year")
+  end
+# total government spending on all agencies, grouped by year
+  def self.total_spending
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts GROUP BY year ORDER BY year")
+  end
+# total spending per each agency, grouped by year
+   def self.spending_per_agency(agency)
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE agency_id = #{agency} GROUP BY year ORDER BY year")
+  end
+
+    # date_string - the start date and end date of the contract
   # Most contracts seem to look like this...
   #             ex: 2013-10-18 to 2013-10-20
   #             ex: 2013-10-18 à 2013-10-20
@@ -44,6 +78,15 @@ class Contract < ActiveRecord::Base
       contract = Contract.create!(attrs)
     end
     contract
+  end
+  
+  def self.to_csv(contracts)
+    CSV.generate do |csv|
+      csv << column_names
+      contracts.each do |contract|
+        csv << contract.attributes.values_at(*column_names)
+      end
+    end
   end
 
 end

@@ -1,0 +1,56 @@
+/*
+ *  Pure CSS Overrides
+ */
+
+// Set this property to allow us to set borders and padding directly
+// to a grid unit without breaking the grid.
+// See: http://purecss.io/grids/#applying-padding-and-borders-to-grid-units
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Lucida Console", monospace;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: "AtlasTypewriterRegular", "Andale Mono", "Consolas", "Lucida Console", "Menlo", "Luxi Mono", monospace;
+}
+
+.pure-g {
+  letter-spacing: 0.01em;
+}
+
+body {
+  line-height: 1.7em;
+  color: #7f8c8d;
+  font-size: 1em;
+  font-family: "Lucida Console", monospace;
+  padding: 0.3em 4em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: #333333;
+  font-weight: 0.1em;
+}
+
+.pure-menu.pure-menu-open.pure-menu-fixed {
+  border-bottom: 0.1em solid #d35400;
+  z-index: 4;
+}
+
+/*
+ * Extras
+ */
+.inline {
+  display: inline-block;
+}
+
+
+
