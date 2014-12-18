@@ -23,7 +23,6 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'pry-debugger'
   gem 'wombat' # scraper DSL
   gem 'chronic' # Natural language date parser used by scraper to parse dates
   gem 'monetize' # Parse money amounts. Used by scraper.
