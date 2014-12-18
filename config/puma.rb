@@ -8,6 +8,7 @@ port        ENV['PORT']     || 3000
 environment ENV['RACK_ENV'] || 'development'
 
 on_worker_boot do
+  raise "booting app on #{ENV['PORT'] || 3000}"
   # worker specific setup
   ActiveSupport.on_load(:active_record) do
     config = ActiveRecord::Base.configurations[Rails.env] ||
