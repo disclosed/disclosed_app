@@ -9,17 +9,17 @@ $(function(){
     axis: {
         x: {
             type: 'timeseries',
-            label: 'year',
+            label: 'year total',
             tick: {
                format: '%Y'
             } 
         },
         y: {
-           label: 'contract value ($)'
+           label: 'contract value ($1000)'
         }
     },
     color: {
-      pattern: ['#D35400', '#F62459', '#674172', '#EF4836', '#336E7B','#1E8BC3', '#26A65B', '#1BA39C']
+      pattern: ['#141E9C', '#B72D2F', '#79B337', '#664081', '#1189A4','#F1701B', '#7897C9', '#000000']
     },
     transition: {
       duration: 1000
