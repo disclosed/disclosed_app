@@ -19,8 +19,19 @@ end
 def load_csv(path)
   puts "Loading CSV data from #{path}"
   loader = ContractLoader.new(path)
-  puts "Found #{loader.contracts.length} contracts."
-  puts "Loading contracts into database"
-  loader.upsert_into_db!
+  contract_count = loader.contracts.length
+  puts "Found #{contract_count} contracts."
+  puts "Loading contracts into database."
+  previous_percentage = 0
+  ActiveRecord::Base.logger.silence do
+    loader.upsert_into_db! do |index|
+      percentage = (index.to_f / contract_count * 100).round
+      if previous_percentage != percentage
+        print "(#{percentage}%)"
+        STDOUT.flush
+        previous_percentage = percentage
+      end
+    end
+  end
   puts "Done. Skipped #{loader.skipped_count} contracts with invalid data."
 end

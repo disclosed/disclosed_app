@@ -138,8 +138,7 @@ contract_hash("http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120
  "effective_date"=>Tue, 01 Jan 2013,  # Date object
  "description"=>
   "0473 Information Technology and Telecommunications Consultantss; Regional Office: Gulf; Contact Phone: 1-866-266-6603",
- "start_date"=>Tue, 01 Jan 2013,
- "end_date"=>Sun, 31 Mar 2013,
+  "raw_contract_period"=>"2013-01-01 to 2013-03-31",
  "value"=>9500, # Integer
  "comments"=>"",
  "url"=>"http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120002"
@@ -162,6 +161,13 @@ To run your scraper for 2014, 2nd quarter:
 rake contracts:scrape[rcmp,2014q2]
 ```
 
+### Backing up entire data set
+
+Creates a .sql file in `tmp`.
+
+```
+rake db:data:dump
+```
 
 
 
