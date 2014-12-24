@@ -43,19 +43,5 @@ it "must not save if the abbr has already been taken" do
       proc {Fabricate(:agency, name: "Fooo!", abbr: nil)}.must_raise Agency::UnknownAgency
     end
   end
-
-  describe "Scopees" do
-    before do 
-      @agency1 = Fabricate(:agency, name: "Test agency 1")
-      @agency2 = Fabricate(:agency, name: "Test Agengy2")
-    end 
-
-    it "should return contracts given the vendor name" do
-      Agency.agency_name("Test agency 1").must_equal [@agency1]
-    end
-    
-    it "should return contracts given the abbr" do
-      Contract.abbr("ig2").must_equal [@agency2]
-    end
-  end
 end
+
