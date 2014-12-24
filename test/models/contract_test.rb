@@ -62,23 +62,55 @@ describe Contract do
 
   end
 
+  describe "::contract_for" do
+    before do
+      @agency = Fabricate(:agency)
+    end
+
+    it "should return the contract if there is only one" do
+      contract = Fabricate(:contract, reference_number: "A100", effective_date: 1.year.ago, agency: @agency)
+      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", effective_date: 1.year.ago, agency: @agency)
+      Contract.contract_for(contract_attrs).must_equal contract
+    end
+
+    it "should return nil if the contract doesn't exist" do
+      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", effective_date: 1.year.ago, agency: @agency)
+      Contract.contract_for(contract_attrs).must_equal nil
+    end
+
+    it "should return the contract if there is more than one contract with the same ref number" do
+      contract = Fabricate(:contract, reference_number: "A100", effective_date: 1.year.ago, agency: @agency)
+      contract2 = Fabricate(:contract, reference_number: "A100", effective_date: 6.months.ago, agency: @agency)
+      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", effective_date: 6.months.ago, agency: @agency)
+      Contract.contract_for(contract_attrs).must_equal contract2
+    end
+
+    it "should return nil if there is more than one contract with the same ref number but the date is different" do
+      contract = Fabricate(:contract, reference_number: "A100", effective_date: 1.year.ago, agency: @agency)
+      contract2 = Fabricate(:contract, reference_number: "A100", effective_date: 6.months.ago, agency: @agency)
+      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", effective_date: 3.months.ago, agency: @agency)
+      Contract.contract_for(contract_attrs).must_equal nil
+    end
+  end
+
   describe "::create_or_update" do
     before do
       @agency = Fabricate(:agency)
     end
 
-    it "should create a record if a reference number doesn't exist" do
-      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", agency: @agency)
-      Contract.create_or_update!(contract_attrs)
-      Contract.find_by(reference_number: "A100").wont_equal nil
+    it "should create a record if the contract does not exist" do
+      attrs = Fabricate.attributes_for(:contract, reference_number: "A123")
+      Contract.any_instance.stubs(:contract_for).returns(nil)
+      contract = Contract.create_or_update!(attrs)
+      Contract.where(reference_number: "A123").count.must_equal 1
     end
 
     it "should update a record if the reference number exists" do
       contract = Fabricate(:contract, reference_number: "A123", agency: @agency)
-      attrs = Fabricate.attributes_for(:contract, reference_number: "A123", vendor_name: "New Company Inc.")
+      attrs = Fabricate.attributes_for(:contract, reference_number: "A123")
+      Contract.any_instance.stubs(:contract_for).returns(contract)
       contract = Contract.create_or_update!(attrs)
-      contract.must_be :persisted?
-      Contract.find_by(reference_number: "A123").vendor_name.must_equal "New Company Inc."
+      Contract.where(reference_number: "A123").count.must_equal 1
     end
 
     it "should raise an exception if the contract data is invalid" do

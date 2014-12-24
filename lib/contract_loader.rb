@@ -29,17 +29,19 @@ class ContractLoader
     parse(file_path)
   end
 
-  def upsert_into_db!
-    @contracts.each do |contract|
+  def upsert_into_db!(&callback)
+    @contracts.each_with_index do |contract, i|
       attributes = build_attributes(contract)
       if !Contract.new(attributes).valid?
         @skipped_count += 1
         next
       end
       begin
-        Contract.create_or_update!(attributes)
+        contract = Contract.create_or_update!(attributes)
+        yield(i) if block_given?
       rescue ActiveRecord::StatementInvalid
-        @logger.warning "Invalid data #{attributes.inspect}"
+        @skipped_count += 1
+        @logger.warn "Invalid data #{attributes.inspect}"
       end
     end
   end
@@ -84,7 +86,7 @@ class ContractLoader
         comments:    contract[:comments]
       }
     rescue ArgumentError => e
-      @logger.warning "\nCould not build attributes. #{e} #{contract}.\n"
+      @logger.warn "\nCould not build attributes. #{e} #{contract}.\n"
       return nil
     end
   end

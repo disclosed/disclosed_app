@@ -42,13 +42,17 @@ class Contract < ActiveRecord::Base
 
 
   def self.create_or_update!(attrs)
-    contract = self.find_by(reference_number: attrs[:reference_number])
+    contract = self.contract_for(attrs)
     if contract
       contract.update_attributes!(attrs)
     else
       contract = Contract.create!(attrs)
     end
     contract
+  end
+
+  def self.contract_for(attrs)
+    self.find_by(reference_number: attrs[:reference_number], effective_date: attrs[:effective_date])
   end
   
   def self.to_csv(contracts)
