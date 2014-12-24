@@ -53,7 +53,7 @@ describe ContractLoader do
       Contract.count.must_equal 5
       second_loader.upsert_into_db!
       Contract.count.must_equal 5
-      Contract.where(reference_number: "P1400400").first.vendor_name.must_equal "DNR CONSULTING GROUP"
+      Contract.where(reference_number: "P1400400").first.vendor_name.must_equal "DNR CONSULTING GROUP INC"
     end
 
     it "should skip csv records with invalid date" do
