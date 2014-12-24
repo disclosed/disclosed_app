@@ -12,8 +12,7 @@ describe Scrapers::Dfo::DfoCrawler do
         contract['vendor_name'].must_equal "DOCULIBRE INC"
         contract['reference_number'].must_equal "F4748-120002"
         contract['effective_date'].must_equal Date.parse("2013-01-01")
-        contract['start_date'].must_equal Date.parse("2013-01-01")
-        contract['end_date'].must_equal Date.parse("2013-03-31")
+        contract['raw_contract_period'].must_equal "2013-01-01 - 2013-03-31"
         contract['url'].must_equal "http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F4748-120002"
         contract['value'].must_equal 9500
         contract['description'].must_equal "0473 Information Technology and Telecommunications Consultantss; Regional Office: Gulf; Contact Phone: 1-866-266-6603"

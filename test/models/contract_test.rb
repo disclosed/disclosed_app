@@ -10,11 +10,27 @@ describe Contract do
       contract = Contract.new
       contract.save.must_equal false
       contract.errors[:url].must_include "can't be blank"
-      contract.errors[:vendor_name].must_include "can't be blank"
-      # contract.errors[:start_date].must_include "can't be blank"
-      # contract.errors[:effective_date].must_include "can't be blank"
-      contract.errors[:value].must_include "can't be blank"
       contract.errors[:agency].must_include "can't be blank"
+    end
+  end
+
+  describe "contract start date and end date" do
+    it "should parse out the raw contract period on save" do
+      contract = Fabricate(:contract, raw_contract_period: "2014-01-10 to 2014-11-12")
+      contract.start_date.must_equal Date.parse('2014-01-10')
+      contract.end_date.must_equal Date.parse('2014-11-12')
+    end
+
+    it "should parse out the raw contract period if the attribute was updated" do
+      contract = Fabricate(:contract, raw_contract_period: "2014-01-10 to 2014-11-12")
+      contract.update_attributes(raw_contract_period: "2014-01-10 to 2014-11-13")
+      contract.end_date.must_equal Date.parse('2014-11-13')
+    end
+
+    it "should parse out the raw contract period if the attribute was updated" do
+      contract = Fabricate(:contract, raw_contract_period: "2014-01-10 to 2014-11-12")
+      ContractPeriodParser.expects(:new).never
+      contract.update_attributes(vendor_name: "foo")
     end
   end
   
@@ -40,49 +56,10 @@ describe Contract do
     end
 
     it "should return contracts given the value of the contract" do
+      skip
       Contract.value("123").must_equal [@contract3]
     end
 
-  end
-
-  describe "::extract_dates" do
-    it "should extract dates that look like 2014-01-01" do
-      dates = Contract.extract_dates("2004-06-14 to 2005-02-28")
-      dates.must_equal [Date.parse("2004-06-14"), Date.parse("2005-02-28")]
-      dates = Contract.extract_dates("2013-10-20to 2014-10-18")
-      dates.must_equal [Date.parse("2013-10-20"), Date.parse("2014-10-18")]
-      dates = Contract.extract_dates("2013-10-20to2014-10-18")
-      dates.must_equal [Date.parse("2013-10-20"), Date.parse("2014-10-18")]
-    end
-
-    it "should extract dates that look like Jan 1, 2014" do
-      dates = Contract.extract_dates("October 20th, 2013 to October 18th, 2014")
-      dates.must_equal [Date.parse("2013-10-20"), Date.parse("2014-10-18")]
-    end
-
-    it "should extract dates that have a french language divider" do
-      dates = Contract.extract_dates("2013-10-20 &agrave; 2014-10-18")
-
-      dates.must_equal [Date.parse("2013-10-20"), Date.parse("2014-10-18")]
-    end
-
-    it "should extract dates where only the start date is given" do
-      dates = Contract.extract_dates("2013-10-20")
-      dates.must_equal [Date.parse("2013-10-20"), nil]
-    end
-
-    it "should return nil dates if there is no contract period" do
-      dates = Contract.extract_dates(nil)
-      dates.must_equal [nil, nil]
-      dates = Contract.extract_dates("")
-      dates.must_equal [nil, nil]
-      dates = Contract.extract_dates("  \n")
-      dates.must_equal [nil, nil]
-    end
-
-    it "should raise an error if the date string is invalid" do
-      proc {Contract.extract_dates("All your base are belong to us")}.must_raise ArgumentError
-    end
   end
 
   describe "::create_or_update" do
@@ -105,7 +82,7 @@ describe Contract do
     end
 
     it "should raise an exception if the contract data is invalid" do
-      contract_attrs = Fabricate.attributes_for(:contract, reference_number: "A100", vendor_name: nil, agency: @agency)
+      contract_attrs = Fabricate.attributes_for(:contract, url: nil, agency: @agency)
 
       proc { Contract.create_or_update!(contract_attrs) }.must_raise ActiveRecord::RecordInvalid
     end
@@ -113,7 +90,6 @@ describe Contract do
 
 
   describe "::spending_per_vendor" do 
-    focus
     before do
       @agency1 = Fabricate(:agency, name: "Test agency 1")
       @agency2 = Fabricate(:agency, name: "Test Agengy2")
@@ -123,8 +99,9 @@ describe Contract do
       @contract4 = Fabricate(:contract, agency: @agency2, vendor_name: "Amex", value: 1234, effective_date: "2008-04-04")
       @contract5 = Fabricate(:contract, agency: @agency2, vendor_name: "Amex", value: 12345, effective_date: "2009-05-05")
     end
-    focus
+
     it "should display total contract sum of the given vendor for the year" do
+      skip
       query = Contract.spending_per_vendor("Amex")
       result = [12345, 1357, 12345]
       query.must_be_same_as result

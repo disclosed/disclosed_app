@@ -17,13 +17,7 @@ class Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Crawler < Scrape
       description do
         main "css="
       end
-      # start_date and end_date
-      start_date "css=" do |date|
-        Contract.extract_dates(date).first
-      end
-      end_date "css=" do |date|
-        Contract.extract_dates(date).try(:second)
-      end
+      raw_contract_period "css="
       value "css=" do |amount|
         Monetize.parse(amount).cents / 100
       end

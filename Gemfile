@@ -27,6 +27,7 @@ group :development, :test do
   gem 'wombat' # scraper DSL
   gem 'chronic' # Natural language date parser used by scraper to parse dates
   gem 'monetize' # Parse money amounts. Used by scraper.
+  gem 'active_attr' # Used for value objects on steroids
 end
 
 group :test do

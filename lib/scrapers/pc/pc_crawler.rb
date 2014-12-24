@@ -14,13 +14,7 @@ class Scrapers::Pc::PcCrawler < Scrapers::ContractCrawler
       description do
         main "css=.divRow:nth-child(4) .divRightCol"
       end
-      # start_date and end_date
-      start_date "css=.divRow:nth-child(5) .divRightCol" do |date|
-        Contract.extract_dates(date).first
-      end
-      end_date "css=.divRow:nth-child(5) .divRightCol" do |date|
-        Contract.extract_dates(date).try(:second)
-      end
+      raw_contract_period "css=.divRow:nth-child(5) .divRightCol"
       value "css=.divRow:nth-child(7) .divRightCol" do |amount|
         Monetize.parse(amount).cents / 100
       end

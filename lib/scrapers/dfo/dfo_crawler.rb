@@ -20,13 +20,7 @@ class Scrapers::Dfo::DfoCrawler < Scrapers::ContractCrawler
           "Contact Phone: #{phone}"
         end
       end
-      # start_date and end_date
-      start_date "css=table.pdcp tr:nth-child(5) td" do |date|
-        Contract.extract_dates(date).first
-      end
-      end_date "css=table.pdcp tr:nth-child(5) td" do |date|
-        Contract.extract_dates(date).try(:second)
-      end
+      raw_contract_period "css=table.pdcp tr:nth-child(5) td"
       value "css=table.pdcp tr:nth-child(7) td" do |amount|
         Monetize.parse(amount).cents / 100
       end

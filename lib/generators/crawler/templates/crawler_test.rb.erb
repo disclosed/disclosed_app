@@ -9,6 +9,7 @@ describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Crawler do
         contract['vendor_name'].must_equal 
         contract['reference_number'].must_equal 
         contract['effective_date'].must_equal Date.parse("")
+        contract['raw_contract_period'].must_equal 
         contract['start_date'].must_equal Date.parse("")
         contract['end_date'].must_equal Date.parse("")
         contract['url'].must_equal ""

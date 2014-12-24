@@ -1,6 +1,21 @@
+# The ContractLoader reads in a csv produced by one of the old scrapers.
+# The rows are converted to hashes and mapped to the structure needed by the database.
+#
 # The order of the columns in the CSV file is
 # url, agency name, vendor name, reference number, effective date, description, period start and end date as string, SOMETHING??, value, comments
-
+# The final schema is:
+# {"url"=>"http://www.veterans.gc.ca/eng/sub.cfm?source=department/dco10k/d_details&cont_id=470&profile=vac", 
+#  "vendor_name"=>"Syst&egrave;mes Influatec Inc.", 
+#  "reference_number"=>"5511-04-0248", 
+#  "start_date"=>Fri, 01 Apr 2005, 
+#  "end_date"=>Fri, 31 Mar 2006, 
+#  "effective_date"=>Thu, 31 Mar 2005, 
+#  "value"=>29, 
+#  "description"=>"1228 Computer Software", 
+#  "comments"=>nil, 
+#  "agency_id"=>80,
+#  "raw_contract_period" => "2005-04-01 until 2006-03-31"
+# }
 require "csv"
 class ContractLoader
   
@@ -9,6 +24,7 @@ class ContractLoader
   def initialize(file_path)
     @contracts = []
     @skipped_count = 0
+    @logger = Logger.new(File.join(Rails.root, "log", "contract_loader.log"))
     config_csv_converter
     parse(file_path)
   end
@@ -20,7 +36,11 @@ class ContractLoader
         @skipped_count += 1
         next
       end
-      Contract.create_or_update!(attributes)
+      begin
+        Contract.create_or_update!(attributes)
+      rescue ActiveRecord::StatementInvalid
+        @logger.warning "Invalid data #{attributes.inspect}"
+      end
     end
   end
 
@@ -52,22 +72,21 @@ class ContractLoader
 
   def build_attributes(contract)
     begin
-      start_date, end_date = Contract.extract_dates(contract[:contract_period])
-    rescue ArgumentError
+      {
+        url: contract[:url],
+        agency: Agency.find_or_create_by(name: contract[:agency]),
+        vendor_name:      contract[:vendor_name],
+        reference_number: contract[:reference_number].try(:to_s),
+        effective_date:   contract[:contract_date].try(:to_date),
+        raw_contract_period: contract[:contract_period],
+        value:       contract[:contract_value].to_i / 1000,
+        description: contract[:description_of_work],
+        comments:    contract[:comments]
+      }
+    rescue ArgumentError => e
+      @logger.warning "\nCould not build attributes. #{e} #{contract}.\n"
       return nil
     end
-    {
-      url: contract[:url],
-      agency: Agency.find_or_create_by(name: contract[:agency]),
-      vendor_name:      contract[:vendor_name] || "Unknown",
-      reference_number: contract[:reference_number].try(:to_s),
-      effective_date:   contract[:contract_date].try(:to_date),
-      start_date:       start_date,
-      end_date:         end_date,
-      value:       contract[:contract_value].to_i,
-      description: contract[:description_of_work],
-      comments:    contract[:comments]
-    }
   end
 
 end

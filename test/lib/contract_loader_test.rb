@@ -42,7 +42,7 @@ describe ContractLoader do
       contract.description.must_equal "1282 Computer Equipment - Servers (includes related parts and peripherals)"
       contract.start_date.must_equal Date.parse("2013-10-18")
       contract.end_date.must_equal Date.parse("2013-10-18")
-      contract.value.must_equal 43900
+      contract.value.must_equal 43  # contract values are expressed in multiples of $1000
       contract.comments.must_equal "Purchase of Network equipment. Contract awarded through a Public Works and Government Services Canada (PWGSC) Standing Offer."
     end
 
@@ -56,10 +56,13 @@ describe ContractLoader do
       Contract.where(reference_number: "P1400400").first.vendor_name.must_equal "DNR CONSULTING GROUP INC"
     end
 
-    it "should skip csv records with invalid date" do
+    it "should set missing attributes as nil" do
       loader = ContractLoader.new(Rails.root.join('test/fixtures/sample_contracts_with_errors.csv'))
       loader.upsert_into_db!
-      Contract.count.must_equal 1 # saves the contract with an invalid date
+      Contract.find_by(value: 43).reference_number.must_equal nil
+      Contract.find_by(value: 11).start_date.must_equal nil
+      Contract.find_by(value: 11).end_date.must_equal nil
+      Contract.find_by(value: 17).vendor_name.must_equal nil
     end
 
     it "should load all contracts and agencies into the database" do
