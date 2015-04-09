@@ -13,12 +13,14 @@ gem 'd3_rails' # C3 is dependent on a D3 library present.
 gem 'gon'
 
 gem 'puma'
+
+# Asset compilation gems should be available in production for Capistrano deployment
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
+gem 'therubyracer' # Required by less
+gem 'less-rails'
 
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'therubyracer' # Required by less
-  gem 'less-rails'
   gem 'guard-minitest'
 
   gem 'capistrano', '~> 3.1.0'
