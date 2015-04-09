@@ -11,6 +11,9 @@
 /log/*.log
 /tmp
 
+/config/application.yml
+/config/database.yml
+
 # Ignore machine-specific config files
 .ruby-version
 
