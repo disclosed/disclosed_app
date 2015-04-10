@@ -12,6 +12,7 @@
 /tmp
 
 /config/application.yml
+/config/secrets.yml
 /config/database.yml
 /public/assets
 
