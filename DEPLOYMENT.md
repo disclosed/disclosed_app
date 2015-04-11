@@ -1,5 +1,7 @@
 Deployment was done following this guide: https://coderwall.com/p/ttrhow/deploying-rails-app-using-nginx-puma-and-capistrano-3
 
+`/etc/environmen` defines the environment variable for `SECRET_KEY_BASE`. Setting this value under `.bash_profile` or `.bashrc` did not work.
+
 ### Commands
 
 Use `cap -T` to see all available capistrano tasks.
