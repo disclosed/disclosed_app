@@ -1,4 +1,4 @@
-server 'disclosed.ca', port: 32000, roles: [:web, :app, :db], primary: true
+server 'www.disclosed.ca', port: 32000, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:disclosed/disclosed_app.git'
 set :application,     'disclosed'
