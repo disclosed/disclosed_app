@@ -111,7 +111,7 @@ GEM
     less-rails (2.6.0)
       actionpack (>= 3.1)
       less (~> 2.6.0)
-    libv8 (3.16.14.3)
+    libv8 (3.16.14.7)
     listen (2.7.5)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
