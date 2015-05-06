@@ -55,7 +55,13 @@ div.pure-g#about
     p
       'The format of the contract data is dictated by these Treasury Board
       a href="http://www.tbs-sct.gc.ca/pd-dp/dc/index-eng.asp" guidelines.
-    p It's worth noting that the data set is incomplete. The drop in overall spending on the graph above from 2012 onward is probably due to missing data on our end. We are planning to fix this.
+    p
+      'It's worth noting that the data set is incomplete. The drop in overall spending on the graph above from 2012 onward is probably due to missing data on our end. We are planning to fix this. 
+      a href="https://donorbox.org/disclosed-ca-scraper-development" Pitch in
+      '
+      'to help support development efforts.
+    p.donate
+      a class="pure-button pure-button-primary" href="https://donorbox.org/disclosed-ca-scraper-development" Support the Project
 
 div.pure-g#newsletter
   div.pure-u-1
@@ -64,6 +70,6 @@ div.pure-g#newsletter
     = form_for Watcher.new, html: {class: "pure-form pure-form-stacked"} do |f|
       fieldset
         = f.email_field :email, required: true, placeholder: "Email address", class: "pure-input-1-3"
-        = button_tag "Submit", class: "pure-button pure-button-primary"
+        = button_tag "Submit", class: "pure-button"
 
 
