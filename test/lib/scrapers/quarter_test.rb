@@ -47,6 +47,13 @@ describe Scrapers::Quarter do
     end
   end
 
+  describe "#to_s" do
+    it "should return a string representation of the quarter" do
+      quarter = Scrapers::Quarter.new(2010, 1)
+      quarter.to_s.must_equal "2010q1"
+    end
+  end
+
   describe "::latest" do
     it "should retrieve the latest quarter" do
       Timecop.freeze(Time.local(2010, 1, 1))

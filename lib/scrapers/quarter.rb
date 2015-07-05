@@ -31,6 +31,10 @@ class Scrapers::Quarter < Struct.new(:year, :quarter)
   def valid?
     valid_year?(year) && valid_quarter?(quarter)
   end
+  
+  def to_s
+    "#{year}q#{quarter}"
+  end
 
   # Government of Canada Quarters
   # 4th Quarter  (2014-01-01 - 2014-03-31)
