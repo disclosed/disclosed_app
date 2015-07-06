@@ -1,0 +1,24 @@
+describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Scraper do
+  describe "#scrape_contracts" do
+    it "should parse the data from a contract page" do
+      VCR.use_cassette('<%= @agency.downcase %>_2012_q4', record: :new_episodes) do
+        quarter = Scrapers::Quarter.new(2012, 4)
+        scraper = Scrapers::<%= @agency.camelize %>::Scraper.new(quarter)
+        contracts = scraper.scrape_contracts(0..1)
+        contract = contracts.first
+        contract['vendor_name'].must_equal "FILL IN"
+        contract['reference_number'].must_equal "FILL IN"
+        contract['effective_date'].must_equal Date.parse("")
+        contract['raw_contract_period'].must_equal "FILL IN"
+        contract['start_date'].must_equal Date.parse("")
+        contract['end_date'].must_equal Date.parse("")
+        contract['url'].must_equal "FILL IN"
+        contract['value'].must_equal 999
+        contract['description'].must_equal "FILL IN"
+        contract['comments'].must_equal "FILL IN"
+        contract['quarter'].must_equal "2012q4"
+      end
+    end
+  end
+end
+

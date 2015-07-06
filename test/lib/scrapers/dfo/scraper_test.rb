@@ -1,13 +1,12 @@
 require "test_helper"
-describe Scrapers::Dfo::DfoCrawler do
+describe Scrapers::Dfo::Scraper do
 
-  describe "#scrape_contracts" do
+  describe "#contracts" do
 
     it "should parse the data from a contract page" do
       VCR.use_cassette('dfo_2013_q4') do
         y2013q4 = Scrapers::Quarter.new(2013, 4)
-        scraper = Scrapers::Dfo::DfoCrawler.new(y2013q4)
-        contracts = scraper.scrape_contracts(0..2)
+        contracts = Scrapers::Dfo::Scraper.new(y2013q4).contracts(0..1)
         contract = contracts.second
         contract['vendor_name'].must_equal "DOCULIBRE INC"
         contract['reference_number'].must_equal "F4748-120002"

@@ -1,7 +1,12 @@
-class Scrapers::Pc::PcCrawler < Scrapers::ContractCrawler
+class Scrapers::Pc::Scraper < Scrapers::ContractScraper
 
-  protected
-  
+  def contracts(range = 0..-1)
+    contract_urls(quarter)[range].collect do |url|
+      flatten_to_json(contract_hash(url))
+    end
+  end
+
+  private
   def contract_hash(url)
     attrs = Wombat.crawl do
       base_url url

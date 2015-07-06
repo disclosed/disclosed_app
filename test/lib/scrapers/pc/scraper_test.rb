@@ -1,13 +1,12 @@
 require "test_helper"
-describe Scrapers::Pc::PcCrawler do
+describe Scrapers::Pc::Scraper do
 
-  describe "#scrape_contracts" do
+  describe "#contracts" do
 
-    it "should parse the data from a contract page" do
+    it "should parse the data from the first contract in the quarter" do
       VCR.use_cassette('pc_2013_q4', record: :new_episodes) do
         y2013q4 = Scrapers::Quarter.new(2013, 4)
-        scraper = Scrapers::Pc::PcCrawler.new(y2013q4)
-        contracts = scraper.scrape_contracts(0..2)
+        contracts = Scrapers::Pc::Scraper.new(y2013q4).contracts(0..1)
         contract = contracts.first
         contract['vendor_name'].must_equal "KONE INC."
         contract['reference_number'].must_equal "45340584"
