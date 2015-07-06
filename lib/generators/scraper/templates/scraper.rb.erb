@@ -1,9 +1,35 @@
 class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
 
+  # Scrape contracts for then given #quarter
+  # 
+  # range::
+  #   A Range indicating which contracts to scrape from the #quarter.
+  # 
+  # Returns an Array of Hashes containing the contract data.
+  # 
+  #   q4 = Quarter.new(2013, 4)
+  #   Scrapers::Pc::Scraper.new(q4).contracts(0..1)
+  #   #=> [
+  #     { vendor_name: "KONE INC.",
+  #       reference_number: "45340584",
+  #       effective_date: <#Date>,
+  #       raw_contract_period: "2014/03/31 to 2015/03/31",
+  #       url: "http://www.pc.gc.ca/apps/pdc/index_E.asp?oqYEAR=2013-2014&oqQUARTER=4&oqCONTRACT_ID=43649"
+  #       value: 17687,
+  #       description: "665 Other equipment (specify)",
+  #       comments: "Elevator Maintenance"
+  #     },
+  #     {...}
+  #   ]
+  #
   def contracts(range = 0..-1)
 
   end
 
+  # Scrape the main Reports page for the agency and returns all the quarters
+  # that the agency has contract data for.
+  #
+  # Returns an array of Quarter objects.
   def self.available_quarters
 
   end
