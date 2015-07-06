@@ -9,14 +9,11 @@ describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Scraper do
         contract['vendor_name'].must_equal "FILL IN"
         contract['reference_number'].must_equal "FILL IN"
         contract['effective_date'].must_equal Date.parse("")
-        contract['raw_contract_period'].must_equal "FILL IN"
-        contract['start_date'].must_equal Date.parse("")
-        contract['end_date'].must_equal Date.parse("")
+        contract['contract_period'].must_equal "FILL IN"
         contract['url'].must_equal "FILL IN"
         contract['value'].must_equal 999
         contract['description'].must_equal "FILL IN"
         contract['comments'].must_equal "FILL IN"
-        contract['quarter'].must_equal "2012q4"
       end
     end
   end
