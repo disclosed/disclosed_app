@@ -58,6 +58,10 @@ class Contract < ActiveRecord::Base
     end
   end
 
+  def quarter
+    Scrapers::Quarter.from_date(effective_date)
+  end
+
   protected
   def parse_start_date_end_date
     if self.raw_contract_period_changed?

@@ -33,6 +33,14 @@ describe Contract do
       contract.update_attributes(vendor_name: "foo")
     end
   end
+
+  describe "#quarter" do
+    it "should return the quarter based on the effective date" do
+      contract = Fabricate.build(:contract)
+      Scrapers::Quarter.expects(:from_date).with(contract.effective_date)
+      contract.quarter
+    end
+  end
   
   describe "scopes" do
     before do 
