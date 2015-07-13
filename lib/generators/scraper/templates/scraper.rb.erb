@@ -1,14 +1,18 @@
 class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
 
-  # Scrape contracts for then given #quarter
-  # 
+  # Scrape contracts for the given #quarter
+  #
+  # While scraping use the notifier to let the scraper runner know when
+  # you are scraping a new contract page.
+  #    notifier.trigger(:scraping_contract, "http://www.pc.gc.ca/apps/pdc/index_E.asp?oqYEAR=2013-2014&oqQUARTER=4&oqCONTRACT_ID=43649")
+  #
   # range::
   #   A Range indicating which contracts to scrape from the #quarter.
-  # 
+  #
   # Returns an Array of Hashes containing the contract data.
-  # 
+  #
   #   q4 = Quarter.new(2013, 4)
-  #   Scrapers::Pc::Scraper.new(q4).contracts(0..1)
+  #   Scrapers::Xyz::Scraper.new(q4, ScraperNotifier.new).contracts(0..1)
   #   #=> [
   #     { vendor_name: "KONE INC.",
   #       reference_number: "45340584",
@@ -22,7 +26,15 @@ class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
   #     {...}
   #   ]
   #
-  def contracts(range = 0..-1)
+  def scrape_contracts(range = 0..-1)
+
+  end
+
+  # Returns the number of contracts available in the #quarter.
+  #
+  #   Scrapers::Xyz::Scraper.new(q4).count_contracts
+  #   #=> 128
+  def count_contracts
 
   end
 

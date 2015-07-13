@@ -2,8 +2,9 @@ class Scrapers::Quarter < Struct.new(:year, :quarter)
   QUARTER_MONTH_RANGES = [(4..6), (7..9), (10..12), (1..3)].freeze
   QUARTER_SEQUENCE = [4, 1, 2, 3] # the order of the quarters in a year
                                   # the year starts with the 4th quarter
+  FORMAT_REGEX = /\A(\d{4})q([1-4])\Z/i
   def self.parse(quarter_string = "")
-    matches, year, quarter = quarter_string.match(/^(\d{4})q([1-4])$/i).to_a
+    matches, year, quarter = quarter_string.match(FORMAT_REGEX).to_a
     raise ArgumentError, "Quarter string is invalid. Should be something like 2013q4" if !year or !quarter
     self.new(year.to_i, quarter.to_i)
   end
@@ -45,8 +46,13 @@ class Scrapers::Quarter < Struct.new(:year, :quarter)
   def self.latest
     current_year = Date.today.year
     current_month = Date.today.month
-    quarter = QUARTER_MONTH_RANGES.index {|range| range.include?(current_month)} + 1
-    self.new(current_year, quarter)
+    quarter_number = quarter_from_month(current_month)
+    self.new(current_year, quarter_number)
+  end
+
+  def self.from_date(date)
+    quarter_number = quarter_from_month(date.month)
+    self.new(date.year, quarter_number)
   end
 
   private
@@ -56,6 +62,13 @@ class Scrapers::Quarter < Struct.new(:year, :quarter)
 
   def valid_quarter?(quarter)
     (1..4).include?(quarter)
+  end
+
+  # Returns a number between 1 - 4 representing the quarter.
+  #
+  # month_number: A number between 1 - 12 representing the month.
+  def self.quarter_from_month(month_number)
+    QUARTER_MONTH_RANGES.index {|range| range.include?(month_number)} + 1
   end
 
 end

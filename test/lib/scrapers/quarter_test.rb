@@ -68,6 +68,19 @@ describe Scrapers::Quarter do
     end
   end
 
+  describe "::from_date" do
+    it "should return the quarter for a given date" do
+      Scrapers::Quarter.from_date(Date.new(2014, 01, 01)).must_equal Scrapers::Quarter.new(2014, 4)
+      Scrapers::Quarter.from_date(Date.new(2014,  3, 31)).must_equal Scrapers::Quarter.new(2014, 4)
+      Scrapers::Quarter.from_date(Date.new(2013, 10,  1)).must_equal Scrapers::Quarter.new(2013, 3)
+      Scrapers::Quarter.from_date(Date.new(2013, 12, 31)).must_equal Scrapers::Quarter.new(2013, 3)
+      Scrapers::Quarter.from_date(Date.new(2013,  7,  1)).must_equal Scrapers::Quarter.new(2013, 2)
+      Scrapers::Quarter.from_date(Date.new(2013,  9, 30)).must_equal Scrapers::Quarter.new(2013, 2)
+      Scrapers::Quarter.from_date(Date.new(2013,  4,  1)).must_equal Scrapers::Quarter.new(2013, 1)
+      Scrapers::Quarter.from_date(Date.new(2013,  6, 30)).must_equal Scrapers::Quarter.new(2013, 1)
+    end
+  end
+
   describe "::parse" do
     it "should create a quarter based on a string" do
       quarter = Scrapers::Quarter.parse("2013q1")

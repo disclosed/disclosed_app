@@ -32,16 +32,13 @@ class ContractLoader
   def upsert_into_db!(&callback)
     @contracts.each_with_index do |contract, i|
       attributes = build_attributes(contract)
-      if !Contract.new(attributes).valid?
-        @skipped_count += 1
-        next
-      end
-      begin
-        contract = Contract.create_or_update!(attributes)
+      context = SaveContractFromScraper.call(attributes: attributes, agency: attributes[:agency])
+      if context.success?
         yield(i) if block_given?
-      rescue ActiveRecord::StatementInvalid
+      else
         @skipped_count += 1
         @logger.warn "Invalid data #{attributes.inspect}"
+        @logger.warn context.message
       end
     end
   end

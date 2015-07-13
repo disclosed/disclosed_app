@@ -93,34 +93,6 @@ describe Contract do
     end
   end
 
-  describe "::create_or_update" do
-    before do
-      @agency = Fabricate(:agency)
-    end
-
-    it "should create a record if the contract does not exist" do
-      attrs = Fabricate.attributes_for(:contract, reference_number: "A123")
-      Contract.any_instance.stubs(:contract_for).returns(nil)
-      contract = Contract.create_or_update!(attrs)
-      Contract.where(reference_number: "A123").count.must_equal 1
-    end
-
-    it "should update a record if the reference number exists" do
-      contract = Fabricate(:contract, reference_number: "A123", agency: @agency)
-      attrs = Fabricate.attributes_for(:contract, reference_number: "A123")
-      Contract.any_instance.stubs(:contract_for).returns(contract)
-      contract = Contract.create_or_update!(attrs)
-      Contract.where(reference_number: "A123").count.must_equal 1
-    end
-
-    it "should raise an exception if the contract data is invalid" do
-      contract_attrs = Fabricate.attributes_for(:contract, url: nil, agency: @agency)
-
-      proc { Contract.create_or_update!(contract_attrs) }.must_raise ActiveRecord::RecordInvalid
-    end
-  end
-
-
   describe "::spending_per_vendor" do 
     before do
       @agency1 = Fabricate(:agency, name: "Test agency 1")

@@ -1,25 +1,44 @@
 describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Scraper do
+
   describe "#scrape_contracts" do
     it "should parse the data from a contract page" do
-      VCR.use_cassette('<%= @agency.downcase %>_2012_q4', record: :new_episodes) do
+      VCR.use_cassette('<%= @agency.downcase %>_2012_q4_scrape_contracts', record: :new_episodes) do
         quarter = Scrapers::Quarter.new(2012, 4)
-        scraper = Scrapers::<%= @agency.camelize %>::Scraper.new(quarter)
-        contracts = scraper.scrape_contracts(0..1)
+        notifier = mock("notifier")
+        notifier.expects(:trigger).with(:scraping_contract, "FILL IN")
+        scraper = Scrapers::<%= @agency.camelize %>::Scraper.new(quarter, notifier)
+        contracts = scraper.scrape_contracts(0..0)
         contract = contracts.first
+
+        contract['url'].must_equal "FILL IN"
         contract['vendor_name'].must_equal "FILL IN"
         contract['reference_number'].must_equal "FILL IN"
+        contract['raw_contract_period'].must_equal "FILL IN"
         contract['effective_date'].must_equal Date.parse("")
-        contract['contract_period'].must_equal "FILL IN"
-        contract['url'].must_equal "FILL IN"
         contract['value'].must_equal 999
         contract['description'].must_equal "FILL IN"
         contract['comments'].must_equal "FILL IN"
+        contract['agency_id'].must_equal Agency.find_by(abbr: "<%= @agency %>").id
+      end
+    end
+  end
+
+  describe "#count_contracts" do
+    it "should return the total count of contracts in the quarter" do
+      VCR.use_cassette('<%= @agency.downcase %>_2012_q4_count_contracts', record: :new_episodes) do
+        quarter = Scrapers::Quarter.new(2012, 4)
+        notifier = ScraperNotifier.new
+        scraper = Scrapers::<%= @agency.camelize %>::Scraper.new(quarter, notifier)
+        scraper.count_contracts.must_equal 999
       end
     end
   end
 
   describe ".available_quarters" do
-    it "should return all available quarters for the agency"
+    it "should return all available quarters for the agency" do
+      quarters = Scrapers::<%= @agency.camelize %>::Scraper.available_quarters
+      quarters.first.must_be_instance_of(Scrapers::Quarter)
+    end
   end
 end
 
