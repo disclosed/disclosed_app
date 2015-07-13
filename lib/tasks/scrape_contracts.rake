@@ -11,7 +11,8 @@ namespace :contracts do
     })
     scraper  = scraper_for_agency(agency.abbr).new(quarter, notifier)
     puts_and_log "There are #{scraper.count_contracts} contracts in #{quarter}."
-    scrape_quarter(scraper, agency)
+    range = get_range_from_user
+    scrape_quarter(scraper, agency, range)
   end
 end
 
@@ -44,14 +45,25 @@ def ask_for_quarter(agency)
   quarters.each { |quarter| puts quarter.to_s }
   puts "Which quarter would you like to scrape?"
   print "quarter code > "
-  Scrapers::Quarter.parse(STDIN.gets.chomp)
+  quarter = STDIN.gets.chomp
+  Scrapers::Quarter.parse(quarter)
 end
 
+def get_range_from_user
+  puts "Which contracts would you like to scrape?"
+  print "Enter a range (ex. '0-20'). Default: all> "
+  input = STDIN.gets.chomp
+  return 0..-1 if input.blank?
+  not_used, from, to = input.match(/(\d+)\-(\d+)/).to_a
+  from = from.to_i
+  to = to.to_i
+  from..to
+end
 
-def scrape_quarter(scraper, agency)
-  puts "Scraping contracts"
-  contracts = scraper.scrape_contracts
-  puts "\nSaving contracts to the database"
+def scrape_quarter(scraper, agency, range)
+  puts_and_log "\nScraping contracts #{range} from #{agency.abbr} quarter #{scraper.quarter}"
+  contracts = scraper.scrape_contracts(range)
+  puts_and_log "\nSaving contracts to the database"
   failed_contract_count = 0
   contracts.each do |contract|
     result = SaveContractFromScraper.call(attributes: contract, agency: agency)
