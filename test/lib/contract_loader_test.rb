@@ -11,19 +11,17 @@ describe ContractLoader do
     end
 
     it "should parse the contract data out of the csv file" do
-
       @loader.contracts.first.must_equal({
-        :url => 
-  "http://www.oag-bvg.gc.ca/internet/English/con_2013-2014_Q3_e_39047.html",
-        :agency => "Office of the Auditor General of Canada",
-        :vendor_name => "DNR CONSULTING GROUP",
-        :reference_number => "P1400400",
-        :contract_date => "2013-10-01",
-        :description_of_work => "1282 Computer Equipment - Servers (includes related parts and peripherals)",
-        :contract_period => "2013-10-18 to 2013-10-18",
-        :something => nil,
-        :contract_value => 43900.76,
-        :comments => "Purchase of Network equipment. Contract awarded through a Public Works and Government Services Canada (PWGSC) Standing Offer."
+        url: "http://www.oag-bvg.gc.ca/internet/English/con_2013-2014_Q3_e_39047.html",
+        agency: "Office of the Auditor General of Canada",
+        vendor_name: "DNR CONSULTING GROUP",
+        reference_number: "P1400400",
+        contract_date: "2013-10-01",
+        description_of_work: "1282 Computer Equipment - Servers (includes related parts and peripherals)",
+        contract_period: "2013-10-18 to 2013-10-18",
+        something: nil,
+        contract_value: 43900.76,
+        comments: "Purchase of Network equipment. Contract awarded through a Public Works and Government Services Canada (PWGSC) Standing Offer."
       })
     end
 
@@ -59,7 +57,6 @@ describe ContractLoader do
     it "should set missing attributes as nil" do
       loader = ContractLoader.new(Rails.root.join('test/fixtures/sample_contracts_with_errors.csv'))
       loader.upsert_into_db!
-      Contract.find_by(value: 43).reference_number.must_equal nil
       Contract.find_by(value: 11).start_date.must_equal nil
       Contract.find_by(value: 11).end_date.must_equal nil
       Contract.find_by(value: 17).vendor_name.must_equal nil

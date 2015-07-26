@@ -1,0 +1,423 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.pc.gc.ca/apps/pdc/index_e.asp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Date:
+      - Sun, 26 Jul 2015 00:56:34 GMT
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/html
+      Expires:
+      - Sun, 17 May 2015 14:16:33 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      - ASP.NET; Sitecore CMS
+      Set-Cookie:
+      - ASPSESSIONIDQQCDTSRS=HCEFCOJBMHALBDAPGIDHDAHO; path=/
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\r\n  \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\r\n\r\n<head>\r\n\r\n\t<!--
+        CLF 2.0 TEMPLATE VERSION 1.04 | VERSION 1.04 DU GABARIT NSI 2.0 -->\r\n\t<!--
+        HEADER BEGINS | DEBUT DE L'EN-TETE -->\r\n\t\r\n\t\r\n\r\n\t<meta content=\"text/html;
+        charset=iso-8859-1\" http-equiv=\"Content-Type\" />\r\n\t<link href=\"http://purl.org/dc/elements/1.1/\"
+        rel=\"schema.dc\" />\r\n\t<link href=\"http://purl.org/dc/terms/ \" rel=\"schema.dc\"
+        />\r\n<!-- ANY OTHER INCLUDES YOU NEED GO HERE -->\r\n\r\n<link href=\"styles/pdc_style.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n\r\n\t<meta
+        name=\"dcterms.modified\" scheme=\"W3CDTF\" content=\"2008-01-01\" />\r\n\t<meta
+        name=\"dc.language\" scheme=\"ISO639-2/T\" content=\"eng\" />\r\n\t<title>Parks
+        Canada - Reports</title>\r\n\t\r\n\r\n\t<!-- TEMPLATE SCRIPTS/CSS BEGIN |
+        DEBUT DES SCRIPTS/CSS DU GABARIT -->\r\n\t<link href=\"/css/template/base.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n\t\r\n\t
+        \   \r\n\t<link href=\"/css/template/2col.css\" media=\"screen, print\" rel=\"stylesheet\"
+        type=\"text/css\" />\r\n     \r\n\t\r\n\t\r\n\r\n\t\r\n\t\r\n\t\r\n\t<style
+        type=\"text/css\" media=\"all\">@import url(/css/template/base2.css);</style>\r\n\t<!--
+        TEMPLATE SCRIPTS/CSS END | FIN DES SCRIPTS/CSS DU GABARIT -->\r\n\r\n\t<!--
+        PROGRESSIVE ENHANCEMENT BEGINS | DEBUT DE L'AMELIORATION PROGRESSIVE -->\r\n\t<script
+        src=\"/scripts/template/pe-ap.js\" type=\"text/javascript\"></script>\r\n\t<script
+        type=\"text/javascript\">\r\n\t/* <![CDATA[ */\r\n\t\tvar params = {\r\n\t\t\tlng:\"eng\",\r\n\t\t\tmultimedia:
+        \"active\",\r\n\t\t\tpngfix:\"/images/template/inv.gif\"\r\n\t\t};\r\n\t\tPE.progress(params);\r\n\t/*
+        ]]> */\r\n\t</script>\r\n\r\n\t<!-- PROGRESSIVE ENHANCEMENT ENDS | FIN DE
+        L'AMELIORATION PROGRESSIVE -->\r\n\t\r\n\t<!-- CUSTOM SCRIPTS/CSS BEGIN |
+        DEBUT DES SCRIPTS/CSS PERSONNALISES -->\r\n\t<link href=\"/css/template/base-institution.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n\t<link
+        href=\"/css/template/institution.css\" media=\"screen, print\" rel=\"stylesheet\"
+        type=\"text/css\" />\r\n\t<link href='/css/template/clf1/theme_agency.css'
+        rel='stylesheet' type='text/css' />\r\n\t<!-- CUSTOM SCRIPTS/CSS END | FIN
+        DES SCRIPTS/CSS PERSONNALISES -->\r\n\r\n\t<!-- TEMPLATE PRINT CSS BEGINS
+        | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION -->\r\n\t<link href=\"/css/template/pf-if.css\"
+        rel=\"stylesheet\" type=\"text/css\" />\r\n\t<!-- TEMPLATE PRINT CSS ENDS
+        | FIN DU CSS DU GABARIT POUR L'IMPRESSION -->\r\n</head>\r\n\r\n<body>\r\n<div
+        class=\"page\"><div class=\"core\">\r\n\t<!-- FIP HEADER BEGINS | DEBUT DE
+        L'EN-TETE PCIM --> \r\n\t<div class=\"fip\"><a name=\"tphp\" id=\"tphp\"><img
+        src=\"/images/template/sig-eng.gif\" width=\"372\" height=\"20\" alt=\"Parks
+        Canada\" /></a></div>\r\n\t<div class=\"cwm\"><img src=\"/images/template/wmms.gif\"
+        width=\"83\" height=\"20\" alt=\"Symbol of the Government of Canada\" /></div>\r\n\t<!--
+        FIP HEADER ENDS | FIN DE L'EN-TETE PCIM --> \r\n\t\r\n\t<!-- INSTITUTIONAL
+        BANNER STARTS | DEBUT DE LA BANNIERE INSTITUTIONNELLE -->\r\n\t\t\t\t<div
+        class=\"banner\">\r\n\t\t<img src=\"/images/template/lffl.gif\" class=\"lf
+        pngfix\" height=\"65\" width=\"65\" alt=\"\" />\r\n\t\t<p class=\"main\">Parks
+        Canada</p>\r\n\t\t<p class=\"siteuri\">parkscanada.gc.ca</p>\r\n\t</div>\r\n\t<!--
+        INSTITUTIONAL BANNER ENDS | FIN DE LA BANNIERE INSTITUTIONNELLE -->\r\n\t\r\n\t<!--
+        SKIP NAVIGATION BEGINS | DEBUT DU SAUT DE NAVIGATION -->\r\n\t<div class=\"navaid\">\r\n\t\t<a
+        href=\"#cont\">Skip to content</a> \r\n        |\r\n\t\t<a href=\"#il\">Skip
+        to institutional links</a>\r\n        \r\n\t</div>\r\n\t<!-- SKIP NAVIGATION
+        ENDS | FIN DU SAUT DE NAVIGATION -->\r\n\t\r\n\t<!-- COMMON MENU BAR BEGINS
+        | DEBUT DE LA BARRE DE MENU COMMUNE --> \r\n\t<div class=\"fp\">\r\n\t\t<!--
+        COMMON MENU BAR TITLE BEGINS | DEBUT DU TITRE DE LA BARRE DE MENU COMMUNE
+        -->\r\n\t\t<h1 class=\"navaid\">Common menu bar links</h1>\r\n\t\t<!-- COMMON
+        MENU BAR TITLE ENDS | FIN DU TITRE DE LA BARRE DE MENU COMMUNE -->\r\n\t\t<ul
+        class=\"commonbar\">\r\n\t\t\t\r\n\t\t\t\t<!-- DEBUT DU LIEN ANGLAIS | ENGLISH
+        LINK BEGINS -->\r\n\t\t\t\t<li class=\"fiptexta\"><div><a href=\"/scripts/refit_flip.asp\"
+        lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais - Version fran&ccedil;aise
+        de cette page\">Fran&ccedil;ais</a></div></li>\r\n\t\t\t\t<li class=\"fiptext\"><div><a
+        href=\"/eng/index.aspx\" title=\"Home - The main page of Parks Canada\">Home</a></div></li>\r\n\t\t\t\t<li
+        class=\"fiptextc\"><div><a href=\"/eng/agen/courriel-email.aspx\" title=\"Contact
+        Us - Institutional contact information\">Contact Us</a></div></li>\r\n\t\t\t\t<li
+        class=\"fiptext\"><div><a href=\"/eng/aide-help.aspx\" title=\"Help - Information
+        about using the Parks Canada Web site\">Help</a></div></li>\r\n\t\t\t\t<li
+        class=\"fiptext\"><div><a href=\"/eng/rech-srch.aspx\" title=\"Search - Search
+        the Parks Canada Web site\">Search</a></div></li>\r\n\t\t\t\t<li class=\"fiptextb\"><div><a
+        href=\"http://www.canada.ca/en/index.html\" title=\"Canada.ca - Government
+        of Canada Web site\">Canada.ca</a></div></li>\r\n\t\t\t\t<!-- FIN DU LIEN
+        ANGLAIS | ENGLISH LINK ENDS -->\r\n\t\t\t\r\n\t\t\t\r\n\t\t</ul>\r\n\t</div>\r\n\t<!--
+        COMMON MENU BAR ENDS | FIN DE LA BARRE DE MENU COMMUNE --> \r\n\t<!-- HEADER
+        ENDS | FIN DE L'EN-TETE --> \r\n\r\n\t<!-- BREAD CRUMB BEGINS | DEBUT DE LA
+        PISTE DE NAVIGATION --> \r\n\t<p class=\"breadcrumb\"><a href=\"/index_e.asp\">Home</a>
+        &gt; <a href=\"/agen/index_e.asp/eng/agen/index.aspx\">About Parks Canada
+        Agency</a> &gt; <a href=\"/agen/dp-pd/proactive_e.asp\">Proactive Disclosure</a>
+        &gt; <a href=\"/apps/pdc/indexa_e.asp\">Disclosure of Goods and Services Contracts
+        valued at more than $10,000</a> &gt; Reports</p>\r\n\t<!-- BREAD CRUMB ENDS
+        | FIN DE LA PISTE DE NAVIGATION --> \r\n\t<div class=\"colLayout\">\r\n\t<!--
+        COLUMN LAYOUT BEGINS | DEBUT DE LA MISE EN PAGE DE COLONNES -->\r\n\r\n\t<!--
+        LEFT SIDE MENU BEGINS | DEBUT DU MENU LATERAL GAUCHE --> \r\n\t<div class=\"left\">\r\n\r\n\t\t<!--
+        SIDE MENU TITLE BEGINS | DEBUT DU TITRE DU MENU LATERAL -->\r\n\t\t<h1 class=\"navaid\"><a
+        name=\"il\" id=\"il\">Institutional links</a></h1>\r\n\t\t<!-- SIDE MENU TITLE
+        ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n\t\t<div id=\"nav\" style=\"overflow:
+        visible;\"><ul><li><a href=\"/apps/pdc/indexa_e.asp\">Disclosure of Goods
+        and Services Contracts valued at more than $10,000</a><ul><li><a href=\"/apps/pdc/index_e.asp?oqYEAR=&amp;oqQUARTER=\">Reports</a></li></ul></li></ul></div>\r\n\t</div>
+        \  \r\n\t<!-- LEFT SIDE MENU ENDS | FIN DU MENU LATERAL GAUCHE --> \r\n\r\n\r\n\t<div
+        class=\"center\" id=\"cont\">\r\n\t\t\r\n\t\t<div class=\"fullWidth\">\r\n\t\t\r\n<!--div
+        class=\"right\" style=\"width: 200px; float: right;\">\r\n<# include virtual=\"/includes/template/search.asp\">\r\n</div-->\r\n<h1>Disclosure
+        of Goods and Services Contracts valued at more than $10,000</h1><h2>Reports</h2>\r\n<!--
+        Content Starts Here -->\r\n\r\n<p>\r\n    Please select a report:</p>\r\n<h3>2014-2015</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2014-2015&amp;oqQUARTER=4\">\r\n    2014-2015\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2014-2015&amp;oqQUARTER=3\">\r\n
+        \   2014-2015\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2014-2015&amp;oqQUARTER=2\">\r\n    2014-2015\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2014-2015&amp;oqQUARTER=1\">\r\n
+        \   2014-2015\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2013-2014</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2013-2014&amp;oqQUARTER=4\">\r\n    2013-2014\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2013-2014&amp;oqQUARTER=3\">\r\n
+        \   2013-2014\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2013-2014&amp;oqQUARTER=2\">\r\n    2013-2014\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2013-2014&amp;oqQUARTER=1\">\r\n
+        \   2013-2014\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2012-2013</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2012-2013&amp;oqQUARTER=4\">\r\n    2012-2013\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2012-2013&amp;oqQUARTER=3\">\r\n
+        \   2012-2013\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2012-2013&amp;oqQUARTER=2\">\r\n    2012-2013\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2012-2013&amp;oqQUARTER=1\">\r\n
+        \   2012-2013\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2011-2012</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2011-2012&amp;oqQUARTER=4\">\r\n    2011-2012\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2011-2012&amp;oqQUARTER=3\">\r\n
+        \   2011-2012\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2011-2012&amp;oqQUARTER=2\">\r\n    2011-2012\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2011-2012&amp;oqQUARTER=1\">\r\n
+        \   2011-2012\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2010-2011</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2010-2011&amp;oqQUARTER=4\">\r\n    2010-2011\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2010-2011&amp;oqQUARTER=3\">\r\n
+        \   2010-2011\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2010-2011&amp;oqQUARTER=2\">\r\n    2010-2011\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2010-2011&amp;oqQUARTER=1\">\r\n
+        \   2010-2011\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2009-2010</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2009-2010&amp;oqQUARTER=4\">\r\n    2009-2010\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2009-2010&amp;oqQUARTER=3\">\r\n
+        \   2009-2010\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2009-2010&amp;oqQUARTER=2\">\r\n    2009-2010\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2009-2010&amp;oqQUARTER=1\">\r\n
+        \   2009-2010\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2008-2009</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2008-2009&amp;oqQUARTER=4\">\r\n    2008-2009\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2008-2009&amp;oqQUARTER=3\">\r\n
+        \   2008-2009\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2008-2009&amp;oqQUARTER=2\">\r\n    2008-2009\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2008-2009&amp;oqQUARTER=1\">\r\n
+        \   2008-2009\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2007-2008</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2007-2008&amp;oqQUARTER=4\">\r\n    2007-2008\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2007-2008&amp;oqQUARTER=3\">\r\n
+        \   2007-2008\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2007-2008&amp;oqQUARTER=2\">\r\n    2007-2008\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2007-2008&amp;oqQUARTER=1\">\r\n
+        \   2007-2008\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2006-2007</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2006-2007&amp;oqQUARTER=4\">\r\n    2006-2007\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2006-2007&amp;oqQUARTER=3\">\r\n
+        \   2006-2007\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2006-2007&amp;oqQUARTER=2\">\r\n    2006-2007\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2006-2007&amp;oqQUARTER=1\">\r\n
+        \   2006-2007\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2005-2006</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2005-2006&amp;oqQUARTER=4\">\r\n    2005-2006\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2005-2006&amp;oqQUARTER=3\">\r\n
+        \   2005-2006\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2005-2006&amp;oqQUARTER=2\">\r\n    2005-2006\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2005-2006&amp;oqQUARTER=1\">\r\n
+        \   2005-2006\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul><h3>2004-2005</h3><ul>\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2004-2005&amp;oqQUARTER=4\">\r\n    2004-2005\r\n
+        \   4<sup>th</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2004-2005&amp;oqQUARTER=3\">\r\n
+        \   2004-2005\r\n    3<sup>rd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a
+        href=\"index_E.asp?oqYEAR=2004-2005&amp;oqQUARTER=2\">\r\n    2004-2005\r\n
+        \   2<sup>nd</sup>\r\n    Quarter</a></li>\r\n\r\n<li><a href=\"index_E.asp?oqYEAR=2004-2005&amp;oqQUARTER=1\">\r\n
+        \   2004-2005\r\n    1<sup>st</sup>\r\n    Quarter</a></li>\r\n</ul>\r\n<!--
+        Content Ends Here -->\r\n\t\t\t</div>\r\n\t\t\r\n\t</div>\r\n\t<!-- COLUMN
+        LAYOUT ENDS | FIN DE LA MISE EN PAGE DE COLONNES -->\r\n\r\n\t<!-- FOOTER
+        BEGINS | DEBUT DU PIED DE LA PAGE --> \r\n\t<div class=\"footer\">\r\n\t\t<div
+        class=\"footerline\"></div>\t\t\r\n\t\t<div class=\"foot1\">\r\n\t\t<!-- DATE
+        MODIFIED BEGINS | DEBUT DE LA DATE DE MODIFICATION -->\r\n\t\tDate Modified:
+        <span class=\"date\">2015-06-10</span>\r\n\t\t<!-- DATE MODIFIED ENDS | FIN
+        DE LA DATE DE MODIFICATION -->\r\n\t\t</div>\r\n\t\t<div class=\"foot2\"><a
+        href=\"#tphp\" title=\"Return to Top of Page\"><img class=\"uparrow\" src=\"/images/template/tphp.gif\"
+        width=\"19\" height=\"12\" alt=\"\" /><br />Top of Page</a></div>\r\n\t\t<div
+        class=\"foot3\"><a href=\"/avis-notice_E.asp\">Important Notices</a></div>\r\n\t</div>\r\n\t<!--
+        FOOTER ENDS | FIN DU PIED DE LA PAGE -->\r\n\t</div>\r\n</div></div>\r\n</body>\r\n</html>"
+    http_version: 
+  recorded_at: Sun, 26 Jul 2015 00:56:41 GMT
+- request:
+    method: get
+    uri: http://www.dfo-mpo.gc.ca/PD-CP/reports-eng.asp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 26 Jul 2015 01:05:33 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '14510'
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - ASPSESSIONIDQQRSBRTT=IHJCLJMBMPIKLLHHBOCOJKBM; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\r\n<head>\r\n
+        \r\n\t<!-- CLF 2.0 TEMPLATE VERSION 1.04 | VERSION 1.04 DU GABARIT NSI 2.0
+        -->\r\n \r\n\t<!-- HEADER BEGINS | DEBUT DE L'EN-TETE -->\r\n \r\n\t<!-- TITLE
+        BEGINS | DEBUT DU TITRE -->\r\n \r\n\t<title>Fisheries and Oceans - Disclosure
+        of Contracts Over $10,000</title>\r\n \r\n\t<!-- TITLE ENDS | FIN DU TITRE
+        -->\r\n \r\n\t\r\n \r\n\t<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=iso-8859-1\" />\r\n \r\n\t<link rel=\"schema.dc\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\r\n \r\n\t<link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\"
+        />\r\n \r\n\t<meta name=\"dc.description\" content=\"Fisheries and Oceans
+        Canada - Proactive Disclosure of Contracts Over $10,000\" />\r\n \r\n\t<meta
+        name=\"description\" content=\"Fisheries and Oceans Canada - Proactive Disclosure
+        of Contracts Over $10,000\" />\r\n \r\n\t<meta name=\"keywords\" content=\"proactive
+        disclosure, disclosure, contracts, over, ten thousand, 10000\" />\r\n \r\n\t<meta
+        name=\"dc.creator\" content=\"Government of Canada, Fisheries and Oceans Canada,
+        Finance and Administration\" />\r\n \r\n\t<meta name=\"dc.title\" content=\"Fisheries
+        and Oceans - Disclosure of Contracts Over $10,000\" />\r\n \r\n\t<meta name=\"dcterms.issued\"
+        scheme=\"W3CDTF\" content=\"2009-07-21\" />\r\n \r\n\t<meta name=\"dcterms.modifed\"
+        scheme=\"W3CDTF\" content=\"2012-04-30\" />\r\n \r\n\t<meta name=\"dc.subject\"
+        scheme=\"gccore\" content=\"fish, fisheries, oceans, Canada,proactive disclosure,
+        disclosure\" />\r\n \r\n\t<meta name=\"dc.language\" scheme=\"ISO639-2\" content=\"eng\"
+        />\r\n \r\n\t\r\n \r\n\t<!-- TEMPLATE SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS
+        DU GABARIT -->\r\n\t\r\n\t<link href=\"/css/base.css\" media=\"screen, print\"
+        rel=\"stylesheet\" type=\"text/css\" />\r\n\t<link href=\"/css/2col.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n\t<style
+        type=\"text/css\" media=\"all\">@import url(\"/css/base2.css\");\r\n\t</style>\r\n
+        \r\n\t<!-- TEMPLATE SCRIPTS/CSS END | FIN DES SCRIPTS/CSS DU GABARIT -->\r\n
+        \   \r\n    <!-- PROGRESSIVE ENHANCEMENT BEGINS | DEBUT DE L'AMELIORATION
+        PROGRESSIVE -->\r\n      <script src=\"/scripts/pe-ap.js\" type=\"text/javascript\"></script>\r\n
+        \     <script type=\"text/javascript\">\r\n      /* <![CDATA[ */\r\n            var
+        params = { \r\n                  lng:\"eng\",\r\n                  pngfix:\"/images/inv.gif\"
+        \r\n            };\r\n            PE.progress(params);\r\n      /* ]]> */\r\n
+        \     </script>\r\n \r\n\t<!-- PROGRESSIVE ENHANCEMENT ENDS | FIN DE L'AMELIORATION
+        PROGRESSIVE -->\r\n \r\n\t<!-- CUSTOM SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS
+        PERSONNALISES -->\r\n \r\n\t<link href=\"/css/base-institution.css\" media=\"screen,
+        print\" rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"/css/dfo/pg.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n\t<link
+        href=\"/css/institution.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n
+        \   <link href=\"/PD-CP/css/table.css\" rel=\"stylesheet\" type=\"text/css\"
+        />\r\n \r\n\t<!-- CUSTOM SCRIPTS/CSS END | FIN DES SCRIPTS/CSS PERSONNALISES
+        -->\r\n\t<!-- TEMPLATE PRINT CSS BEGINS | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION
+        -->\r\n \r\n\t<link href=\"/css/pf-if.css\" rel=\"stylesheet\" type=\"text/css\"
+        />\r\n \r\n\t<!-- TEMPLATE PRINT CSS ENDS | FIN DU CSS DU GABARIT POUR L'IMPRESSION
+        -->\r\n</head>\r\n<body>\r\n\r\n<div class=\"page\"><div class=\"core\">\r\n\r\n\t<!--
+        FIP HEADER BEGINS | DEBUT DE L'EN-TETE PCIM --> \r\n\r\n\t<div class=\"fip\"><a
+        name=\"tphp\" id=\"tphp\">\r\n      <img src=\"/PD-CP/images/sig-eng.gif\"
+        alt=\"Fisheries and Oceans Canada\"  width=\"372\" height=\"20\" /></a></div>\r\n\r\n\t<div
+        class=\"cwm\">\r\n      <img src=\"/PD-CP/images/wmms.gif\" alt=\"Symbol of
+        the Government of Canada\" width=\"83\" height=\"20\" /></div>\r\n\r\n\t<!--
+        FIP HEADER ENDS | FIN DE L'EN-TETE PCIM --> \r\n\t<!-- INSTITUTIONAL BANNER
+        STARTS | DEBUT DE LA BANNIERE INSTITUTIONNELLE -->\r\n\r\n\t<div class=\"banner
+        banner-1\">\r\n\t\t<img src=\"/PD-CP/images/lffl.gif\" class=\"lf pngfix\"
+        height=\"65\" width=\"65\" alt=\"\" /> \r\n\t\t<p class=\"main\">Fisheries
+        and Oceans Canada</p>\r\n\t\t<p class=\"siteuri\">www.dfo-mpo.gc.ca</p>\r\n\t</div>\r\n\t\r\n\t<!--
+        INSTITUTIONAL BANNER ENDS | FIN DE LA BANNIERE INSTITUTIONNELLE -->\r\n    <!--
+        SKIP NAVIGATION BEGINS | DEBUT DU SAUT DE NAVIGATION -->\r\n\t<div class=\"navaid\">\r\n\t\t<a
+        href=\"#cont\">Skip to content</a> |\r\n\t\t<a href=\"#il\">Skip to institutional
+        links</a>\r\n\t</div>\r\n\t<!-- SKIP NAVIGATION ENDS | FIN DU SAUT DE NAVIGATION
+        -->\r\n\t<!-- COMMON MENU BAR BEGINS | DEBUT DE LA BARRE DE MENU COMMUNE -->
+        \r\n\r\n<!-- COMMON MENU BAR BEGINS | DEBUT DE LA BARRE DE MENU COMMUNE -->
+        \r\n\r\n<div class=\"fp\">\r\n\t\t<!-- COMMON MENU BAR TITLE BEGINS | DEBUT
+        DU TITRE DE LA BARRE DE MENU COMMUNE -->\r\n\t\t<h1 class=\"navaid\">Common
+        menu bar links</h1>\r\n\t\t<!-- COMMON MENU BAR TITLE ENDS | FIN DU TITRE
+        DE LA BARRE DE MENU COMMUNE -->\r\n\t\t<ul class=\"commonbar\">\r\n\r\n\t\t\t<!--
+        FRENCH LINK BEGINS | DEBUT DU LIEN FRANCAIS -->\r\n\r\n\t\t\t<li class=\"fiptexta\"><div>\r\n
+        \             <a lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais - Version
+        fran&ccedil;aise de cette page\" href=\"/PD-CP/scripts/language.asp\">Fran&ccedil;ais</a></div>\r\n\t\t\t<!--
+        FRENCH LINK ENDS | FIN DU LIEN FRANCAIS -->\r\n\r\n\t\t\t</li>\r\n\r\n\t\t\t<li
+        class=\"fiptext\"><div><a href=\"http://www.dfo-mpo.gc.ca/index-eng.htm\"
+        title=\"Home - The main page of the Fisheries and Oceans Canada website\">Home</a></div>\r\n\t\t
+        \ </li>\r\n\r\n\t\t\t<li class=\"fiptextc\"><div><a href=\"http://www.dfo-mpo.gc.ca/Contact-eng.htm\"
+        title=\"Contact Us - Fisheries and Oceans Canada contact information\">Contact
+        Us</a></div>\r\n\t\t  </li>\r\n\r\n\t\t\t<li class=\"fiptext\"><div><a title=\"Help
+        - Information about using the Fisheries and Oceans Canada website\" href=\"http://www.dfo-mpo.gc.ca/help-aide-eng.htm\">Help</a></div>\r\n\t\t
+        \ </li>\r\n\r\n\t\t\t<li class=\"fiptext\"><div><a href=\"http://recherche-search.gc.ca/s_r?t3mpl1t34d=1&amp;s5t34d=dfo&amp;l7c1l3=eng&amp;S_08D4T.1ct57n=form&amp;S_08D4T.s3rv5c3=basic&amp;S_F8LLT2XT=&amp;S_S20RCH.l1ng91g3=eng\"
+        title=\"Search - Search the Fisheries and Oceans Canada website\">Search</a></div>\r\n\t\t
+        \ </li>\r\n\r\n\t\t\t<li class=\"fiptextb\"><div><a href=\"http://www.canada.gc.ca/home.html\"
+        title=\"canada.gc.ca - Government of Canada website\">canada.gc.ca</a></div></li>\r\n\r\n\t\t</ul>\r\n\t</div>\r\n<script
+        type=\"text/javascript\">\r\nvar gaJsHost = ((\"https:\" == document.location.protocol)
+        ? \"https://ssl.\" : \"http://www.\");\r\ndocument.write(unescape(\"%3Cscript
+        src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\r\n</script>\r\n<script
+        type=\"text/javascript\">\r\nvar pageTracker = _gat._getTracker(\"UA-5411606-1\");\r\npageTracker._trackPageview();\r\n</script>\r\n\r\n\t<!--
+        COMMON MENU BAR ENDS | FIN DE LA BARRE DE MENU COMMUNE --> \r\n\r\n\t\t<!--
+        COMMON MENU BAR ENDS | FIN DE LA BARRE DE MENU COMMUNE --> \r\n\t<!-- HEADER
+        ENDS | FIN DE L'EN-TETE --> \r\n\t<!-- BREAD CRUMB BEGINS | DEBUT DE LA PISTE
+        DE NAVIGATION --> \r\n\t<p class=\"breadcrumb\"><a href=\" /index-eng.htm\">Home</a>
+        &gt;\r\n\tContracts over $10,000</p>\r\n\r\n<!-- BREAD CRUMB ENDS | FIN DE
+        LA PISTE DE NAVIGATION --> \r\n\t <div class=\"colLayout\">\r\n<!-- TWO COLUMN
+        LAYOUT BEGINS | DEBUT DE LA MISE EN PAGE DE DEUX COLONNES -->\r\n\r\n<!--
+        LEFT SIDE MENU BEGINS | DEBUT DU MENU LATERAL GAUCHE --> \r\n<div class=\"left\">\r\n
+        \ <!-- SIDE MENU TITLE BEGINS | DEBUT DU TITRE DU MENU LATERAL -->\r\n  <h1
+        class=\"navaid\"><a name=\"il\" id=\"il\">Institutional links</a></h1>\r\n
+        \ <!-- SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n  <ul class=\"nav\">\r\n
+        \   <li>\r\n      <h2 class=\"nav\"><a href=\"/about-notre-sujet-eng.htm\">About
+        Us</a></h2>\r\n      <h2 class=\"nav\"><a href=\"/media-eng.htm\">Media</a></h2>\r\n
+        \     <h2 class=\"nav\"><a href=\"/index-eng.htm\">Topics</a></h2>\r\n      <ul
+        class=\"nav\">\r\n\t\t<li class=\"menucontent\"><a class=\"menulink\" title=\"Aquaculture\"
+        href=\"/aquaculture/aquaculture-eng.htm\">Aquaculture</a></li>\r\n        <li
+        class=\"menucontent\"><a class=\"menulink\" title=\"Aquatic Species\" href=\"/aquatic-aquatique-eng.htm\">Aquatic
+        Species</a></li>\r\n        <li class=\"menucontent\"><a class=\"menulink\"
+        title=\"Fisheries\" href=\"/fm-gp/index-eng.htm\">Fisheries</a></li>\r\n        <li
+        class=\"menucontent\"><a class=\"menulink\" title=\"International Fisheries\"
+        href=\"/overfishing-surpeche/index-eng.htm\">International Fisheries</a></li>\r\n
+        \       \r\n        <li class=\"menucontent\"><a class=\"menulink\" title=\"Nautical
+        Charts and Services\" href=\"http://www.charts.gc.ca/index-eng.asp\">Nautical
+        Charts and Services</a></li>\r\n        <li class=\"menucontent\"><a class=\"menulink\"
+        title=\"Oceans\" href=\"/oceans/oceans-eng.htm\">Oceans</a></li>\r\n        <li
+        class=\"menucontent\"><a class=\"menulink\" title=\"Science\" href=\"/science/index-eng.htm\">Science</a></li>\r\n
+        \       <li class=\"menucontent\"><a class=\"menulink\" title=\"Small Craft
+        Harbours\" href=\"/sch-ppb/home-accueil-eng.htm\">Small Craft Harbours</a></li>\r\n\t\t<li
+        class=\"menucontent\"><a class=\"menulink\" title=\"Working Near Water\" href=\"/habitat/habitat-eng.htm\">Working
+        Near Water</a></li>\r\n</ul>\r\n      <h2 class=\"nav\"><a href=\"/regions-eng.htm\">Regions</a></h2>\r\n
+        \     <h2 class=\"nav\"><a href=\"/resources-ressources-eng.htm\">Resources</a></h2>\r\n
+        \   </li>\r\n    <li>\r\n      <div class=\"prodis\"></div>\r\n      <h2 class=\"navaid\">Proactive
+        Disclosure</h2>\r\n      <!-- PROACTIVE DISCLOSURE BEGINS | DEBUT DU LIEN
+        DIVULGATION PROACTIVE -->\r\n      <div class=\"menucontent\"> <a class=\"menulink\"
+        title=\"Proactive Disclosure\" href=\"/disclosure-divulgation-eng.htm\">Proactive
+        Disclosure</a></div>\r\n      <!-- PROACTIVE DISCLOSURE ENDS | FIN DU LIEN
+        DIVULGATION PROACTIVEE -->\r\n    </li>\r\n  </ul>\r\n</div>\r\n \r\n<!--
+        LEFT SIDE MENU ENDS | FIN DU MENU LATERAL GAUCHE --> \r\n\r\n\r\n\t\t<!--
+        CONTENT BEGINS | DEBUT DU CONTENU --> \r\n\t<div class=\"center\">\r\n\t\t<h1><a
+        name=\"cont\" id=\"cont\"></a>\r\n\r\n\t\t<!-- CONTENT TITLE BEGINS | DEBUT
+        DU TITRE DU CONTENU -->\r\n\t\tDisclosure of Contracts\r\n\t\t<!-- CONTENT
+        TITLE ENDS | FIN DU TITRE DU CONTENU -->\r\n\t\tOver $10,000</h1>\r\n\t\t\r\n\t\t\r\n\t\t<!--
+        TOP MENU BEGINS | DEBUT DU MENU EN HAUT -->\r\n\t\t<img src=\"/PD-CP/blt-square.gif\"
+        width=\"15\" height=\"15\" class=\"alignCenter\" />\r\n\t\t<a href=\"index-eng.asp\">Overview</a>\r\n
+        \   \t<img src=\"/PD-CP/blt-square.gif\" width=\"15\" height=\"15\" class=\"alignCenter\"
+        />\r\n\t\t<a href=\"reports-eng.asp\">Contracts over $10,000</a>\r\n    \t<img
+        src=\"/PD-CP/blt-square.gif\" width=\"15\" height=\"15\" class=\"alignCenter\"
+        />\r\n\t\t<a href=\"Amendments/amend_reports-eng.asp\">Amendments</a>\r\n
+        \   \t<img src=\"/PD-CP/blt-square.gif\" width=\"15\" height=\"15\" class=\"alignCenter\"
+        />\r\n\t\t<a href=\"/PD-CP/Former/reports_former-eng.asp\">Former Public Servants</a>\r\n\r\n\t<!--
+        CONTENT BEGINS -->\r\n\t\t\r\n<p><b>Please select a report:</b></p>\r\n\r\n<h3>2014-2015</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2015-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2015-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2015-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2015-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2013-2014</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2014-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2014-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2014-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2014-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2012-2013</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2013-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2013-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2013-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2013-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2011-2012</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2012-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2012-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2012-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2012-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2010-2011</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2011-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2011-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2011-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2011-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2009-2010</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2010-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2010-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2010-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2010-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2008-2009</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2009-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2009-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2009-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2009-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2007-2008</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2008-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2008-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2008-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2008-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2006-2007</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2007-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2007-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2007-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2007-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2005-2006</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2006-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2006-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2006-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2006-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n<h3>2004-2005</h3>\r\n<ul>\r\n
+        \ <li><a href=\"2005-Q4-eng.htm\">4<sup>th</sup> Quarter</a></li>\r\n  <li><a
+        href=\"2005-Q3-eng.htm\">3<sup>rd</sup> Quarter</a></li>\r\n  <li><a href=\"2005-Q2-eng.htm\">2<sup>nd</sup>
+        Quarter</a></li>\r\n  <li><a href=\"2005-Q1-eng.htm\">1<sup>st</sup> Quarter</a></li>\r\n</ul>\r\n\r\n</div>\r\n\t<!--
+        CONTENT ENDS | FIN DU CONTENU -->\r\n\t<!-- TWO COLUMN LAYOUT ENDS | FIN DE
+        LA MISE EN PAGE DE DEUX COLONNES -->\r\n\t<!-- FOOTER BEGINS | DEBUT DU PIED
+        DE LA PAGE --> \r\n\t<div class=\"footer\">\r\n\t<div class=\"footerline\"></div>\t\t\r\n\t<div
+        class=\"foot1\">\r\n\t<!-- DATE MODIFIED BEGINS | DEBUT DE LA DATE DE MODIFICATION
+        -->\r\n\tDate Modified: 2015-01-30\r\n\r\n\t\t<!-- DATE MODIFIED ENDS | FIN
+        DE LA DATE DE MODIFICATION -->\r\n\r\n\t\t</div>\r\n\r\n\t\t<div class=\"foot2\"><a
+        href=\"#tphp\" title=\"Return to Top of Page\">\r\n\t\t\t<img class=\"uparrow\"
+        src=\"/PD-CP/images/tphp.gif\" width=\"19\" height=\"12\" alt=\"\" /><br />Top
+        of Page</a></div>\r\n\r\n\t\t<div class=\"foot3\"><a href=\"http://www.dfo-mpo.gc.ca/notices-avis-eng.htm\">Important
+        Notices</a></div>\r\n\r\n\t</div>\r\n\r\n\t<!-- FOOTER ENDS | FIN DU PIED
+        DE LA PAGE -->\r\n\r\n\t</div>\r\n\r\n</div></div>\r\n\r\n</body>\r\n\r\n</html>"
+    http_version: 
+  recorded_at: Sun, 26 Jul 2015 01:05:09 GMT
+recorded_with: VCR 2.9.2
