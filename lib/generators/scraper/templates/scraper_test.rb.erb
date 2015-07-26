@@ -1,4 +1,5 @@
-describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Scraper do
+require "test_helper"
+describe Scrapers::<%= @agency.camelize %>::Scraper do
 
   describe "#scrape_contracts" do
     it "should parse the data from a contract page" do
@@ -44,7 +45,7 @@ describe Scrapers::<%= @agency.camelize %>::<%= @agency.camelize %>Scraper do
 
     it "should set the correct agency code and url for the first report" do
       VCR.use_cassette('<%= @agency.downcase %>_reports', record: :new_episodes) do
-        reports = Scrapers::Pc::Scraper.reports
+        reports = Scrapers::<%= @agency.camelize %>::Scraper.reports
         reports.first.agency_code.must_equal '<%= @agency.downcase %>'
         reports.first.url.must_equal "FILL IN"
       end
