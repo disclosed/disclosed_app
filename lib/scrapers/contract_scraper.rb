@@ -1,29 +1,28 @@
 # ContractScrapers are responsible for extracting contract information
-# for a given quarter.
+# for a given report.
 # The scraper might have to visit more than one page to get the data for
 # a single contract.
-require_relative 'scraper_helpers'
+require 'open-uri'
 class Scrapers::ContractScraper
-  include ScraperHelpers
-  attr_reader :quarter, :notifier
+  attr_reader :report, :notifier
 
-  def initialize(quarter, notifier)
-    @quarter = quarter
+  def initialize(report, notifier)
+    @report = report
     @notifier = notifier
   end
 
-  # Scrape contracts for the given #quarter
+  # Scrape contracts for the given #report
   #
   # While scraping, use the notifier to let the scraper runner know when
   # you are scraping a new contract page.
   #    notifier.send(:scraping_contract, "http://www.pc.gc.ca/apps/pdc/index_E.asp?oqYEAR=2013-2014&oqQUARTER=4&oqCONTRACT_ID=43649")
   #
   # range::
-  #   A Range indicating which contracts to scrape from the #quarter.
+  #   A Range indicating which contracts to scrape from the #report.
   #
   # Returns an Array of Hashes containing the contract data.
   #
-  #   q4 = Quarter.new(2013, 4)
+  #   report = Scrapers::Report.new("pc", "http://www.pc.gc.ca/apps/pdc/index_E.asp?oqYEAR=2013-2014&oqQuarter=4"
   #   Scrapers::Xyz::Scraper.new(q4, ScraperNotifier.new).contracts(0..1)
   #   #=> [
   #     { vendor_name: "KONE INC.",
@@ -42,19 +41,19 @@ class Scrapers::ContractScraper
     raise "Please implement me!"
   end
 
-  # Returns the number of contracts available in the #quarter.
+  # Returns the number of contracts available in the #report.
   #
-  #   Scrapers::Xyz::Scraper.new(q4).count_contracts
+  #   Scrapers::Xyz::Scraper.new(report).count_contracts
   #   #=> 128
   def count_contracts
     raise "Please implement me!"
   end
 
-  # Scrape the main Reports page for the agency and returns all the quarters
+  # Scrape the main Reports page for the agency and returns all the reports
   # that the agency has contract data for.
   #
-  # Returns an array of Quarter objects.
-  def self.available_quarters
+  # Returns an array of Report objects.
+  def self.reports
     raise "Please implement me!"
   end
 end

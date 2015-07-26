@@ -1,57 +1,50 @@
 class Scrapers::Dfo::Scraper < Scrapers::ContractScraper
+  BASE_URL = "http://www.dfo-mpo.gc.ca/PD-CP/"
 
-  def contracts(range = 0..-1)
-    contract_urls(quarter)[range].collect do |url|
-      flatten_to_json(contract_hash(url))
+  def scrape_contracts(range = 0..-1)
+    contract_urls(report)[range].collect do |url|
+      notifier.trigger(:scraping_contract, url)
+      contract_hash(url)
     end
+  end
+
+  def count_contracts
+    contract_urls(report).length
+  end
+
+  def self.reports
+    page = Nokogiri::HTML(open("#{BASE_URL}reports-eng.asp"))
+    links = page.css(".center ul li a")
+    links.map { |a_tag| Scrapers::Report.new("dfo", "#{BASE_URL}#{a_tag['href']}") }
   end
 
   private
 
   def contract_hash(url)
-    attrs = Wombat.crawl do
-      base_url url
-      path ""
-      vendor_name "css=table.pdcp tr:nth-child(1) td"
-      reference_number "css=table.pdcp tr:nth-child(2) td"
-      effective_date "css=table.pdcp tr:nth-child(3) td" do |date|
-        Date.parse(date)
-      end
-      description do
-        main "css=table.pdcp tr:nth-child(4) td"
-        regional_office "css=table.pdcp tr:nth-child(8) td" do |office|
-          "Regional Office: #{office}"
-        end
-        contact_phone "css=table.pdcp tr:nth-child(9) td" do |phone|
-          "Contact Phone: #{phone}"
-        end
-      end
-      raw_contract_period "css=table.pdcp tr:nth-child(5) td"
-      value "css=table.pdcp tr:nth-child(7) td" do |amount|
-        Monetize.parse(amount).cents / 100
-      end
-      comments do
-        main "css=table.pdcp tr:nth-child(10) td"
-        additional "css=table.pdcp tr:nth-child(11) td"
-      end
-    end
-    attrs["url"] = url
-    attrs
+    page = Nokogiri::HTML(open(url))
+    contract = {}
+    contract[:vendor_name] = page.css("table.pdcp tr:nth-child(1) td").text.strip
+    contract[:reference_number] = page.css("table.pdcp tr:nth-child(2) td").text.strip
+    contract[:effective_date] = page.css("table.pdcp tr:nth-child(3) td").text.strip
+    contract[:effective_date] = Date.parse(contract[:effective_date])
+    contract[:description] = page.css("table.pdcp tr:nth-child(4) td").text.strip
+    contract[:description] << "; Regional Office: "
+    contract[:description] << page.css("table.pdcp tr:nth-child(8) td").text.strip
+    contract[:description] << "; Contact Phone: "
+    contract[:description] << page.css("table.pdcp tr:nth-child(9) td").text.strip
+    contract[:raw_contract_period] = page.css("table.pdcp tr:nth-child(5) td").text.strip
+    contract[:value] = page.css("table.pdcp tr:nth-child(7) td").text.strip
+    contract[:value] = Monetize.parse(contract[:value]).cents / 100
+    contract[:comments] = page.css("table.pdcp tr:nth-child(10) td").text.strip
+    contract[:comments] << ";"
+    contract[:comments] = page.css("table.pdcp tr:nth-child(11) td").text.strip
+    contract[:url] = url
+    contract
   end
 
-  # Figure out the urls that contain the data for each contract
-  # Return an Array with the urls the parser needs to visit to scrape all
-  # contracts in this quarter
-  def contract_urls(quarter)
-    urls = Wombat.crawl do
-      base_url "http://www.dfo-mpo.gc.ca/PD-CP"
-      path     "/#{quarter.year}-Q#{quarter.quarter}-eng.htm"
-      contract_link "xpath=//table//td[2]//a[1]/@href", :list do |all_urls|
-        all_urls.map { |url| "http://www.dfo-mpo.gc.ca/PD-CP/" + url }
-      end
-    end
-
-    urls.values.flatten
+  def contract_urls(report)
+    page = Nokogiri::HTML(open(report.url))
+    page.css("table td:nth-child(2) a:nth-child(1)").map { |a_tag| "#{BASE_URL}#{a_tag['href']}" }
   end
 
 

@@ -2,17 +2,17 @@ namespace :contracts do
   desc "Scrape the contract data and load it in the DB."
   task :scrape => :environment do
     agency = ask_for_agency
-    quarter = ask_for_quarter(agency)
+    report = ask_for_report(agency)
     create_log_file(agency)
     notifier = ScraperNotifier.new
     notifier.on(:scraping_contract, -> (args) {
       print "."
       $logger.debug("Scraping URL: #{args.inspect}")
     })
-    scraper  = scraper_for_agency(agency.abbr).new(quarter, notifier)
-    puts_and_log "There are #{scraper.count_contracts} contracts in #{quarter}."
+    scraper  = scraper_for_agency(agency.abbr).new(report, notifier)
+    puts_and_log "There are #{scraper.count_contracts} contracts in #{report.url}."
     range = get_range_from_user
-    scrape_quarter(scraper, agency, range)
+    scrape_report(scraper, agency, range)
   end
 end
 
@@ -39,14 +39,15 @@ def ask_for_agency
   Agency.find_by(abbr: code) || (raise "Invalid code: #{code}.")
 end
 
-def ask_for_quarter(agency)
+def ask_for_report(agency)
   scraper_class  = scraper_for_agency(agency.abbr)
-  quarters = scraper_class.available_quarters
-  quarters.each { |quarter| puts quarter.to_s }
-  puts "Which quarter would you like to scrape?"
-  print "quarter code > "
-  quarter = STDIN.gets.chomp
-  Scrapers::Quarter.parse(quarter)
+  reports = scraper_class.reports
+  puts "Report No.\tURL"
+  reports.each_with_index { |report, index| puts "#{index}\t#{report.url}" }
+  puts "Which report would you like to scrape?"
+  print "report number > "
+  index = STDIN.gets.chomp.to_i
+  reports[index]
 end
 
 def get_range_from_user
@@ -60,8 +61,8 @@ def get_range_from_user
   from..to
 end
 
-def scrape_quarter(scraper, agency, range)
-  puts_and_log "\nScraping contracts #{range} from #{agency.abbr} quarter #{scraper.quarter}"
+def scrape_report(scraper, agency, range)
+  puts_and_log "\nScraping contracts #{range} from #{agency.abbr} report #{scraper.report.url}"
   contracts = scraper.scrape_contracts(range)
   puts_and_log "\nSaving contracts to the database"
   failed_contract_count = 0

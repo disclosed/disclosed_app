@@ -34,14 +34,6 @@ describe Contract do
     end
   end
 
-  describe "#quarter" do
-    it "should return the quarter based on the effective date" do
-      contract = Fabricate.build(:contract)
-      Scrapers::Quarter.expects(:from_date).with(contract.effective_date)
-      contract.quarter
-    end
-  end
-  
   describe "scopes" do
     before do 
       @agency1 = Fabricate(:agency, name: "Test agency 1")

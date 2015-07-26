@@ -20,6 +20,11 @@ gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'therubyracer' # Required by less
 gem 'less-rails'
 
+# Scraper gems
+gem 'nokogiri'
+gem 'chronic' # Natural language date parser used by scraper to parse dates
+gem 'monetize' # Parse money amounts. Used by scraper.
+
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'guard-minitest'
@@ -33,9 +38,6 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'wombat' # scraper DSL
-  gem 'chronic' # Natural language date parser used by scraper to parse dates
-  gem 'monetize' # Parse money amounts. Used by scraper.
   gem 'active_attr' # Used for value objects on steroids
 end
 
