@@ -25,7 +25,9 @@ def create_log_file(agency)
   time = Time.now.strftime("%Y%m%d_%H%M")
   log_file_path = File.join(Rails.root, "log", "#{time}_#{agency.abbr}_scraper.log")
   log_file = File.open(log_file_path, "a")
+  log_file.sync = true # ensure log messages are written to the file immediately
   $logger = Logger.new(log_file)
+  puts "Writing to log file: #{log_file_path}"
 end
 
 
