@@ -1,9 +1,0 @@
-Description:
-    Generate a contract crawler for a given government agency.
-
-Example:
-    rails generate crawler agency rcmp
-
-    This will create:
-        lib/scrapers/rcmp/rcmp_crawler.rb
-        test/lib/scrapers/rcmp/rcmp_crawler_test.rb

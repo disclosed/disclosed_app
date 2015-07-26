@@ -2,8 +2,13 @@ class Contract < ActiveRecord::Base
   belongs_to :agency
   belongs_to :vendor
 
-  validates :url,            presence: true
-  validates :agency,         presence: true
+  validates :url,               presence: true
+  validates :agency,            presence: true
+  validates :reference_number,  presence: true
+  validates :effective_date,    presence: true
+  validates :value,             presence: true
+  validates :vendor_name,       presence: true
+  validates :raw_contract_period, presence: true
 
   before_save :parse_start_date_end_date
 
@@ -38,17 +43,6 @@ class Contract < ActiveRecord::Base
 # total spending per each agency, grouped by year
    def self.spending_per_agency(agency)
     find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE agency_id = #{agency} GROUP BY year ORDER BY year")
-  end
-
-
-  def self.create_or_update!(attrs)
-    contract = self.contract_for(attrs)
-    if contract
-      contract.update_attributes!(attrs)
-    else
-      contract = Contract.create!(attrs)
-    end
-    contract
   end
 
   def self.contract_for(attrs)

@@ -1,0 +1,9 @@
+Description:
+    Generate a contract scraper for a given government agency.
+
+Example:
+    rails generate scraper agency rcmp
+
+    This will create:
+        lib/scrapers/rcmp/rcmp_scraper.rb
+        test/lib/scrapers/rcmp/rcmp_scraper_test.rb
