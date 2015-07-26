@@ -23,13 +23,14 @@ describe Scrapers::Dfo::Scraper do
 
   end
 
-  describe "#count_contracts" do
-    it "should return the correct number of contracts for 2013 q4" do
+  describe "#contract_urls" do
+    it "should return the correct contracts for 2013 q4" do
       VCR.use_cassette('dfo_count_contracts', record: :new_episodes) do
         report = Scrapers::Report.new("dfo", "http://www.dfo-mpo.gc.ca/PD-CP/2013-Q4-eng.htm")
         notifier = ScraperNotifier.new
-        count = Scrapers::Dfo::Scraper.new(report, notifier).count_contracts
-        count.must_equal 1659
+        scraper = Scrapers::Dfo::Scraper.new(report, notifier)
+        scraper.contract_urls.length.must_equal 1659
+        scraper.contract_urls.first.must_equal "http://www.dfo-mpo.gc.ca/PD-CP/details_e.asp?f=2013q4&r=F2599-120291"
       end
     end
   end

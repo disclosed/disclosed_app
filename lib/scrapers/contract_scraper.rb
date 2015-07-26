@@ -38,7 +38,10 @@ class Scrapers::ContractScraper
   #   ]
   #
   def scrape_contracts(range = 0..-1)
-    raise "Please implement me!"
+    contract_urls[range].collect do |url|
+      notifier.trigger(:scraping_contract, url)
+      scrape_contract(url)
+    end
   end
 
   # Returns the number of contracts available in the #report.

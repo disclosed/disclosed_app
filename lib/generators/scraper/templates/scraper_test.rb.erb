@@ -1,15 +1,13 @@
 require "test_helper"
 describe Scrapers::<%= @agency.camelize %>::Scraper do
 
-  describe "#scrape_contracts" do
+  describe "#scrape_contract" do
     it "should parse the data from a contract page" do
       VCR.use_cassette('<%= @agency.downcase %>_scrape_contracts', record: :new_episodes) do
-        report = Scrapers::Report.new('<%= agency.downcase %>', 'FILL IN')
+        report = mock("report")
         notifier = mock("notifier")
-        notifier.expects(:trigger).with(:scraping_contract, "FILL IN")
         scraper = Scrapers::<%= @agency.camelize %>::Scraper.new(report, notifier)
-        contracts = scraper.scrape_contracts(0..0)
-        contract = contracts.first
+        contract = scraper.scrape_contract("FILL IN")
 
         contract[:url].must_equal "FILL IN"
         contract[:vendor_name].must_equal "FILL IN"
@@ -19,18 +17,18 @@ describe Scrapers::<%= @agency.camelize %>::Scraper do
         contract[:value].must_equal 999
         contract[:description].must_equal "FILL IN"
         contract[:comments].must_equal "FILL IN"
-        contract[:agency_id].must_equal Agency.find_by(abbr: "<%= @agency %>").id
       end
     end
   end
 
-  describe "#count_contracts" do
-    it "should return the total count of contracts in the report" do
+  describe "#contract_urls" do
+    it "should return the urls for all contract pages in the report" do
       VCR.use_cassette('<%= @agency.downcase %>_count_contracts', record: :new_episodes) do
         report = Scrapers::Report.new('<%= @agency.downcase %>', 'FILL IN')
         notifier = ScraperNotifier.new
         scraper = Scrapers::<%= @agency.camelize %>::Scraper.new(report, notifier)
-        scraper.count_contracts.must_equal 999
+        scraper.contract_urls.length.must_equal 999
+        scraper.contract_urls.first.must_equal "FILL IN"
       end
     end
   end
@@ -39,6 +37,7 @@ describe Scrapers::<%= @agency.camelize %>::Scraper do
     it "should return all available reports for the agency" do
       VCR.use_cassette('<%= @agency.downcase %>_reports', record: :new_episodes) do
         reports = Scrapers::<%= @agency.camelize %>::Scraper.reports
+        reports.length.must_equal 999
         reports.first.must_be_instance_of(Scrapers::Report)
       end
     end

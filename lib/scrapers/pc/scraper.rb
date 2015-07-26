@@ -2,17 +2,6 @@ class Scrapers::Pc::Scraper < Scrapers::ContractScraper
 
   BASE_URL = "http://www.pc.gc.ca/apps/pdc/"
 
-  def scrape_contracts(range = 0..-1)
-    contract_urls(report)[range].collect do |url|
-      notifier.trigger(:scraping_contract, url)
-      contract_hash(url)
-    end
-  end
-
-  def count_contracts
-    contract_urls(report).length
-  end
-
   def self.reports
     page = Nokogiri::HTML(open("#{BASE_URL}index_e.asp"))
     report_links = page.css('.fullWidth ul li a')
@@ -22,8 +11,7 @@ class Scrapers::Pc::Scraper < Scrapers::ContractScraper
     end
   end
 
-  private
-  def contract_hash(url)
+  def scrape_contract(url)
     page = Nokogiri::HTML(open(url))
     contract = {}
     contract[:vendor_name]         = page.css('.divRow:nth-child(1) .divRightCol').text
@@ -40,10 +28,9 @@ class Scrapers::Pc::Scraper < Scrapers::ContractScraper
     contract
   end
 
-  # Figure out the urls that contain the data for each contract
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in this report
-  def contract_urls(report)
+  def contract_urls
     page = Nokogiri::HTML(open(report.url))
     page.css('table td:nth-child(2) a').map { |a_tag| "#{BASE_URL}#{a_tag['href']}" }
   end

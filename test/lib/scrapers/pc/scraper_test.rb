@@ -24,13 +24,14 @@ describe Scrapers::Pc::Scraper do
 
   end
 
-  describe "#count_contracts" do
+  describe "#contract_urls" do
     it "should return the correct number of contracts for 2013 q4" do
       VCR.use_cassette('pc_count_contracts', record: :new_episodes) do
         report = Scrapers::Report.new("pc", "http://www.pc.gc.ca/apps/pdc/index_E.asp?oqYEAR=2013-2014&oqQUARTER=4")
         notifier = ScraperNotifier.new
-        count = Scrapers::Pc::Scraper.new(report, notifier).count_contracts
-        count.must_equal 832
+        report = Scrapers::Pc::Scraper.new(report, notifier)
+        report.contract_urls.length.must_equal 832
+        report.contract_urls.first.must_equal "http://www.pc.gc.ca/apps/pdc/index_E.asp?oqYEAR=2013-2014&oqQUARTER=4&oqCONTRACT_ID=43649"
       end
     end
   end

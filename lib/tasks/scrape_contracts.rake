@@ -10,7 +10,7 @@ namespace :contracts do
       $logger.debug("Scraping URL: #{args.inspect}")
     })
     scraper  = scraper_for_agency(agency.abbr).new(report, notifier)
-    puts_and_log "There are #{scraper.count_contracts} contracts in #{report.url}."
+    puts_and_log "There are #{scraper.contract_urls.count} contracts in #{report.url}."
     range = get_range_from_user
     scrape_report(scraper, agency, range)
   end
