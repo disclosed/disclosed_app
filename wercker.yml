@@ -10,6 +10,9 @@ build:
         # A step that prepares the database.yml using the database in services
         - rails-database-yml
         - script:
+            name: Install rvm
+            code: rvm install 2.1.2
+        - script:
             name: Set up db
             code: bin/rake db:schema:load RAILS_ENV=test
         - script:
