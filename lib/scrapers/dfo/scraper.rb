@@ -2,25 +2,16 @@ class Scrapers::Dfo::Scraper < Scrapers::ContractScraper
   BASE_URL = "http://www.dfo-mpo.gc.ca/PD-CP/"
 
   def scrape_contract(url)
-    page = Nokogiri::HTML(open(url))
-    contract = {}
-    contract[:vendor_name] = page.css("table.pdcp tr:nth-child(1) td").text.strip
-    contract[:reference_number] = page.css("table.pdcp tr:nth-child(2) td").text.strip
-    contract[:effective_date] = page.css("table.pdcp tr:nth-child(3) td").text.strip
-    contract[:effective_date] = Date.parse(contract[:effective_date])
-    contract[:description] = page.css("table.pdcp tr:nth-child(4) td").text.strip
-    contract[:description] << "; Regional Office: "
-    contract[:description] << page.css("table.pdcp tr:nth-child(8) td").text.strip
-    contract[:description] << "; Contact Phone: "
-    contract[:description] << page.css("table.pdcp tr:nth-child(9) td").text.strip
-    contract[:raw_contract_period] = page.css("table.pdcp tr:nth-child(5) td").text.strip
-    contract[:value] = page.css("table.pdcp tr:nth-child(7) td").text.strip
-    contract[:value] = Monetize.parse(contract[:value]).cents / 100
-    contract[:comments] = page.css("table.pdcp tr:nth-child(10) td").text.strip
-    contract[:comments] << ";"
-    contract[:comments] = page.css("table.pdcp tr:nth-child(11) td").text.strip
-    contract[:url] = url
-    contract
+    mappings = [
+      Scrapers::TableMapping.new(:vendor_name),
+      Scrapers::TableMapping.new(:reference_number),
+      Scrapers::TableMapping.new(:raw_contract_period, "contract period"),
+      Scrapers::TableMapping.new(:effective_date, "contract date"),
+      Scrapers::TableMapping.new(:value, "original contract value"),
+      Scrapers::TableMapping.new(:description),
+      Scrapers::TableMapping.new(:comments)
+    ]
+    Scrapers::TableExtractor.new(url, mappings).extract
   end
 
   def contract_urls

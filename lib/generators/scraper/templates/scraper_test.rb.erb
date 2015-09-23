@@ -37,16 +37,10 @@ describe Scrapers::<%= @agency.camelize %>::Scraper do
     it "should return all available reports for the agency" do
       VCR.use_cassette('<%= @agency.downcase %>_reports', record: :new_episodes) do
         reports = Scrapers::<%= @agency.camelize %>::Scraper.reports
-        reports.length.must_equal 999
-        reports.first.must_be_instance_of(Scrapers::Report)
-      end
-    end
+        (reports.length > 999).must_equal true
+        reports.last.must_be_instance_of(Scrapers::Report)
+        reports.last.url.must_equal "FILL IN"
 
-    it "should set the correct agency code and url for the first report" do
-      VCR.use_cassette('<%= @agency.downcase %>_reports', record: :new_episodes) do
-        reports = Scrapers::<%= @agency.camelize %>::Scraper.reports
-        reports.first.agency_code.must_equal '<%= @agency.downcase %>'
-        reports.first.url.must_equal "FILL IN"
       end
     end
   end

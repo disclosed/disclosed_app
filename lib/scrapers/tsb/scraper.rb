@@ -1,5 +1,5 @@
-class Scrapers::Scc::Scraper < Scrapers::ContractScraper
-  BASE_URL = "http://www.scc-csc.gc.ca"
+class Scrapers::Tsb::Scraper < Scrapers::ContractScraper
+  BASE_URL = "http://www.tsb.gc.ca/eng/divulgation-disclosure/contrats-contracts"
 
   # Scrape contract information from a page.
   #
@@ -28,7 +28,7 @@ class Scrapers::Scc::Scraper < Scrapers::ContractScraper
       Scrapers::TableMapping.new(:reference_number),
       Scrapers::TableMapping.new(:raw_contract_period, "contract period"),
       Scrapers::TableMapping.new(:effective_date, "contract date"),
-      Scrapers::TableMapping.new(:value, "original contract value"),
+      Scrapers::TableMapping.new(:value, "contract value"),
       Scrapers::TableMapping.new(:description),
       Scrapers::TableMapping.new(:comments)
     ]
@@ -41,7 +41,16 @@ class Scrapers::Scc::Scraper < Scrapers::ContractScraper
   #   #=> ["http://www.pc.gc.ca/disclosure/contracts/123", ...]
   def contract_urls
     page = Nokogiri::HTML(open(report.url))
-    page.css("table tr a").map {|a_tag| "#{BASE_URL}#{a_tag['href']}" }
+    results = []
+    page.css("#wb-main table tr td:nth-child(2) a").each do |a_tag| 
+      href = a_tag['href']
+      if is_relative_link?(href)
+        results << report.url.gsub('index.asp', href)
+      else
+        results << "http://www.tsb.gc.ca#{href}" 
+      end
+    end
+    results
   end
 
   # Scrape the main Reports page for the agency and returns all the report
@@ -49,11 +58,23 @@ class Scrapers::Scc::Scraper < Scrapers::ContractScraper
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
-    page = Nokogiri::HTML(open("#{BASE_URL}/pd-dp/crl-lrc-eng.aspx"))
-    page.css("#wb-main-in ul li a").map do |a_tag| 
-      url = "#{BASE_URL}/pd-dp/#{a_tag['href']}"
-      Scrapers::Report.new("scc", url)
+    reports = []
+    # Reports are grouped by year -> quarter
+    # Need to make up the URLs manually because the yearly report pages for 2006, 
+    # 2007 and 2008 are commented out in the HTML
+    Date.today.year.downto(2007).each do |year|
+      yearly_report = BASE_URL + "/#{year - 1}-#{year}/rapport-report.asp"
+      yearly_report_page = Nokogiri::HTML(open(yearly_report))
+      yearly_report_page.css("#wb-main li a").each do |a_tag|
+        reports << Scrapers::Report.new("tsb", BASE_URL + "/#{year - 1}-#{year}/#{a_tag['href']}")
+      end
     end
+    reports
+  end
+
+  private
+  def is_relative_link?(href)
+    !href.start_with?('/')
   end
 end
 

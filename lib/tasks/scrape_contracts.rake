@@ -79,6 +79,8 @@ def scrape_report(scraper, agency, range)
     end
   end
   puts_and_log "\nRESULT: Scraped #{contracts.length}. Loaded #{contracts.length - failed_contract_count}. Failed #{failed_contract_count}."
+rescue StandardError => e
+  puts_and_log "\nError! See log for details. #{e}"
 end
 
 # Return the scraper class for the given agency code

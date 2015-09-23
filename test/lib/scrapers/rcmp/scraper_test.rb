@@ -15,7 +15,7 @@ describe Scrapers::Rcmp::Scraper do
         contract[:raw_contract_period].must_equal "2005-04-01 to 2015-06-30"
         contract[:effective_date].must_equal Date.parse("2005-04-01")
         contract[:value].must_equal 1646280
-        contract[:description].must_equal "514 - Rental of other buildings; Original contract value: 1,100,414.19"
+        contract[:description].must_equal "514 - Rental of other buildings"
         contract[:comments].must_equal "RCMP invoicing planThis contract was competitively sourced.This contract includes one or more amendments."
       end
     end

@@ -27,24 +27,24 @@ class Scrapers::Rcmp::Scraper < Scrapers::ContractScraper
   #   ]
   #
   def scrape_contract(url)
-    page = Nokogiri::HTML(open(url))
-    contract = {}
-    contract[:vendor_name] = page.css("table tr:nth-child(1) td").text.strip
-    contract[:reference_number] = page.css("table tr:nth-child(2) td").text.strip
-    contract[:effective_date] = page.css("table tr:nth-child(3) td").text.strip
-    contract[:effective_date] = Date.parse(contract[:effective_date])
-    contract[:description] = page.css("table tr:nth-child(4) td").text.strip
-    contract[:raw_contract_period] = page.css("table tr:nth-child(5) td").text.strip
-    contract[:value] = page.css("table tr:nth-child(7) td").text.strip
+    mappings = [
+      Scrapers::TableMapping.new(:vendor_name),
+      Scrapers::TableMapping.new(:reference_number),
+      Scrapers::TableMapping.new(:raw_contract_period, "contract period"),
+      Scrapers::TableMapping.new(:effective_date, "contract date"),
+      Scrapers::TableMapping.new(:description),
+      Scrapers::TableMapping.new(:comments)
+    ]
+    extractor = Scrapers::TableExtractor.new(url, mappings)
+    contract = extractor.result
+
+    contract[:value] = extractor.page.css("table tr:nth-child(7) td").text.strip
     if match = contract[:value].match(/Amended contract value\: \$(.*)Original contract value\: \$(.*)/)
       contract[:value] = Monetize.parse(match[1]).cents / 100
-      contract[:description] << "; Original contract value: #{match[2]}"
     else
       raise "Unexpected contract value data: #{contract[:value]}. URL: #{url}"
     end
 
-    contract[:comments] = page.css("table tr:nth-child(9) td").text
-    contract[:url] = url
     contract
   end
 

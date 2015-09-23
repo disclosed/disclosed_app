@@ -12,10 +12,10 @@ describe Scrapers::Scc::Scraper do
         contract[:url].must_equal "http://www.scc-csc.gc.ca/pd-dp/cd-dc-eng.aspx?id=784"
         contract[:vendor_name].must_equal "Prof. S Beaulac"
         contract[:reference_number].must_equal "1N001-1415-976"
-        contract[:raw_contract_period].must_equal "2015‑03‑23 to 2015‑04‑22"
+        contract[:raw_contract_period].must_equal "2015-03-23 to 2015-04-22"
         contract[:effective_date].must_equal Date.parse("2015-03-23")
         contract[:value].must_equal 10000
-        contract[:description].must_equal "0819 - Non Professional Personal Services Contracts not Elsewhere Specified; Preparation of a legal research document for the 7th Triennal Conference of the ACCPUF."
+        contract[:description].must_equal "0819 - Non Professional Personal Services Contracts not Elsewhere SpecifiedPreparation of a legal research document for the 7th Triennal Conference of the ACCPUF."
         contract[:comments].must_equal "This contract was sole-sourced."
       end
     end
@@ -46,16 +46,9 @@ describe Scrapers::Scc::Scraper do
     it "should return all available reports for the agency" do
       VCR.use_cassette('scc_reports', record: :new_episodes) do
         reports = Scrapers::Scc::Scraper.reports
-        reports.length.must_equal 25
-        reports.first.must_be_instance_of(Scrapers::Report)
-      end
-    end
-
-    it "should set the correct agency code and url for the first report" do
-      VCR.use_cassette('scc_reports', record: :new_episodes) do
-        reports = Scrapers::Scc::Scraper.reports
-        reports.first.agency_code.must_equal 'scc'
-        reports.first.url.must_equal "http://www.scc-csc.gc.ca/pd-dp/cr-rc-eng.aspx?d1=01/04/2015&d2=30/06/2015"
+        (reports.length > 24).must_equal true
+        reports.last.must_be_instance_of(Scrapers::Report)
+        reports.last.url.must_equal "http://www.scc-csc.gc.ca/pd-dp/cr-rc-eng.aspx?d1=01/04/2009&d2=30/06/2009"
       end
     end
   end

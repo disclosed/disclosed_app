@@ -3,6 +3,7 @@
 # The scraper might have to visit more than one page to get the data for
 # a single contract.
 require 'open-uri'
+require_relative '../nokogiri_xpath_extensions'
 class Scrapers::ContractScraper
   attr_reader :report, :notifier
 
@@ -58,6 +59,11 @@ class Scrapers::ContractScraper
   # Returns an array of Report objects.
   def self.reports
     raise "Please implement me!"
+  end
+
+  # Case insensitive xpath text search
+  def xpath_contains(node, selector, value)
+    node.xpath("#{selector}//text()[contains(translate(., \"#{value.upcase}\", \"#{value}\"), \"#{value}\")]")
   end
 end
 

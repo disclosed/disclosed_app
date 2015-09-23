@@ -34,7 +34,7 @@ class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
   end
 
   # Scrape the main Reports page for the agency and returns all the report
-  # that the agency has contract data for.
+  # that the agency has contract data for. Newest report link first.
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
