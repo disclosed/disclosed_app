@@ -1,0 +1,553 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.wd.gc.ca//eng/7705.asp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Sep 2015 23:07:54 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '18375'
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - ASPSESSIONIDCSBQACTB=KKENMBHBIHAMDOIFIKOOEIKP; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\r\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\r\n<head>\r\n
+        \ <title>Reports</title>\r\n  <meta http-equiv=\"content-type\" content=\"text/html;
+        charset=utf-8\" />\r\n  <link rel=\"schema.dc\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\r\n  <link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\" />\r\n
+        \ <meta name=\"dc.description\" content=\"Disclosure of contracts contracts
+        issued by or on behalf of Western Economic Diversification Canada for amounts
+        over $10,000\" />\r\n  <meta name=\"description\" content=\"Disclosure of
+        contracts contracts issued by or on behalf of Western Economic Diversification
+        Canada for amounts over $10,000\" />\r\n  <meta name=\"keywords\" content=\"Disclosure
+        of Contracts, contracts, disclosure, procurement contracts, goods and services,
+        contracts awarded, awarded\" />\r\n  <meta name=\"dc.title\" content=\"Reports\"
+        />\r\n  <meta name=\"WT.cg_n\" content=\"prodisc_con\" />\r\n  <meta name=\"dc.creator\"
+        content=\"Government of Canada, Western Economic Diversification Canada\"
+        />\r\n  <meta name=\"dcterms.issued\" scheme=\"W3CDTF\" content=\"2007-05-31\"
+        />\r\n  <meta name=\"dcterms.modified\" scheme=\"W3CDTF\" content=\"2015-07-31\"
+        />\r\n  <meta name=\"dc.date.created\" content=\"2007-05-31\" />\r\n  <meta
+        name=\"dc.date.modified\" content=\"2015-07-31\" />\r\n  <meta name=\"DCSext.modifed_date\"
+        content=\"2015-07-31\" />\r\n  <meta name=\"WT.mc_id\" content=\"\" />\r\n
+        \ <meta name=\"dc.subject\" scheme=\"gccore\" content=\"federal government,
+        federal departments, federal programs, government services, government information\"
+        />\r\n  <meta name=\"dc.language\" scheme=\"ISO639-2/T\" content=\"eng\" />\r\n
+        \ <meta http-equiv=\"content-language\" content=\"eng\" />\r\n  <link rel=\"shortcut
+        icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n  <link rel=\"icon\"
+        href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n  <link href=\"/base.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n  <link
+        href=\"/2col.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        />\r\n  <style type=\"text/css\" media=\"all\">\r\n/*<![CDATA[*/\r\n  @import
+        url(/base2.css);\r\n  /*]]>*/\r\n  </style><!-- PROGRESSIVE ENHANCEMENT BEGINS
+        | DEBUT DE L'AMELIORATION PROGRESSIVE -->\r\n\r\n  <script src=\"/js/lib/jquery.min.js\"
+        type=\"text/javascript\">\r\n</script>\r\n  <script src=\"/js/pe-ap.js\" type=\"text/javascript\"
+        id=\"progressive\">\r\n</script>\r\n  <script type=\"text/javascript\">\r\n/*
+        <![CDATA[ */\r\n  var params = {\r\n  lng:\"eng\",\r\n\r\n\r\n\r\n  pngfix:\"/images/tmpl/inv.gif\"\r\n
+        \ };\r\n  PE.progress(params);\r\n  /* ]]> */\r\n  </script><!-- PROGRESSIVE
+        ENHANCEMENT ENDS | FIN DE L'AMELIORATION PROGRESSIVE -->\r\n  <!-- CUSTOM
+        SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS PERSONNALISES -->\r\n  <link href=\"/base-institution.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n  <link
+        href=\"/institution.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        /><!-- CUSTOM SCRIPTS/CSS END | FIN DES SCRIPTS/CSS PERSONNALISES -->\r\n
+        \ <!-- TEMPLATE PRINT CSS BEGINS | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION
+        -->\r\n  <link href=\"/pf-if.css\" rel=\"stylesheet\" type=\"text/css\" /><!--
+        TEMPLATE PRINT CSS ENDS | FIN DU CSS DU GABARIT POUR L'IMPRESSION -->\r\n</head>\r\n\r\n<body>\r\n
+        \ <div class=\"page\">\r\n    <div class=\"core\">\r\n      <div class=\"fip\">\r\n
+        \       <a id=\"tphp\" name=\"tphp\"><img src=\"/images/tmpl/wd_fip_e_2c_55.gif\"
+        alt=\"Western Economic Diversification Canada\" width=\"337\" height=\"20\"
+        /></a>\r\n      </div>\r\n\r\n      <div class=\"cwm\">\r\n        <img src=\"/images/tmpl/wmms.gif\"
+        alt=\"Symbol of the Government of Canada\" width=\"83\" height=\"20\" />\r\n
+        \     </div>\r\n\r\n      <div class=\"banner\">\r\n        <img src=\"/images/tmpl/lffl.gif\"
+        class=\"lf pngfix\" height=\"65\" width=\"65\" alt=\"\" />\r\n\r\n        <p
+        class=\"main\">Western Economic Diversification Canada</p>\r\n\r\n        <p
+        class=\"siteuri\">www.wd-deo.gc.ca</p>\r\n      </div>\r\n\r\n      <div class=\"navaid\">\r\n
+        \       <a href=\"#cont\">Skip to content</a> | <a href=\"#il\">Skip to institutional
+        links</a>\r\n      </div>\r\n\r\n      <div class=\"fp\">\r\n        <h1 class=\"navaid\">Common
+        menu bar links</h1>\r\n\r\n        <ul class=\"commonbar\">\r\n          \r\n\r\n
+        \         <li class=\"fiptexta\">\r\n            <div>\r\n              <a
+        href=\"/fra/7705.asp\" lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais
+        - Version fran&ccedil;aise de cette page\">Fran&ccedil;ais</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptext\">\r\n            <div>\r\n
+        \             <a href=\"/eng/home.asp\" title=\"Home\">Home</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptextc\">\r\n            <div>\r\n
+        \             <a href=\"/eng/39.asp\" title=\"Contact Us\">Contact Us</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/41.asp\" title=\"Help\">Help</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/42.asp\" title=\"Search\">Search</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptextb\">\r\n
+        \           <div>\r\n              <a href=\"http://www.canada.ca/en/index.html\"
+        title=\"canada.ca - Government of Canada Web Site\">canada.ca</a>\r\n            </div>\r\n
+        \         </li>\r\n        </ul>\r\n      </div><!-- BREAD CRUMB BEGINS |
+        DEBUT DE LA PISTE DE NAVIGATION -->\r\n\r\n      <p class=\"breadcrumb\"><a
+        href=\"/eng/home.asp\" class=\"bcrumbs\">Home</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;<a
+        href=\"/eng/46.asp\" class=\"bcrumbs\">Proactive Disclosure</a>&nbsp;<span
+        class=\"smalltext\">&gt;</span>&nbsp;<a href=\"/eng/112.asp\" class=\"bcrumbs\">Disclosure
+        of Contracts</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;Reports</p><!--
+        BREAD CRUMB ENDS | FIN DE LA PISTE DE NAVIGATION -->\r\n\r\n      <div class=\"colLayout\">\r\n
+        \       <!-- 2 column layout begins /-->\r\n        <!-- LEFT SIDE MENU BEGINS
+        | DEBUT DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"left\">\r\n
+        \         <!-- SIDE MENU TITLE BEGINS | DEBUT DU TITRE DU MENU LATERAL -->\r\n\r\n
+        \         <h1 class=\"navaid\"><a name=\"il\" id=\"il\">Institutional links</a></h1><!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n          <!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n\r\n          <ul
+        class=\"nav\">\r\n            <li>\r\n              <ul class=\"nav nav_hover\">\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/43.asp\">Minister
+        of State</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/36.asp\">The
+        Department</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/37.asp\">Services</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/16.asp\">Programs</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/45.asp\">Investments
+        in the West</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/15.asp\">Reports
+        and Publications</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/44.asp\">Media Centre</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/10320.asp\">Career Opportunities</a></li>\r\n\r\n                <li
+        class=\"menucontent\"><a href=\"/eng/38.asp\">A - Z Index</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/47.asp\">Frequently
+        Asked Questions</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/40.asp\">Feedback</a></li>\r\n\r\n                <li>\r\n                  <div
+        class=\"prodis\"></div>\r\n\r\n                  <h2 class=\"navaid\">Proactive
+        Disclosure</h2><!-- PROACTIVE DISCLOSURE BEGINS | DEBUT DU LIEN DIVULGATION
+        PROACTIVE -->\r\n\r\n                  <div class=\"menucontent nav_hover\">\r\n
+        \                   <a class=\"menulink\" href=\"/eng/13245.asp\">Completed
+        Access to Information Requests</a> \r\n                  </div>\r\n\r\n                  <div
+        class=\"menucontent nav_hover\">\r\n                    <a class=\"menulink\"
+        href=\"/eng/46.asp\">Proactive Disclosure</a> \r\n                  </div><!--
+        PROACTIVE DISCLOSURE ENDS | FIN DU LIEN DIVULGATION PROACTIVEE -->\r\n                </li>\r\n
+        \             </ul>\r\n            </li>\r\n          </ul>\r\n        </div><!--
+        LEFT SIDE MENU ENDS | FIN DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"center\">\r\n
+        \         <a name=\"cont\" id=\"cont\"></a> \r\n\r\n          <h1>Disclosure
+        of Contracts</h1>\r\n\r\n          <p><a href=\"/eng/112.asp\">Overview</a>
+        | Reports</p>\r\n\r\n          <p>Please select a reporting period:</p>\r\n\r\n
+        \         <h2 class=\"headline\">2015-2016</h2>\r\n\r\n          <ul>\r\n
+        \           <li><a href=\"/eng/7702.asp?qtr=q115\">1st Quarter <span class=\"cn-invisible\">Q115</span></a>-&nbsp;April
+        1, 2015 -&nbsp;June 30, 2015</li>\r\n          </ul>\r\n\r\n          <h2
+        class=\"headline\">2014-2015</h2>\r\n\r\n          <ul>\r\n            <li><a
+        href=\"/eng/7702.asp?qtr=q414\">4th Quarter <span class=\"cn-invisible\">Q414</span></a>-
+        January 1, 2015 - March 31, 2015</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q314\">3rd
+        Quarter <span class=\"cn-invisible\">Q314</span></a>- October 1, 2014 - December
+        31, 2014</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q214\">2nd
+        Quarter <span class=\"cn-invisible\">Q214</span></a>- July 1, 2014 - September
+        30, 2014</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q114\">1st
+        Quarter <span class=\"cn-invisible\">Q114</span></a>- April 1, 2014 - June
+        30, 2014</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2013-2014</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q413\">4th Quarter
+        <span class=\"cn-invisible\">Q413</span></a>- January 1, 2014 - March 31,
+        2014</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q313\">3rd Quarter
+        <span class=\"cn-invisible\">Q313</span></a>- October 1, 2013 - December 31,
+        2013</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q213\">2nd Quarter
+        <span class=\"cn-invisible\">Q213</span></a>- July 1, 2013 - September 30,
+        2013</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q113\">1st Quarter
+        <span class=\"cn-invisible\">Q113</span></a>- April 1, 2013 - June 30, 2013</li>\r\n
+        \         </ul>\r\n\r\n          <h2 class=\"headline\">2012-2013</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q412\">4th Quarter
+        <span class=\"cn-invisible\">Q412</span></a>- January 1, 2013 - March 31,
+        2013</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q312\">3rd Quarter
+        <span class=\"cn-invisible\">Q312</span></a>- October 1, 2012 - December 31,
+        2012</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q212\">2nd Quarter
+        <span class=\"cn-invisible\">Q212</span></a>- July 1, 2012 - September 30,
+        2012</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q112\">1st Quarter
+        <span class=\"cn-invisible\">Q112</span></a>- April 1, 2012 - June 30, 2012</li>\r\n
+        \         </ul>\r\n\r\n          <h2 class=\"headline\">2011-2012</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q411\">4th Quarter
+        <span class=\"cn-invisible\">Q411</span></a> - January 1, 2012 - March 31,
+        2012</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q311\">3rd Quarter
+        <span class=\"cn-invisible\">Q311</span></a> - Oct 1, 2011 - December 31,
+        2011</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q211\">2nd Quarter
+        <span class=\"cn-invisible\">Q211</span></a> - July 1, 2011 - September 30,
+        2011</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q111\">1st Quarter
+        <span class=\"cn-invisible\">Q111</span></a> - April 1, 2011 - June 30, 2011</li>\r\n
+        \         </ul>\r\n\r\n          <h2 class=\"headline\">2010-2011</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q410\">4th Quarter
+        <span class=\"cn-invisible\">Q410</span></a> - January 1, 2011 - March 31,
+        2011</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q310\">3rd Quarter
+        <span class=\"cn-invisible\">Q310</span></a> - October 1, 2010 - December
+        31, 2010</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q210\">2nd
+        Quarter <span class=\"cn-invisible\">Q210</span></a> - July 1, 2010 - September
+        30, 2010</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q110\">1st
+        Quarter <span class=\"cn-invisible\">Q110</span></a> - April 1, 2010 - June
+        30, 2010</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2009-2010</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q409\">4th Quarter
+        <span class=\"cn-invisible\">Q409</span></a> - January 1, 2010 - March 31,
+        2010</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q309\">3rd Quarter
+        <span class=\"cn-invisible\">Q309</span></a> - October 1, 2009 - December
+        31, 2009</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q209\">2nd
+        Quarter <span class=\"cn-invisible\">Q209</span></a> - July 1, 2009 - September
+        30, 2009</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q109\">1st
+        Quarter <span class=\"cn-invisible\">Q109</span></a> - April 1, 2009 - June
+        30, 2009</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2008-2009</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q408\">4th Quarter
+        <span class=\"cn-invisible\">Q408</span></a> - January 1, 2009 - March 31,
+        2009</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q308\">3rd Quarter
+        <span class=\"cn-invisible\">Q308</span></a> - October 1, 2008 - December
+        31, 2008</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q208\">2nd
+        Quarter <span class=\"cn-invisible\">Q208</span></a> - July 1, 2008 - September
+        30, 2008</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q108\">1st
+        Quarter <span class=\"cn-invisible\">Q108</span></a> - April 1, 2008 - June
+        30, 2008</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2007-2008</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q407\">4th Quarter
+        <span class=\"cn-invisible\">Q407</span></a> - January 1, 2008 - March 31,
+        2008</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q307\">3rd Quarter
+        <span class=\"cn-invisible\">Q307</span></a> - October 1, 2007 - December
+        31, 2007</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q207\">2nd
+        Quarter <span class=\"cn-invisible\">Q207</span></a> - July 1, 2007 - September
+        30, 2007</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q107\">1st
+        Quarter <span class=\"cn-invisible\">Q107</span></a> - April 1, 2007 - June
+        30, 2007</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2006-2007</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q406\">4th Quarter
+        <span class=\"cn-invisible\">Q406</span></a> - January 1, 2007 - March 31,
+        2007</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q306\">3rd Quarter
+        <span class=\"cn-invisible\">Q306</span></a> - October 1, 2006 - December
+        31, 2006</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q206\">2nd
+        Quarter <span class=\"cn-invisible\">Q206</span></a> - July 1, 2006 - September
+        30, 2006</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q106\">1st
+        Quarter <span class=\"cn-invisible\">Q106</span></a> - April 1, 2006 - June
+        30, 2006</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2005-2006</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q405\">4th Quarter
+        <span class=\"cn-invisible\">Q405</span></a> - January 1, 2006 - March 31,
+        2006</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q305\">3rd Quarter
+        <span class=\"cn-invisible\">Q305</span></a> - October 1, 2005 - December
+        31, 2005</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q205\">2nd
+        Quarter <span class=\"cn-invisible\">Q205</span></a> - July 1, 2005 - September
+        30, 2005</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q105\">1st
+        Quarter <span class=\"cn-invisible\">Q105</span></a> - April 1, 2005 - June
+        30, 2005</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2004-2005</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q404\">4th Quarter
+        <span class=\"cn-invisible\">Q404</span></a> - January 1, 2005 - March 31,
+        2005</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q304\">3rd Quarter
+        <span class=\"cn-invisible\">Q304</span></a> - October 1, 2004 - December
+        31, 2004</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q204\">2nd
+        Quarter <span class=\"cn-invisible\">Q204</span></a> - July 1, 2004 - September
+        30, 2004</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q104\">1st
+        Quarter <span class=\"cn-invisible\">Q104</span></a> - April 1, 2004 - June
+        30, 2004</li>\r\n          </ul><br />\r\n        </div><!-- CONTENT ENDS
+        | FIN DU CONTENU -->\r\n        <!-- TWO COLUMN LAYOUT ENDS | FIN DE LA MISE
+        EN PAGE DE DEUX COLONNES -->\r\n        <!-- FOOTER BEGINS | DEBUT DU PIED
+        DE LA PAGE -->\r\n\r\n        <div style=\"clear:both;\"></div>\r\n\r\n        <div
+        class=\"footer\">\r\n          <div class=\"footerline\"></div>\r\n\r\n          <div
+        class=\"foot1\">\r\n            Date Modified: <span class=\"date\">2015-07-31</span>\r\n
+        \         </div>\r\n\r\n          <div class=\"foot2\">\r\n            <a
+        href=\"#tphp\" title=\"Return to Top of Page\"><img class=\"uparrow\" src=\"/images/tmpl/tphp.gif\"
+        width=\"19\" height=\"12\" alt=\"Top of Page\" /><br />\r\n            Top
+        of Page</a>\r\n          </div>\r\n\r\n          <div class=\"foot3\">\r\n
+        \           <a href=\"/eng/34.asp\">Terms and Conditions</a>\r\n          </div>\r\n
+        \       </div>\r\n      </div><!-- FOOTER ENDS | FIN DU PIED DE LA PAGE -->\r\n
+        \   </div>\r\n  </div><!-- This page is a Parent Page of the following Child
+        Pages -->\r\n  <!--     =======================================================
+        -->\r\n  <!--              -->\r\n  <!--     =======================================================
+        -->\r\n  <!-- END colLayout -->\r\n  <!-- END core-->\r\n  <!-- END page -->\r\n
+        \ <!-- START OF SmartSource Data Collector TAG -->\r\n  <!-- Copyright (c)
+        1996-2013 Webtrends Inc.  All rights reserved. -->\r\n  <!-- Version: 9.4.0
+        -->\r\n  <!-- Tag Builder Version: 4.1  -->\r\n  <!-- Created: 3/14/2013 6:38:15
+        PM -->\r\n  <script src=\"/scripts/webtrends.js\" type=\"text/javascript\">\r\n</script><!--
+        ===================================================================================
+        -->\r\n  <!-- Warning: The two script blocks below must remain inline. Moving
+        them to an external -->\r\n  <!-- JavaScript include file can cause serious
+        problems with cross-domain tracking.      -->\r\n  <!-- ===================================================================================
+        -->\r\n  <script type=\"text/javascript\">\r\n//<![CDATA[\r\n  var _tag=new
+        WebTrends();\r\n  _tag.dcsGetId();\r\n  //]]>\r\n  </script><script type=\"text/javascript\">\r\n//<![CDATA[\r\n
+        \ _tag.dcsCustom=function(){\r\n  // Add custom parameters here.\r\n  //_tag.DCSext.param_name=param_value;\r\n
+        \ }\r\n  _tag.dcsCollect();\r\n  //]]>\r\n  </script><noscript>\r\n  <div>\r\n
+        \   <img alt=\"DCSIMG\" id=\"DCSIMG\" width=\"1\" height=\"1\" src=\"//sdc.wd.gc.ca/dcs9m2iju0gro2a4ezh9w5j2b_1d7h/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.wd-deo.gc.ca\"
+        />\r\n  </div></noscript><!-- END OF SmartSource Data Collector TAG -->\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 23:10:41 GMT
+- request:
+    method: get
+    uri: http://www.wd.gc.ca/eng/7705.asp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Sep 2015 23:14:06 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '18375'
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - ASPSESSIONIDCSBQACTB=JNENMBHBMJHOHHOPHHDKOPIC; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\r\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\r\n<head>\r\n
+        \ <title>Reports</title>\r\n  <meta http-equiv=\"content-type\" content=\"text/html;
+        charset=utf-8\" />\r\n  <link rel=\"schema.dc\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\r\n  <link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\" />\r\n
+        \ <meta name=\"dc.description\" content=\"Disclosure of contracts contracts
+        issued by or on behalf of Western Economic Diversification Canada for amounts
+        over $10,000\" />\r\n  <meta name=\"description\" content=\"Disclosure of
+        contracts contracts issued by or on behalf of Western Economic Diversification
+        Canada for amounts over $10,000\" />\r\n  <meta name=\"keywords\" content=\"Disclosure
+        of Contracts, contracts, disclosure, procurement contracts, goods and services,
+        contracts awarded, awarded\" />\r\n  <meta name=\"dc.title\" content=\"Reports\"
+        />\r\n  <meta name=\"WT.cg_n\" content=\"prodisc_con\" />\r\n  <meta name=\"dc.creator\"
+        content=\"Government of Canada, Western Economic Diversification Canada\"
+        />\r\n  <meta name=\"dcterms.issued\" scheme=\"W3CDTF\" content=\"2007-05-31\"
+        />\r\n  <meta name=\"dcterms.modified\" scheme=\"W3CDTF\" content=\"2015-07-31\"
+        />\r\n  <meta name=\"dc.date.created\" content=\"2007-05-31\" />\r\n  <meta
+        name=\"dc.date.modified\" content=\"2015-07-31\" />\r\n  <meta name=\"DCSext.modifed_date\"
+        content=\"2015-07-31\" />\r\n  <meta name=\"WT.mc_id\" content=\"\" />\r\n
+        \ <meta name=\"dc.subject\" scheme=\"gccore\" content=\"federal government,
+        federal departments, federal programs, government services, government information\"
+        />\r\n  <meta name=\"dc.language\" scheme=\"ISO639-2/T\" content=\"eng\" />\r\n
+        \ <meta http-equiv=\"content-language\" content=\"eng\" />\r\n  <link rel=\"shortcut
+        icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n  <link rel=\"icon\"
+        href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n  <link href=\"/base.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n  <link
+        href=\"/2col.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        />\r\n  <style type=\"text/css\" media=\"all\">\r\n/*<![CDATA[*/\r\n  @import
+        url(/base2.css);\r\n  /*]]>*/\r\n  </style><!-- PROGRESSIVE ENHANCEMENT BEGINS
+        | DEBUT DE L'AMELIORATION PROGRESSIVE -->\r\n\r\n  <script src=\"/js/lib/jquery.min.js\"
+        type=\"text/javascript\">\r\n</script>\r\n  <script src=\"/js/pe-ap.js\" type=\"text/javascript\"
+        id=\"progressive\">\r\n</script>\r\n  <script type=\"text/javascript\">\r\n/*
+        <![CDATA[ */\r\n  var params = {\r\n  lng:\"eng\",\r\n\r\n\r\n\r\n  pngfix:\"/images/tmpl/inv.gif\"\r\n
+        \ };\r\n  PE.progress(params);\r\n  /* ]]> */\r\n  </script><!-- PROGRESSIVE
+        ENHANCEMENT ENDS | FIN DE L'AMELIORATION PROGRESSIVE -->\r\n  <!-- CUSTOM
+        SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS PERSONNALISES -->\r\n  <link href=\"/base-institution.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n  <link
+        href=\"/institution.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        /><!-- CUSTOM SCRIPTS/CSS END | FIN DES SCRIPTS/CSS PERSONNALISES -->\r\n
+        \ <!-- TEMPLATE PRINT CSS BEGINS | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION
+        -->\r\n  <link href=\"/pf-if.css\" rel=\"stylesheet\" type=\"text/css\" /><!--
+        TEMPLATE PRINT CSS ENDS | FIN DU CSS DU GABARIT POUR L'IMPRESSION -->\r\n</head>\r\n\r\n<body>\r\n
+        \ <div class=\"page\">\r\n    <div class=\"core\">\r\n      <div class=\"fip\">\r\n
+        \       <a id=\"tphp\" name=\"tphp\"><img src=\"/images/tmpl/wd_fip_e_2c_55.gif\"
+        alt=\"Western Economic Diversification Canada\" width=\"337\" height=\"20\"
+        /></a>\r\n      </div>\r\n\r\n      <div class=\"cwm\">\r\n        <img src=\"/images/tmpl/wmms.gif\"
+        alt=\"Symbol of the Government of Canada\" width=\"83\" height=\"20\" />\r\n
+        \     </div>\r\n\r\n      <div class=\"banner\">\r\n        <img src=\"/images/tmpl/lffl.gif\"
+        class=\"lf pngfix\" height=\"65\" width=\"65\" alt=\"\" />\r\n\r\n        <p
+        class=\"main\">Western Economic Diversification Canada</p>\r\n\r\n        <p
+        class=\"siteuri\">www.wd-deo.gc.ca</p>\r\n      </div>\r\n\r\n      <div class=\"navaid\">\r\n
+        \       <a href=\"#cont\">Skip to content</a> | <a href=\"#il\">Skip to institutional
+        links</a>\r\n      </div>\r\n\r\n      <div class=\"fp\">\r\n        <h1 class=\"navaid\">Common
+        menu bar links</h1>\r\n\r\n        <ul class=\"commonbar\">\r\n          \r\n\r\n
+        \         <li class=\"fiptexta\">\r\n            <div>\r\n              <a
+        href=\"/fra/7705.asp\" lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais
+        - Version fran&ccedil;aise de cette page\">Fran&ccedil;ais</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptext\">\r\n            <div>\r\n
+        \             <a href=\"/eng/home.asp\" title=\"Home\">Home</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptextc\">\r\n            <div>\r\n
+        \             <a href=\"/eng/39.asp\" title=\"Contact Us\">Contact Us</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/41.asp\" title=\"Help\">Help</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/42.asp\" title=\"Search\">Search</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptextb\">\r\n
+        \           <div>\r\n              <a href=\"http://www.canada.ca/en/index.html\"
+        title=\"canada.ca - Government of Canada Web Site\">canada.ca</a>\r\n            </div>\r\n
+        \         </li>\r\n        </ul>\r\n      </div><!-- BREAD CRUMB BEGINS |
+        DEBUT DE LA PISTE DE NAVIGATION -->\r\n\r\n      <p class=\"breadcrumb\"><a
+        href=\"/eng/home.asp\" class=\"bcrumbs\">Home</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;<a
+        href=\"/eng/46.asp\" class=\"bcrumbs\">Proactive Disclosure</a>&nbsp;<span
+        class=\"smalltext\">&gt;</span>&nbsp;<a href=\"/eng/112.asp\" class=\"bcrumbs\">Disclosure
+        of Contracts</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;Reports</p><!--
+        BREAD CRUMB ENDS | FIN DE LA PISTE DE NAVIGATION -->\r\n\r\n      <div class=\"colLayout\">\r\n
+        \       <!-- 2 column layout begins /-->\r\n        <!-- LEFT SIDE MENU BEGINS
+        | DEBUT DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"left\">\r\n
+        \         <!-- SIDE MENU TITLE BEGINS | DEBUT DU TITRE DU MENU LATERAL -->\r\n\r\n
+        \         <h1 class=\"navaid\"><a name=\"il\" id=\"il\">Institutional links</a></h1><!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n          <!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n\r\n          <ul
+        class=\"nav\">\r\n            <li>\r\n              <ul class=\"nav nav_hover\">\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/43.asp\">Minister
+        of State</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/36.asp\">The
+        Department</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/37.asp\">Services</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/16.asp\">Programs</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/45.asp\">Investments
+        in the West</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/15.asp\">Reports
+        and Publications</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/44.asp\">Media Centre</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/10320.asp\">Career Opportunities</a></li>\r\n\r\n                <li
+        class=\"menucontent\"><a href=\"/eng/38.asp\">A - Z Index</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/47.asp\">Frequently
+        Asked Questions</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/40.asp\">Feedback</a></li>\r\n\r\n                <li>\r\n                  <div
+        class=\"prodis\"></div>\r\n\r\n                  <h2 class=\"navaid\">Proactive
+        Disclosure</h2><!-- PROACTIVE DISCLOSURE BEGINS | DEBUT DU LIEN DIVULGATION
+        PROACTIVE -->\r\n\r\n                  <div class=\"menucontent nav_hover\">\r\n
+        \                   <a class=\"menulink\" href=\"/eng/13245.asp\">Completed
+        Access to Information Requests</a> \r\n                  </div>\r\n\r\n                  <div
+        class=\"menucontent nav_hover\">\r\n                    <a class=\"menulink\"
+        href=\"/eng/46.asp\">Proactive Disclosure</a> \r\n                  </div><!--
+        PROACTIVE DISCLOSURE ENDS | FIN DU LIEN DIVULGATION PROACTIVEE -->\r\n                </li>\r\n
+        \             </ul>\r\n            </li>\r\n          </ul>\r\n        </div><!--
+        LEFT SIDE MENU ENDS | FIN DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"center\">\r\n
+        \         <a name=\"cont\" id=\"cont\"></a> \r\n\r\n          <h1>Disclosure
+        of Contracts</h1>\r\n\r\n          <p><a href=\"/eng/112.asp\">Overview</a>
+        | Reports</p>\r\n\r\n          <p>Please select a reporting period:</p>\r\n\r\n
+        \         <h2 class=\"headline\">2015-2016</h2>\r\n\r\n          <ul>\r\n
+        \           <li><a href=\"/eng/7702.asp?qtr=q115\">1st Quarter <span class=\"cn-invisible\">Q115</span></a>-&nbsp;April
+        1, 2015 -&nbsp;June 30, 2015</li>\r\n          </ul>\r\n\r\n          <h2
+        class=\"headline\">2014-2015</h2>\r\n\r\n          <ul>\r\n            <li><a
+        href=\"/eng/7702.asp?qtr=q414\">4th Quarter <span class=\"cn-invisible\">Q414</span></a>-
+        January 1, 2015 - March 31, 2015</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q314\">3rd
+        Quarter <span class=\"cn-invisible\">Q314</span></a>- October 1, 2014 - December
+        31, 2014</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q214\">2nd
+        Quarter <span class=\"cn-invisible\">Q214</span></a>- July 1, 2014 - September
+        30, 2014</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q114\">1st
+        Quarter <span class=\"cn-invisible\">Q114</span></a>- April 1, 2014 - June
+        30, 2014</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2013-2014</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q413\">4th Quarter
+        <span class=\"cn-invisible\">Q413</span></a>- January 1, 2014 - March 31,
+        2014</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q313\">3rd Quarter
+        <span class=\"cn-invisible\">Q313</span></a>- October 1, 2013 - December 31,
+        2013</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q213\">2nd Quarter
+        <span class=\"cn-invisible\">Q213</span></a>- July 1, 2013 - September 30,
+        2013</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q113\">1st Quarter
+        <span class=\"cn-invisible\">Q113</span></a>- April 1, 2013 - June 30, 2013</li>\r\n
+        \         </ul>\r\n\r\n          <h2 class=\"headline\">2012-2013</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q412\">4th Quarter
+        <span class=\"cn-invisible\">Q412</span></a>- January 1, 2013 - March 31,
+        2013</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q312\">3rd Quarter
+        <span class=\"cn-invisible\">Q312</span></a>- October 1, 2012 - December 31,
+        2012</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q212\">2nd Quarter
+        <span class=\"cn-invisible\">Q212</span></a>- July 1, 2012 - September 30,
+        2012</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q112\">1st Quarter
+        <span class=\"cn-invisible\">Q112</span></a>- April 1, 2012 - June 30, 2012</li>\r\n
+        \         </ul>\r\n\r\n          <h2 class=\"headline\">2011-2012</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q411\">4th Quarter
+        <span class=\"cn-invisible\">Q411</span></a> - January 1, 2012 - March 31,
+        2012</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q311\">3rd Quarter
+        <span class=\"cn-invisible\">Q311</span></a> - Oct 1, 2011 - December 31,
+        2011</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q211\">2nd Quarter
+        <span class=\"cn-invisible\">Q211</span></a> - July 1, 2011 - September 30,
+        2011</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q111\">1st Quarter
+        <span class=\"cn-invisible\">Q111</span></a> - April 1, 2011 - June 30, 2011</li>\r\n
+        \         </ul>\r\n\r\n          <h2 class=\"headline\">2010-2011</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q410\">4th Quarter
+        <span class=\"cn-invisible\">Q410</span></a> - January 1, 2011 - March 31,
+        2011</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q310\">3rd Quarter
+        <span class=\"cn-invisible\">Q310</span></a> - October 1, 2010 - December
+        31, 2010</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q210\">2nd
+        Quarter <span class=\"cn-invisible\">Q210</span></a> - July 1, 2010 - September
+        30, 2010</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q110\">1st
+        Quarter <span class=\"cn-invisible\">Q110</span></a> - April 1, 2010 - June
+        30, 2010</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2009-2010</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q409\">4th Quarter
+        <span class=\"cn-invisible\">Q409</span></a> - January 1, 2010 - March 31,
+        2010</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q309\">3rd Quarter
+        <span class=\"cn-invisible\">Q309</span></a> - October 1, 2009 - December
+        31, 2009</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q209\">2nd
+        Quarter <span class=\"cn-invisible\">Q209</span></a> - July 1, 2009 - September
+        30, 2009</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q109\">1st
+        Quarter <span class=\"cn-invisible\">Q109</span></a> - April 1, 2009 - June
+        30, 2009</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2008-2009</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q408\">4th Quarter
+        <span class=\"cn-invisible\">Q408</span></a> - January 1, 2009 - March 31,
+        2009</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q308\">3rd Quarter
+        <span class=\"cn-invisible\">Q308</span></a> - October 1, 2008 - December
+        31, 2008</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q208\">2nd
+        Quarter <span class=\"cn-invisible\">Q208</span></a> - July 1, 2008 - September
+        30, 2008</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q108\">1st
+        Quarter <span class=\"cn-invisible\">Q108</span></a> - April 1, 2008 - June
+        30, 2008</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2007-2008</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q407\">4th Quarter
+        <span class=\"cn-invisible\">Q407</span></a> - January 1, 2008 - March 31,
+        2008</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q307\">3rd Quarter
+        <span class=\"cn-invisible\">Q307</span></a> - October 1, 2007 - December
+        31, 2007</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q207\">2nd
+        Quarter <span class=\"cn-invisible\">Q207</span></a> - July 1, 2007 - September
+        30, 2007</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q107\">1st
+        Quarter <span class=\"cn-invisible\">Q107</span></a> - April 1, 2007 - June
+        30, 2007</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2006-2007</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q406\">4th Quarter
+        <span class=\"cn-invisible\">Q406</span></a> - January 1, 2007 - March 31,
+        2007</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q306\">3rd Quarter
+        <span class=\"cn-invisible\">Q306</span></a> - October 1, 2006 - December
+        31, 2006</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q206\">2nd
+        Quarter <span class=\"cn-invisible\">Q206</span></a> - July 1, 2006 - September
+        30, 2006</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q106\">1st
+        Quarter <span class=\"cn-invisible\">Q106</span></a> - April 1, 2006 - June
+        30, 2006</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2005-2006</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q405\">4th Quarter
+        <span class=\"cn-invisible\">Q405</span></a> - January 1, 2006 - March 31,
+        2006</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q305\">3rd Quarter
+        <span class=\"cn-invisible\">Q305</span></a> - October 1, 2005 - December
+        31, 2005</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q205\">2nd
+        Quarter <span class=\"cn-invisible\">Q205</span></a> - July 1, 2005 - September
+        30, 2005</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q105\">1st
+        Quarter <span class=\"cn-invisible\">Q105</span></a> - April 1, 2005 - June
+        30, 2005</li>\r\n          </ul>\r\n\r\n          <h2 class=\"headline\">2004-2005</h2>\r\n\r\n
+        \         <ul>\r\n            <li><a href=\"/eng/7702.asp?qtr=q404\">4th Quarter
+        <span class=\"cn-invisible\">Q404</span></a> - January 1, 2005 - March 31,
+        2005</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q304\">3rd Quarter
+        <span class=\"cn-invisible\">Q304</span></a> - October 1, 2004 - December
+        31, 2004</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q204\">2nd
+        Quarter <span class=\"cn-invisible\">Q204</span></a> - July 1, 2004 - September
+        30, 2004</li>\r\n\r\n            <li><a href=\"/eng/7702.asp?qtr=q104\">1st
+        Quarter <span class=\"cn-invisible\">Q104</span></a> - April 1, 2004 - June
+        30, 2004</li>\r\n          </ul><br />\r\n        </div><!-- CONTENT ENDS
+        | FIN DU CONTENU -->\r\n        <!-- TWO COLUMN LAYOUT ENDS | FIN DE LA MISE
+        EN PAGE DE DEUX COLONNES -->\r\n        <!-- FOOTER BEGINS | DEBUT DU PIED
+        DE LA PAGE -->\r\n\r\n        <div style=\"clear:both;\"></div>\r\n\r\n        <div
+        class=\"footer\">\r\n          <div class=\"footerline\"></div>\r\n\r\n          <div
+        class=\"foot1\">\r\n            Date Modified: <span class=\"date\">2015-07-31</span>\r\n
+        \         </div>\r\n\r\n          <div class=\"foot2\">\r\n            <a
+        href=\"#tphp\" title=\"Return to Top of Page\"><img class=\"uparrow\" src=\"/images/tmpl/tphp.gif\"
+        width=\"19\" height=\"12\" alt=\"Top of Page\" /><br />\r\n            Top
+        of Page</a>\r\n          </div>\r\n\r\n          <div class=\"foot3\">\r\n
+        \           <a href=\"/eng/34.asp\">Terms and Conditions</a>\r\n          </div>\r\n
+        \       </div>\r\n      </div><!-- FOOTER ENDS | FIN DU PIED DE LA PAGE -->\r\n
+        \   </div>\r\n  </div><!-- This page is a Parent Page of the following Child
+        Pages -->\r\n  <!--     =======================================================
+        -->\r\n  <!--              -->\r\n  <!--     =======================================================
+        -->\r\n  <!-- END colLayout -->\r\n  <!-- END core-->\r\n  <!-- END page -->\r\n
+        \ <!-- START OF SmartSource Data Collector TAG -->\r\n  <!-- Copyright (c)
+        1996-2013 Webtrends Inc.  All rights reserved. -->\r\n  <!-- Version: 9.4.0
+        -->\r\n  <!-- Tag Builder Version: 4.1  -->\r\n  <!-- Created: 3/14/2013 6:38:15
+        PM -->\r\n  <script src=\"/scripts/webtrends.js\" type=\"text/javascript\">\r\n</script><!--
+        ===================================================================================
+        -->\r\n  <!-- Warning: The two script blocks below must remain inline. Moving
+        them to an external -->\r\n  <!-- JavaScript include file can cause serious
+        problems with cross-domain tracking.      -->\r\n  <!-- ===================================================================================
+        -->\r\n  <script type=\"text/javascript\">\r\n//<![CDATA[\r\n  var _tag=new
+        WebTrends();\r\n  _tag.dcsGetId();\r\n  //]]>\r\n  </script><script type=\"text/javascript\">\r\n//<![CDATA[\r\n
+        \ _tag.dcsCustom=function(){\r\n  // Add custom parameters here.\r\n  //_tag.DCSext.param_name=param_value;\r\n
+        \ }\r\n  _tag.dcsCollect();\r\n  //]]>\r\n  </script><noscript>\r\n  <div>\r\n
+        \   <img alt=\"DCSIMG\" id=\"DCSIMG\" width=\"1\" height=\"1\" src=\"//sdc.wd.gc.ca/dcs9m2iju0gro2a4ezh9w5j2b_1d7h/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.wd-deo.gc.ca\"
+        />\r\n  </div></noscript><!-- END OF SmartSource Data Collector TAG -->\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 23:16:54 GMT
+recorded_with: VCR 2.9.2

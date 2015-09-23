@@ -1,0 +1,395 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.wd.gc.ca/eng/7702.asp?qtr=q115
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Sep 2015 23:19:59 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '12642'
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - ASPSESSIONIDCSBQACTB=PHFNMBHBLJIMBGLCMPENJANJ; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\r\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\r\n<head>\r\n
+        \ <title>Quarter</title>\r\n  <meta http-equiv=\"content-type\" content=\"text/html;
+        charset=utf-8\" />\r\n  <link rel=\"schema.dc\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\r\n  <link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\" />\r\n
+        \ <meta name=\"dc.description\" content=\"Disclosure of contracts contracts
+        issued by or on behalf of Western Economic Diversification Canada for amounts
+        over $10,000\" />\r\n  <meta name=\"description\" content=\"Disclosure of
+        contracts contracts issued by or on behalf of Western Economic Diversification
+        Canada for amounts over $10,000\" />\r\n  <meta name=\"keywords\" content=\"Disclosure
+        of Contracts, contracts, disclosure, procurement contracts, goods and services,
+        contracts awarded, awarded\" />\r\n  <meta name=\"dc.title\" content=\"Quarter\"
+        />\r\n  <meta name=\"WT.cg_n\" content=\"prodisc_con\" />\r\n  <meta name=\"dc.creator\"
+        content=\"Government of Canada, Western Economic Diversification Canada\"
+        />\r\n  <meta name=\"dcterms.issued\" scheme=\"W3CDTF\" content=\"2007-05-30\"
+        />\r\n  <meta name=\"dcterms.modified\" scheme=\"W3CDTF\" content=\"2009-11-12\"
+        />\r\n  <meta name=\"dc.date.created\" content=\"2007-05-30\" />\r\n  <meta
+        name=\"dc.date.modified\" content=\"2009-11-12\" />\r\n  <meta name=\"DCSext.modifed_date\"
+        content=\"2009-11-12\" />\r\n  <meta name=\"dc.subject\" scheme=\"gccore\"
+        content=\"federal government, federal departments, federal programs, government
+        services, government information\" />\r\n  <meta name=\"dc.language\" scheme=\"ISO639-2/T\"
+        content=\"eng\" />\r\n  <meta http-equiv=\"content-language\" content=\"eng\"
+        />\r\n  <link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"
+        />\r\n  <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n
+        \ <link href=\"/base.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        />\r\n  <link href=\"/2col.css\" media=\"screen, print\" rel=\"stylesheet\"
+        type=\"text/css\" />\r\n  <style type=\"text/css\" media=\"all\">\r\n/*<![CDATA[*/\r\n
+        \ @import url(/base2.css);\r\n  /*]]>*/\r\n  </style><!-- PROGRESSIVE ENHANCEMENT
+        BEGINS | DEBUT DE L'AMELIORATION PROGRESSIVE -->\r\n\r\n  <script src=\"/js/lib/jquery.min.js\"
+        type=\"text/javascript\">\r\n</script>\r\n  <script src=\"/js/pe-ap.js\" type=\"text/javascript\"
+        id=\"progressive\">\r\n</script>\r\n  <script type=\"text/javascript\">\r\n/*
+        <![CDATA[ */\r\n  var params = {\r\n  lng:\"eng\",\r\n\r\n\r\n\r\n  pngfix:\"/images/tmpl/inv.gif\"\r\n
+        \ };\r\n  PE.progress(params);\r\n  /* ]]> */\r\n  </script><!-- PROGRESSIVE
+        ENHANCEMENT ENDS | FIN DE L'AMELIORATION PROGRESSIVE -->\r\n  <!-- CUSTOM
+        SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS PERSONNALISES -->\r\n  <link href=\"/base-institution.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n  <link
+        href=\"/institution.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        /><!-- CUSTOM SCRIPTS/CSS END | FIN DES SCRIPTS/CSS PERSONNALISES -->\r\n
+        \ <!-- TEMPLATE PRINT CSS BEGINS | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION
+        -->\r\n  <link href=\"/pf-if.css\" rel=\"stylesheet\" type=\"text/css\" /><!--
+        TEMPLATE PRINT CSS ENDS | FIN DU CSS DU GABARIT POUR L'IMPRESSION -->\r\n</head>\r\n\r\n<body>\r\n
+        \ <div class=\"page\">\r\n    <div class=\"core\">\r\n      <div class=\"fip\">\r\n
+        \       <a id=\"tphp\" name=\"tphp\"><img src=\"/images/tmpl/wd_fip_e_2c_55.gif\"
+        alt=\"Western Economic Diversification Canada\" width=\"337\" height=\"20\"
+        /></a>\r\n      </div>\r\n\r\n      <div class=\"cwm\">\r\n        <img src=\"/images/tmpl/wmms.gif\"
+        alt=\"Symbol of the Government of Canada\" width=\"83\" height=\"20\" />\r\n
+        \     </div>\r\n\r\n      <div class=\"banner\">\r\n        <img src=\"/images/tmpl/lffl.gif\"
+        class=\"lf pngfix\" height=\"65\" width=\"65\" alt=\"\" />\r\n\r\n        <p
+        class=\"main\">Western Economic Diversification Canada</p>\r\n\r\n        <p
+        class=\"siteuri\">www.wd-deo.gc.ca</p>\r\n      </div>\r\n\r\n      <div class=\"navaid\">\r\n
+        \       <a href=\"#cont\">Skip to content</a> | <a href=\"#il\">Skip to institutional
+        links</a>\r\n      </div>\r\n\r\n      <div class=\"fp\">\r\n        <h1 class=\"navaid\">Common
+        menu bar links</h1>\r\n\r\n        <ul class=\"commonbar\">\r\n          \r\n\r\n
+        \         <li class=\"fiptexta\">\r\n            <div>\r\n              <a
+        href=\"/fra/7702.asp?qtr=q115\" lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais
+        - Version fran&ccedil;aise de cette page\">Fran&ccedil;ais</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptext\">\r\n            <div>\r\n
+        \             <a href=\"/eng/home.asp\" title=\"Home\">Home</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptextc\">\r\n            <div>\r\n
+        \             <a href=\"/eng/39.asp\" title=\"Contact Us\">Contact Us</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/41.asp\" title=\"Help\">Help</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/42.asp\" title=\"Search\">Search</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptextb\">\r\n
+        \           <div>\r\n              <a href=\"http://www.canada.ca/en/index.html\"
+        title=\"canada.ca - Government of Canada Web Site\">canada.ca</a>\r\n            </div>\r\n
+        \         </li>\r\n        </ul>\r\n      </div><!-- BREAD CRUMB BEGINS |
+        DEBUT DE LA PISTE DE NAVIGATION -->\r\n\r\n      <p class=\"breadcrumb\"><a
+        href=\"/eng/home.asp\" class=\"bcrumbs\">Home</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;<a
+        href=\"/eng/46.asp\" class=\"bcrumbs\">Proactive Disclosure</a>&nbsp;<span
+        class=\"smalltext\">&gt;</span>&nbsp;<a href=\"/eng/112.asp\" class=\"bcrumbs\">Disclosure
+        of Contracts</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;Quarter</p><!--
+        BREAD CRUMB ENDS | FIN DE LA PISTE DE NAVIGATION -->\r\n\r\n      <div class=\"colLayout\">\r\n
+        \       <!-- 2 column layout begins /-->\r\n        <!-- LEFT SIDE MENU BEGINS
+        | DEBUT DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"left\">\r\n
+        \         <!-- SIDE MENU TITLE BEGINS | DEBUT DU TITRE DU MENU LATERAL -->\r\n\r\n
+        \         <h1 class=\"navaid\"><a name=\"il\" id=\"il\">Institutional links</a></h1><!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n          <!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n\r\n          <ul
+        class=\"nav\">\r\n            <li>\r\n              <ul class=\"nav nav_hover\">\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/43.asp\">Minister
+        of State</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/36.asp\">The
+        Department</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/37.asp\">Services</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/16.asp\">Programs</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/45.asp\">Investments
+        in the West</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/15.asp\">Reports
+        and Publications</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/44.asp\">Media Centre</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/10320.asp\">Career Opportunities</a></li>\r\n\r\n                <li
+        class=\"menucontent\"><a href=\"/eng/38.asp\">A - Z Index</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/47.asp\">Frequently
+        Asked Questions</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/40.asp\">Feedback</a></li>\r\n\r\n                <li>\r\n                  <div
+        class=\"prodis\"></div>\r\n\r\n                  <h2 class=\"navaid\">Proactive
+        Disclosure</h2><!-- PROACTIVE DISCLOSURE BEGINS | DEBUT DU LIEN DIVULGATION
+        PROACTIVE -->\r\n\r\n                  <div class=\"menucontent nav_hover\">\r\n
+        \                   <a class=\"menulink\" href=\"/eng/13245.asp\">Completed
+        Access to Information Requests</a> \r\n                  </div>\r\n\r\n                  <div
+        class=\"menucontent nav_hover\">\r\n                    <a class=\"menulink\"
+        href=\"/eng/46.asp\">Proactive Disclosure</a> \r\n                  </div><!--
+        PROACTIVE DISCLOSURE ENDS | FIN DU LIEN DIVULGATION PROACTIVEE -->\r\n                </li>\r\n
+        \             </ul>\r\n            </li>\r\n          </ul>\r\n        </div><!--
+        LEFT SIDE MENU ENDS | FIN DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"center\">\r\n
+        \         <a name=\"cont\" id=\"cont\"></a> \r\n\r\n          <h1>Disclosure
+        of Contracts</h1>\r\n\r\n          <p><a href=\"/eng/112.asp%3C%=varConQS%%3E\">Overview</a>
+        | <a href=\"/eng/7705.asp\">Reports</a> | Quarter</p><h2>2015 - 2016 - 1<sup>st</sup>
+        quarter</h2>\r\n\r\n          <p>Please select the vendor name for contract
+        details.</p>\r\n\r\n          <table class=\"hhdr prodis widthFull\" border=\"0\"
+        cellspacing=\"0\" cellpadding=\"3\">\r\n            <tr>\r\n              <th
+        scope=\"col\">Date</th>\r\n\r\n              <th scope=\"col\">Vendor Name</th>\r\n\r\n
+        \             <th scope=\"col\">Description</th>\r\n\r\n              <th
+        class=\"alignRight\" scope=\"col\">Value*</th>\r\n            </tr>\r\n\r\n
+        \           <tr>\r\n              <td style=\"white-space: nowrap\">2015-06-17</td>\r\n\r\n
+        \             <td><a href=\"7772.asp?id=2837&amp;yr=2015\">Institute on Governance</a></td>\r\n\r\n
+        \             <td>447- Tuition Fees and Costs of Attending Courses Including
+        Seminars not Elsewhere Specified</td>\r\n\r\n              <td class=\"alignRight\">$21,000.00</td>\r\n
+        \           </tr>\r\n\r\n            <tr>\r\n              <td style=\"white-space:
+        nowrap\">2015-06-11</td>\r\n\r\n              <td><a href=\"7772.asp?id=2839&amp;yr=2015\">Skyridge
+        Systems Inc.</a></td>\r\n\r\n              <td>473- Information Technology
+        and Telecommunications Consultants</td>\r\n\r\n              <td class=\"alignRight\">$20,944.35</td>\r\n
+        \           </tr>\r\n\r\n            <tr>\r\n              <td style=\"white-space:
+        nowrap\">2015-05-19</td>\r\n\r\n              <td><a href=\"7772.asp?id=2836&amp;yr=2015\">Cine
+        Audio Visual Sales &amp; Service</a></td>\r\n\r\n              <td>332- Audio-visual
+        Services</td>\r\n\r\n              <td class=\"alignRight\">$15,750.00</td>\r\n
+        \           </tr>\r\n\r\n            <tr>\r\n              <td style=\"white-space:
+        nowrap\">2015-04-27</td>\r\n\r\n              <td><a href=\"7772.asp?id=2838&amp;yr=2015\">Portage
+        Personnel Inc.</a></td>\r\n\r\n              <td>813- Temporary Help Services</td>\r\n\r\n
+        \             <td class=\"alignRight\">$15,123.00</td>\r\n            </tr>\r\n
+        \         </table>\r\n\r\n          <p style=\"text-align:center;\"><em>*
+        All applicable taxes are included.</em></p><br />\r\n        </div><!-- CONTENT
+        ENDS | FIN DU CONTENU -->\r\n        <!-- TWO COLUMN LAYOUT ENDS | FIN DE
+        LA MISE EN PAGE DE DEUX COLONNES -->\r\n        <!-- FOOTER BEGINS | DEBUT
+        DU PIED DE LA PAGE -->\r\n\r\n        <div style=\"clear:both;\"></div>\r\n\r\n
+        \       <div class=\"footer\">\r\n          <div class=\"footerline\"></div>\r\n\r\n
+        \         <div class=\"foot1\">\r\n            Date Modified: <span class=\"date\">2009-11-12</span>\r\n
+        \         </div>\r\n\r\n          <div class=\"foot2\">\r\n            <a
+        href=\"#tphp\" title=\"Return to Top of Page\"><img class=\"uparrow\" src=\"/images/tmpl/tphp.gif\"
+        width=\"19\" height=\"12\" alt=\"Top of Page\" /><br />\r\n            Top
+        of Page</a>\r\n          </div>\r\n\r\n          <div class=\"foot3\">\r\n
+        \           <a href=\"/eng/34.asp\">Terms and Conditions</a>\r\n          </div>\r\n
+        \       </div>\r\n      </div><!-- FOOTER ENDS | FIN DU PIED DE LA PAGE -->\r\n
+        \   </div>\r\n  </div><!-- This page is a Parent Page of the following Child
+        Pages -->\r\n  <!--     =======================================================
+        -->\r\n  <!--              -->\r\n  <!--     =======================================================
+        -->\r\n  <!-- END colLayout -->\r\n  <!-- END core-->\r\n  <!-- END page -->\r\n
+        \ <!-- START OF SmartSource Data Collector TAG -->\r\n  <!-- Copyright (c)
+        1996-2013 Webtrends Inc.  All rights reserved. -->\r\n  <!-- Version: 9.4.0
+        -->\r\n  <!-- Tag Builder Version: 4.1  -->\r\n  <!-- Created: 3/14/2013 6:38:15
+        PM -->\r\n  <script src=\"/scripts/webtrends.js\" type=\"text/javascript\">\r\n</script><!--
+        ===================================================================================
+        -->\r\n  <!-- Warning: The two script blocks below must remain inline. Moving
+        them to an external -->\r\n  <!-- JavaScript include file can cause serious
+        problems with cross-domain tracking.      -->\r\n  <!-- ===================================================================================
+        -->\r\n  <script type=\"text/javascript\">\r\n//<![CDATA[\r\n  var _tag=new
+        WebTrends();\r\n  _tag.dcsGetId();\r\n  //]]>\r\n  </script><script type=\"text/javascript\">\r\n//<![CDATA[\r\n
+        \ _tag.dcsCustom=function(){\r\n  // Add custom parameters here.\r\n  //_tag.DCSext.param_name=param_value;\r\n
+        \ }\r\n  _tag.dcsCollect();\r\n  //]]>\r\n  </script><noscript>\r\n  <div>\r\n
+        \   <img alt=\"DCSIMG\" id=\"DCSIMG\" width=\"1\" height=\"1\" src=\"//sdc.wd.gc.ca/dcs9m2iju0gro2a4ezh9w5j2b_1d7h/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.wd-deo.gc.ca\"
+        />\r\n  </div></noscript><!-- END OF SmartSource Data Collector TAG -->\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 23:22:47 GMT
+- request:
+    method: get
+    uri: http://www.wd.gc.ca/eng/7702.asp?qtr=q115
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Sep 2015 23:20:00 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      Content-Length:
+      - '12642'
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - ASPSESSIONIDCSBQACTB=AIFNMBHBGHBBFBGIEILBGKOO; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\r\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">\r\n<head>\r\n
+        \ <title>Quarter</title>\r\n  <meta http-equiv=\"content-type\" content=\"text/html;
+        charset=utf-8\" />\r\n  <link rel=\"schema.dc\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\r\n  <link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\" />\r\n
+        \ <meta name=\"dc.description\" content=\"Disclosure of contracts contracts
+        issued by or on behalf of Western Economic Diversification Canada for amounts
+        over $10,000\" />\r\n  <meta name=\"description\" content=\"Disclosure of
+        contracts contracts issued by or on behalf of Western Economic Diversification
+        Canada for amounts over $10,000\" />\r\n  <meta name=\"keywords\" content=\"Disclosure
+        of Contracts, contracts, disclosure, procurement contracts, goods and services,
+        contracts awarded, awarded\" />\r\n  <meta name=\"dc.title\" content=\"Quarter\"
+        />\r\n  <meta name=\"WT.cg_n\" content=\"prodisc_con\" />\r\n  <meta name=\"dc.creator\"
+        content=\"Government of Canada, Western Economic Diversification Canada\"
+        />\r\n  <meta name=\"dcterms.issued\" scheme=\"W3CDTF\" content=\"2007-05-30\"
+        />\r\n  <meta name=\"dcterms.modified\" scheme=\"W3CDTF\" content=\"2009-11-12\"
+        />\r\n  <meta name=\"dc.date.created\" content=\"2007-05-30\" />\r\n  <meta
+        name=\"dc.date.modified\" content=\"2009-11-12\" />\r\n  <meta name=\"DCSext.modifed_date\"
+        content=\"2009-11-12\" />\r\n  <meta name=\"dc.subject\" scheme=\"gccore\"
+        content=\"federal government, federal departments, federal programs, government
+        services, government information\" />\r\n  <meta name=\"dc.language\" scheme=\"ISO639-2/T\"
+        content=\"eng\" />\r\n  <meta http-equiv=\"content-language\" content=\"eng\"
+        />\r\n  <link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\"
+        />\r\n  <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n
+        \ <link href=\"/base.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        />\r\n  <link href=\"/2col.css\" media=\"screen, print\" rel=\"stylesheet\"
+        type=\"text/css\" />\r\n  <style type=\"text/css\" media=\"all\">\r\n/*<![CDATA[*/\r\n
+        \ @import url(/base2.css);\r\n  /*]]>*/\r\n  </style><!-- PROGRESSIVE ENHANCEMENT
+        BEGINS | DEBUT DE L'AMELIORATION PROGRESSIVE -->\r\n\r\n  <script src=\"/js/lib/jquery.min.js\"
+        type=\"text/javascript\">\r\n</script>\r\n  <script src=\"/js/pe-ap.js\" type=\"text/javascript\"
+        id=\"progressive\">\r\n</script>\r\n  <script type=\"text/javascript\">\r\n/*
+        <![CDATA[ */\r\n  var params = {\r\n  lng:\"eng\",\r\n\r\n\r\n\r\n  pngfix:\"/images/tmpl/inv.gif\"\r\n
+        \ };\r\n  PE.progress(params);\r\n  /* ]]> */\r\n  </script><!-- PROGRESSIVE
+        ENHANCEMENT ENDS | FIN DE L'AMELIORATION PROGRESSIVE -->\r\n  <!-- CUSTOM
+        SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS PERSONNALISES -->\r\n  <link href=\"/base-institution.css\"
+        media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\" />\r\n  <link
+        href=\"/institution.css\" media=\"screen, print\" rel=\"stylesheet\" type=\"text/css\"
+        /><!-- CUSTOM SCRIPTS/CSS END | FIN DES SCRIPTS/CSS PERSONNALISES -->\r\n
+        \ <!-- TEMPLATE PRINT CSS BEGINS | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION
+        -->\r\n  <link href=\"/pf-if.css\" rel=\"stylesheet\" type=\"text/css\" /><!--
+        TEMPLATE PRINT CSS ENDS | FIN DU CSS DU GABARIT POUR L'IMPRESSION -->\r\n</head>\r\n\r\n<body>\r\n
+        \ <div class=\"page\">\r\n    <div class=\"core\">\r\n      <div class=\"fip\">\r\n
+        \       <a id=\"tphp\" name=\"tphp\"><img src=\"/images/tmpl/wd_fip_e_2c_55.gif\"
+        alt=\"Western Economic Diversification Canada\" width=\"337\" height=\"20\"
+        /></a>\r\n      </div>\r\n\r\n      <div class=\"cwm\">\r\n        <img src=\"/images/tmpl/wmms.gif\"
+        alt=\"Symbol of the Government of Canada\" width=\"83\" height=\"20\" />\r\n
+        \     </div>\r\n\r\n      <div class=\"banner\">\r\n        <img src=\"/images/tmpl/lffl.gif\"
+        class=\"lf pngfix\" height=\"65\" width=\"65\" alt=\"\" />\r\n\r\n        <p
+        class=\"main\">Western Economic Diversification Canada</p>\r\n\r\n        <p
+        class=\"siteuri\">www.wd-deo.gc.ca</p>\r\n      </div>\r\n\r\n      <div class=\"navaid\">\r\n
+        \       <a href=\"#cont\">Skip to content</a> | <a href=\"#il\">Skip to institutional
+        links</a>\r\n      </div>\r\n\r\n      <div class=\"fp\">\r\n        <h1 class=\"navaid\">Common
+        menu bar links</h1>\r\n\r\n        <ul class=\"commonbar\">\r\n          \r\n\r\n
+        \         <li class=\"fiptexta\">\r\n            <div>\r\n              <a
+        href=\"/fra/7702.asp?qtr=q115\" lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais
+        - Version fran&ccedil;aise de cette page\">Fran&ccedil;ais</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptext\">\r\n            <div>\r\n
+        \             <a href=\"/eng/home.asp\" title=\"Home\">Home</a>\r\n            </div>\r\n
+        \         </li>\r\n\r\n          <li class=\"fiptextc\">\r\n            <div>\r\n
+        \             <a href=\"/eng/39.asp\" title=\"Contact Us\">Contact Us</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/41.asp\" title=\"Help\">Help</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptext\">\r\n
+        \           <div>\r\n              <a href=\"/eng/42.asp\" title=\"Search\">Search</a>\r\n
+        \           </div>\r\n          </li>\r\n\r\n          <li class=\"fiptextb\">\r\n
+        \           <div>\r\n              <a href=\"http://www.canada.ca/en/index.html\"
+        title=\"canada.ca - Government of Canada Web Site\">canada.ca</a>\r\n            </div>\r\n
+        \         </li>\r\n        </ul>\r\n      </div><!-- BREAD CRUMB BEGINS |
+        DEBUT DE LA PISTE DE NAVIGATION -->\r\n\r\n      <p class=\"breadcrumb\"><a
+        href=\"/eng/home.asp\" class=\"bcrumbs\">Home</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;<a
+        href=\"/eng/46.asp\" class=\"bcrumbs\">Proactive Disclosure</a>&nbsp;<span
+        class=\"smalltext\">&gt;</span>&nbsp;<a href=\"/eng/112.asp\" class=\"bcrumbs\">Disclosure
+        of Contracts</a>&nbsp;<span class=\"smalltext\">&gt;</span>&nbsp;Quarter</p><!--
+        BREAD CRUMB ENDS | FIN DE LA PISTE DE NAVIGATION -->\r\n\r\n      <div class=\"colLayout\">\r\n
+        \       <!-- 2 column layout begins /-->\r\n        <!-- LEFT SIDE MENU BEGINS
+        | DEBUT DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"left\">\r\n
+        \         <!-- SIDE MENU TITLE BEGINS | DEBUT DU TITRE DU MENU LATERAL -->\r\n\r\n
+        \         <h1 class=\"navaid\"><a name=\"il\" id=\"il\">Institutional links</a></h1><!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n          <!--
+        SIDE MENU TITLE ENDS | FIN DU TITRE DU MENU LATERAL -->\r\n\r\n          <ul
+        class=\"nav\">\r\n            <li>\r\n              <ul class=\"nav nav_hover\">\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/43.asp\">Minister
+        of State</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/36.asp\">The
+        Department</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/37.asp\">Services</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/16.asp\">Programs</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/45.asp\">Investments
+        in the West</a></li>\r\n\r\n                <li class=\"menucontent\"><a href=\"/eng/15.asp\">Reports
+        and Publications</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/44.asp\">Media Centre</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/10320.asp\">Career Opportunities</a></li>\r\n\r\n                <li
+        class=\"menucontent\"><a href=\"/eng/38.asp\">A - Z Index</a></li>\r\n\r\n
+        \               <li class=\"menucontent\"><a href=\"/eng/47.asp\">Frequently
+        Asked Questions</a></li>\r\n\r\n                <li class=\"menucontent\"><a
+        href=\"/eng/40.asp\">Feedback</a></li>\r\n\r\n                <li>\r\n                  <div
+        class=\"prodis\"></div>\r\n\r\n                  <h2 class=\"navaid\">Proactive
+        Disclosure</h2><!-- PROACTIVE DISCLOSURE BEGINS | DEBUT DU LIEN DIVULGATION
+        PROACTIVE -->\r\n\r\n                  <div class=\"menucontent nav_hover\">\r\n
+        \                   <a class=\"menulink\" href=\"/eng/13245.asp\">Completed
+        Access to Information Requests</a> \r\n                  </div>\r\n\r\n                  <div
+        class=\"menucontent nav_hover\">\r\n                    <a class=\"menulink\"
+        href=\"/eng/46.asp\">Proactive Disclosure</a> \r\n                  </div><!--
+        PROACTIVE DISCLOSURE ENDS | FIN DU LIEN DIVULGATION PROACTIVEE -->\r\n                </li>\r\n
+        \             </ul>\r\n            </li>\r\n          </ul>\r\n        </div><!--
+        LEFT SIDE MENU ENDS | FIN DU MENU LATERAL GAUCHE -->\r\n\r\n        <div class=\"center\">\r\n
+        \         <a name=\"cont\" id=\"cont\"></a> \r\n\r\n          <h1>Disclosure
+        of Contracts</h1>\r\n\r\n          <p><a href=\"/eng/112.asp%3C%=varConQS%%3E\">Overview</a>
+        | <a href=\"/eng/7705.asp\">Reports</a> | Quarter</p><h2>2015 - 2016 - 1<sup>st</sup>
+        quarter</h2>\r\n\r\n          <p>Please select the vendor name for contract
+        details.</p>\r\n\r\n          <table class=\"hhdr prodis widthFull\" border=\"0\"
+        cellspacing=\"0\" cellpadding=\"3\">\r\n            <tr>\r\n              <th
+        scope=\"col\">Date</th>\r\n\r\n              <th scope=\"col\">Vendor Name</th>\r\n\r\n
+        \             <th scope=\"col\">Description</th>\r\n\r\n              <th
+        class=\"alignRight\" scope=\"col\">Value*</th>\r\n            </tr>\r\n\r\n
+        \           <tr>\r\n              <td style=\"white-space: nowrap\">2015-06-17</td>\r\n\r\n
+        \             <td><a href=\"7772.asp?id=2837&amp;yr=2015\">Institute on Governance</a></td>\r\n\r\n
+        \             <td>447- Tuition Fees and Costs of Attending Courses Including
+        Seminars not Elsewhere Specified</td>\r\n\r\n              <td class=\"alignRight\">$21,000.00</td>\r\n
+        \           </tr>\r\n\r\n            <tr>\r\n              <td style=\"white-space:
+        nowrap\">2015-06-11</td>\r\n\r\n              <td><a href=\"7772.asp?id=2839&amp;yr=2015\">Skyridge
+        Systems Inc.</a></td>\r\n\r\n              <td>473- Information Technology
+        and Telecommunications Consultants</td>\r\n\r\n              <td class=\"alignRight\">$20,944.35</td>\r\n
+        \           </tr>\r\n\r\n            <tr>\r\n              <td style=\"white-space:
+        nowrap\">2015-05-19</td>\r\n\r\n              <td><a href=\"7772.asp?id=2836&amp;yr=2015\">Cine
+        Audio Visual Sales &amp; Service</a></td>\r\n\r\n              <td>332- Audio-visual
+        Services</td>\r\n\r\n              <td class=\"alignRight\">$15,750.00</td>\r\n
+        \           </tr>\r\n\r\n            <tr>\r\n              <td style=\"white-space:
+        nowrap\">2015-04-27</td>\r\n\r\n              <td><a href=\"7772.asp?id=2838&amp;yr=2015\">Portage
+        Personnel Inc.</a></td>\r\n\r\n              <td>813- Temporary Help Services</td>\r\n\r\n
+        \             <td class=\"alignRight\">$15,123.00</td>\r\n            </tr>\r\n
+        \         </table>\r\n\r\n          <p style=\"text-align:center;\"><em>*
+        All applicable taxes are included.</em></p><br />\r\n        </div><!-- CONTENT
+        ENDS | FIN DU CONTENU -->\r\n        <!-- TWO COLUMN LAYOUT ENDS | FIN DE
+        LA MISE EN PAGE DE DEUX COLONNES -->\r\n        <!-- FOOTER BEGINS | DEBUT
+        DU PIED DE LA PAGE -->\r\n\r\n        <div style=\"clear:both;\"></div>\r\n\r\n
+        \       <div class=\"footer\">\r\n          <div class=\"footerline\"></div>\r\n\r\n
+        \         <div class=\"foot1\">\r\n            Date Modified: <span class=\"date\">2009-11-12</span>\r\n
+        \         </div>\r\n\r\n          <div class=\"foot2\">\r\n            <a
+        href=\"#tphp\" title=\"Return to Top of Page\"><img class=\"uparrow\" src=\"/images/tmpl/tphp.gif\"
+        width=\"19\" height=\"12\" alt=\"Top of Page\" /><br />\r\n            Top
+        of Page</a>\r\n          </div>\r\n\r\n          <div class=\"foot3\">\r\n
+        \           <a href=\"/eng/34.asp\">Terms and Conditions</a>\r\n          </div>\r\n
+        \       </div>\r\n      </div><!-- FOOTER ENDS | FIN DU PIED DE LA PAGE -->\r\n
+        \   </div>\r\n  </div><!-- This page is a Parent Page of the following Child
+        Pages -->\r\n  <!--     =======================================================
+        -->\r\n  <!--              -->\r\n  <!--     =======================================================
+        -->\r\n  <!-- END colLayout -->\r\n  <!-- END core-->\r\n  <!-- END page -->\r\n
+        \ <!-- START OF SmartSource Data Collector TAG -->\r\n  <!-- Copyright (c)
+        1996-2013 Webtrends Inc.  All rights reserved. -->\r\n  <!-- Version: 9.4.0
+        -->\r\n  <!-- Tag Builder Version: 4.1  -->\r\n  <!-- Created: 3/14/2013 6:38:15
+        PM -->\r\n  <script src=\"/scripts/webtrends.js\" type=\"text/javascript\">\r\n</script><!--
+        ===================================================================================
+        -->\r\n  <!-- Warning: The two script blocks below must remain inline. Moving
+        them to an external -->\r\n  <!-- JavaScript include file can cause serious
+        problems with cross-domain tracking.      -->\r\n  <!-- ===================================================================================
+        -->\r\n  <script type=\"text/javascript\">\r\n//<![CDATA[\r\n  var _tag=new
+        WebTrends();\r\n  _tag.dcsGetId();\r\n  //]]>\r\n  </script><script type=\"text/javascript\">\r\n//<![CDATA[\r\n
+        \ _tag.dcsCustom=function(){\r\n  // Add custom parameters here.\r\n  //_tag.DCSext.param_name=param_value;\r\n
+        \ }\r\n  _tag.dcsCollect();\r\n  //]]>\r\n  </script><noscript>\r\n  <div>\r\n
+        \   <img alt=\"DCSIMG\" id=\"DCSIMG\" width=\"1\" height=\"1\" src=\"//sdc.wd.gc.ca/dcs9m2iju0gro2a4ezh9w5j2b_1d7h/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.wd-deo.gc.ca\"
+        />\r\n  </div></noscript><!-- END OF SmartSource Data Collector TAG -->\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Wed, 23 Sep 2015 23:22:47 GMT
+recorded_with: VCR 2.9.2
