@@ -19,6 +19,16 @@ describe Scrapers::Nrc::Scraper do
         contract[:comments].must_equal "This contract includes one or more amendments.The Original Contract Value was: $ 151,442.93This contract was competitively sourced.This contract is a multi-year contract."
       end
     end
+    it "should leave the date as nil if date is blank" do
+      VCR.use_cassette('nrc_scrape_contracts_empty_date', record: :new_episodes) do
+        report = mock("report")
+        notifier = mock("notifier")
+        scraper = Scrapers::Nrc::Scraper.new(report, notifier)
+        contract = scraper.scrape_contract("http://www.nrc-cnrc.gc.ca/eng/transparency/disclosure/contracts/index.php?action=details&id=25425")
+
+        contract[:effective_date].must_equal nil
+      end
+    end
   end
 
   describe "#contract_urls" do

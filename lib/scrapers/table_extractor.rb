@@ -31,6 +31,7 @@ class Scrapers::TableExtractor
   end
 
   def parse_date(value)
+    return nil if value.blank?
     begin
       Date.parse(value)
     # Date.parse throws an argument error if date is invalid. Raise a better exception
