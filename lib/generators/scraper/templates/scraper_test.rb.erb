@@ -39,6 +39,7 @@ describe Scrapers::<%= @agency.camelize %>::Scraper do
         reports = Scrapers::<%= @agency.camelize %>::Scraper.reports
         (reports.length > 999).must_equal true
         reports.last.must_be_instance_of(Scrapers::Report)
+        reports.first.agency_code.must_equal "<%= @agency.downcase %>"
         reports.last.url.must_equal "FILL IN"
 
       end
