@@ -26,8 +26,7 @@ class Scrapers::Pc::Scraper < Scrapers::ContractScraper
   # Return an Array with the urls the parser needs to visit to scrape all
   # contracts in this report
   def contract_urls
-    page = Nokogiri::HTML(open(report.url))
-    page.css('table td:nth-child(2) a').map { |a_tag| "#{BASE_URL}#{a_tag['href']}" }
+    Scrapers::ContractUrlExtractor.new(report.url).urls
   end
 
 end

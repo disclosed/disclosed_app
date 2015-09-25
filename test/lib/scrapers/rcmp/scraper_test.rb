@@ -28,7 +28,7 @@ describe Scrapers::Rcmp::Scraper do
         notifier = ScraperNotifier.new
         scraper = Scrapers::Rcmp::Scraper.new(report, notifier)
         scraper.contract_urls.length.must_equal 1058
-        scraper.contract_urls.first.must_equal "http://www.rcmp.gc.ca/en/apps/contra/?r-id=41740"
+        scraper.contract_urls.first.must_equal "http://www.rcmp-grc.gc.ca/en/apps/contra/?r-id=41740"
       end
     end
   end

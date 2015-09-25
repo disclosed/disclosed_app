@@ -39,8 +39,7 @@ class Scrapers::Nrc::Scraper < Scrapers::ContractScraper
   #   Scrapers::Xyz::Scraper.new(report).contract_urls
   #   #=> ["http://www.pc.gc.ca/disclosure/contracts/123", ...]
   def contract_urls
-    page = Nokogiri::HTML(open(report.url))
-    page.xpath('//table//caption[contains(., "Contracts over $10,000")]//..//td/a').map {|a_tag| "#{BASE_URL}#{a_tag['href']}" }
+    Scrapers::ContractUrlExtractor.new(report.url).urls
   end
 
   # Scrape the main Reports page for the agency and returns all the report

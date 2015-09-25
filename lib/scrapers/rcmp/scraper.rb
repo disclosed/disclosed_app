@@ -53,8 +53,7 @@ class Scrapers::Rcmp::Scraper < Scrapers::ContractScraper
   #   Scrapers::Xyz::Scraper.new(report).contract_urls
   #   #=> 128
   def contract_urls
-    page = Nokogiri::HTML(open(report.url))
-    page.css("main table td a").map {|a_tag| "#{BASE_URL}#{a_tag['href']}"} # they are missing tr elements
+    Scrapers::ContractUrlExtractor.new(report.url, "Vendor name").urls
   end
 
   # Scrape the main Reports page for the agency and returns all the report

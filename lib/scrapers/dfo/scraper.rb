@@ -15,8 +15,7 @@ class Scrapers::Dfo::Scraper < Scrapers::ContractScraper
   end
 
   def contract_urls
-    page = Nokogiri::HTML(open(report.url))
-    page.css("table td:nth-child(2) a:nth-child(1)").map { |a_tag| "#{BASE_URL}#{a_tag['href']}" }
+    Scrapers::ContractUrlExtractor.new(report.url).urls[1..-1]
   end
 
   def self.reports
