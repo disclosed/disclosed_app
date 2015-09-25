@@ -22,7 +22,16 @@ class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
   #     }
   #
   def scrape_contract(url)
-
+    # mappings = [
+    #   Scrapers::TableMapping.new(:vendor_name),
+    #   Scrapers::TableMapping.new(:reference_number),
+    #   Scrapers::TableMapping.new(:raw_contract_period, "contract period"),
+    #   Scrapers::TableMapping.new(:effective_date, "contract  date"),
+    #   Scrapers::TableMapping.new(:value, "contract value"),
+    #   Scrapers::TableMapping.new(:description),
+    #   Scrapers::TableMapping.new(:comments)
+    # ]
+    # Scrapers::TableExtractor.new(url, mappings).extract
   end
 
   # Returns the urls for the contract pages available in the #report.
@@ -30,7 +39,7 @@ class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
   #   Scrapers::Xyz::Scraper.new(report).contract_urls
   #   #=> ["http://www.pc.gc.ca/disclosure/contracts/123", ...]
   def contract_urls
-
+    # Scrapers::ContractUrlExtractor.new(report.url).urls
   end
 
   # Scrape the main Reports page for the agency and returns all the report
@@ -38,7 +47,7 @@ class Scrapers::<%= @agency.camelize %>::Scraper < Scrapers::ContractScraper
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
-    
+    # Scrapers::ReportUrlExtractor.new("FILL IN", "<%= @agency.downcase %>", "FILL IN", "h1").reports
   end
 end
 
