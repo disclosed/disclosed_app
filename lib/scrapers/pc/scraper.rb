@@ -3,12 +3,7 @@ class Scrapers::Pc::Scraper < Scrapers::ContractScraper
   BASE_URL = "http://www.pc.gc.ca/apps/pdc/"
 
   def self.reports
-    page = Nokogiri::HTML(open("#{BASE_URL}index_e.asp"))
-    report_links = page.css('.fullWidth ul li a')
-    report_links.map do |a_tag|
-      url = "#{BASE_URL}#{a_tag['href']}"
-      Scrapers::Report.new('pc', url)
-    end
+    Scrapers::ReportUrlExtractor.new("#{BASE_URL}index_e.asp", "pc", "Please select a report").reports
   end
 
   def scrape_contract(url)

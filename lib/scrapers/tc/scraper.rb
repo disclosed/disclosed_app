@@ -1,5 +1,5 @@
-class Scrapers::Scc::Scraper < Scrapers::ContractScraper
-  BASE_URL = "http://www.scc-csc.gc.ca"
+class Scrapers::Tc::Scraper < Scrapers::ContractScraper
+  BASE_URL = "http://wwwapps.tc.gc.ca/Corp-Serv-Gen/2/PDC-DPC/contract"
 
   # Scrape contract information from a page.
   #
@@ -28,11 +28,11 @@ class Scrapers::Scc::Scraper < Scrapers::ContractScraper
       Scrapers::TableMapping.new(:reference_number),
       Scrapers::TableMapping.new(:raw_contract_period, "contract period"),
       Scrapers::TableMapping.new(:effective_date, "contract date"),
-      Scrapers::TableMapping.new(:value, "original contract value"),
+      Scrapers::TableMapping.new(:value, "contract value"),
       Scrapers::TableMapping.new(:description),
       Scrapers::TableMapping.new(:comments)
     ]
-    Scrapers::TableExtractor.new(url, mappings).result
+    Scrapers::TableExtractor.new(url, mappings).extract
   end
 
   # Returns the urls for the contract pages available in the #report.
@@ -41,15 +41,15 @@ class Scrapers::Scc::Scraper < Scrapers::ContractScraper
   #   #=> ["http://www.pc.gc.ca/disclosure/contracts/123", ...]
   def contract_urls
     page = Nokogiri::HTML(open(report.url))
-    page.css("table tr a").map {|a_tag| "#{BASE_URL}#{a_tag['href']}" }
+    page.css("#ContractsList tr a").map {|a_tag| "#{BASE_URL}/#{a_tag['href']}" }
   end
 
   # Scrape the main Reports page for the agency and returns all the report
-  # that the agency has contract data for.
+  # that the agency has contract data for. Newest report link first.
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
-    Scrapers::ReportUrlExtractor.new("#{BASE_URL}/pd-dp/crl-lrc-eng.aspx", "scc", "Disclosure Reports", "h2").reports
+    Scrapers::ReportUrlExtractor.new("#{BASE_URL}/reports.aspx", "tc", "Please select a quarter").reports
   end
 end
 

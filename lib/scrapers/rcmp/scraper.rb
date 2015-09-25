@@ -62,10 +62,7 @@ class Scrapers::Rcmp::Scraper < Scrapers::ContractScraper
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
-    page = Nokogiri::HTML(open("#{BASE_URL}/en/apps/contra/index.php?lst=1"))
-    page.css("main ul li a").map do |a_tag|
-      Scrapers::Report.new("rcmp", "#{BASE_URL}#{a_tag['href']}")
-    end
+    Scrapers::ReportUrlExtractor.new("#{BASE_URL}/en/apps/contra/index.php?lst=1", "rcmp", "Reports", "h1").reports
   end
 end
 

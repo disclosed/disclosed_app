@@ -48,9 +48,7 @@ class Scrapers::Nrc::Scraper < Scrapers::ContractScraper
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
-    page = Nokogiri::HTML(open("#{BASE_URL}/eng/transparency/disclosure/contracts/index.php?action=index&long_index=1"))
-    links = page.xpath('//p[contains(., "Please select a report")]//..//li//a/@href')
-    links.map {|href| Scrapers::Report.new("wd", "#{BASE_URL}#{href.text}") }
+    Scrapers::ReportUrlExtractor.new("#{BASE_URL}/eng/transparency/disclosure/contracts/index.php?action=index&long_index=1", "nrc", "Please select a report").reports
   end
 end
 

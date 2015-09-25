@@ -48,9 +48,7 @@ class Scrapers::Wd::Scraper < Scrapers::ContractScraper
   #
   # Returns an array of Scrapers::Report objects.
   def self.reports
-    page = Nokogiri::HTML(open("#{BASE_URL}/eng/7705.asp"))
-    links = page.xpath('//p[contains(., "Please select a reporting period")]//..//li//a/@href')
-    links.map {|href| Scrapers::Report.new("wd", "#{BASE_URL}#{href.text}") }
+    Scrapers::ReportUrlExtractor.new("#{BASE_URL}/eng/7705.asp", "wd", "Please select a reporting period").reports
   end
 end
 

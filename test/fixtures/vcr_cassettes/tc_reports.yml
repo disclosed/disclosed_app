@@ -1,0 +1,460 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://wwwapps.tc.gc.ca/Corp-Serv-Gen/2/PDC-DPC/contract/reports.aspx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 24 Sep 2015 12:50:52 GMT
+      Content-Length:
+      - '40712'
+    body:
+      encoding: UTF-8
+      string: "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\r\n
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\"
+        lang=\"en\" xml:lang=\"en\">\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=UTF-8\" />\r\n\t\t<link rel=\"schema.dcterms\"
+        href=\"http://purl.org/dc/terms/\" />\r\n\t\r\n\t\t<!--\r\n\t\tGC Web Usability
+        theme v1.0 / Th&eacute;me de la facilit&eacute; d'emploi GC v1.0\r\n\t\tWeb
+        Experience Toolkit (WET) / Bo&eacute;te &eacute; outils de l'exp&eacute;rience
+        Web (BOEW)\r\n\t\tTerms and conditions of use: http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Terms\r\n\t\tConditions
+        r&eacute;gissant l'utilisation : http://tbs-sct.ircan.gc.ca/projects/gcwwwtemplates/wiki/Conditions\r\n\t\t-->\r\n\t\r\n\t\t<!--
+        Title begins / D&eacute;but du titre -->\r\n\t<title>Reports - Disclosure
+        of Contracts - Proactive Disclosure - Transport Canada</title><meta http-equiv=\"Content-Type\"
+        content=\"text/html; charset=iso-8859-1\" /><link rel=\"schema.dc\" href=\"http://purl.org/dc/elements/1.1/\"
+        /><link rel=\"schema.dcterms\" href=\"http://purl.org/dc/terms/\" /><meta
+        name=\"dc.description\" content=\"Disclosure of Contracts\" /><meta name=\"description\"
+        content=\"Disclosure of Contracts\" /><meta name=\"keywords\" content=\"disclosure,
+        contracts\" /><meta name=\"dc.creator\" content=\"Government of Canada, Transport
+        Canada, Corporate Services, Finance and Administration\" /><meta name=\"dc.title\"
+        content=\"Disclosure of Contracts\" /><meta name=\"dcterms.issued\" scheme=\"W3CDTF\"
+        content=\"2010-04-01\" /><meta name=\"gcterms.dateApproved\" scheme=\"W3CDTF\"
+        content=\"2010-04-01)\" /><meta name=\"gcterms.dateLastUpdated\" scheme=\"W3CDTF\"
+        content=\"2010-04-01\" /><meta name=\"dcterms.modified\" scheme=\"W3CDTF\"
+        content=\"2010-04-01\" /><meta name=\"dc.subject\" scheme=\"gccore\" content=\"Finance\"
+        /><meta name=\"dc.language\" scheme=\"ISO639-2/T\" content=\"eng\" /><meta
+        name=\"gcterms.relationHasLanguageEquivalent\" content=\"lang=&quot;fr&quot;
+        xml:lang=&quot;fr&quot;, &quot;resource\" /><meta name=\"dc.date\" content=\"2010/04/01\"
+        />\r\n\t<!-- Title ends / Fin du titre -->\r\n\r\n\t<!-- Favicon (optional)
+        begins / D&eacute;but du favicon (optionnel) -->\r\n\t<link rel=\"shortcut
+        icon\" href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/fip-pcim/images/favicon.ico\"
+        />\r\n\t<!-- Favicon (optional) ends / Fin du favicon (optionnel) -->\r\n\t\t\t\r\n
+        \   <!-- WET scripts/CSS begin / Dbut des scripts/CSS de la BOEW --><!--[if
+        IE 6]><![endif]-->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/css/base-simple.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><!--[if IE 8]><link href=\"http://www.tc.gc.ca/WET-BOEW/css/base-simple-ie8.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <!--[if IE 7]><link
+        href=\"http://www.tc.gc.ca/WET-BOEW/css/base-simple-ie7.css\" rel=\"stylesheet\"
+        type=\"text/css\" /><![endif]-->\r\n    <!--[if lte IE 6]><link href=\"http://www.tc.gc.ca/WET-BOEW/css/base-simple-ie6.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/css/util.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><!-- CSS Grid System begins / Dbut
+        du systme de grille de CSS -->\r\n    <link rel=\"stylesheet\" href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/grids/css/grid.css\"
+        media=\"screen\" type=\"text/css\" />\r\n    <link rel=\"stylesheet\" href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/grids/css/grid-medium.css\"
+        media=\"screen\" type=\"text/css\" id=\"grid-framework\" />\r\n    <link rel=\"stylesheet\"
+        href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/grids/css/util.css\" media=\"screen\"
+        type=\"text/css\" /><!-- CSS Grid System ends / Fin du systme de grille de
+        CSS -->\r\n\r\n    <!-- GC Web Usability theme begins / Dbut du thme de la
+        facilit d'emploi GC -->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/css/theme-gcwu-fegc.css\"
+        rel=\"stylesheet\" type=\"text/css\" />\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/css/institution.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><!--[if IE 8]><link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/css/theme-gcwu-fegc-ie8.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <!--[if IE 7]><link
+        href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/css/theme-gcwu-fegc-ie7.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <!--[if lte IE
+        6]><link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/css/theme-gcwu-fegc-ie6.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <!-- GC Web Usability
+        theme ends / Fin du thme de la facilit d'emploi GC -->\r\n    <!-- FIP visual
+        elements and identifiers begin / Dbut des lments et identificateurs visuels
+        de PCIM -->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/fip-pcim/css/fip-pcim.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><!--[if IE 8]><link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/fip-pcim/css/fip-pcim-ie8.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <!--[if IE 7]><link
+        href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/fip-pcim/css/fip-pcim-ie7.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n\r\n    <!--[if lte
+        IE 6]><link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/fip-pcim/css/fip-pcim-ie6.css\"
+        rel=\"stylesheet\" type=\"text/css\" /><![endif]-->\r\n    <!-- FIP visual
+        elements and identifiers end / Fin des lments et identificateurs visuels de
+        PCIM -->\r\n    <!-- WET scripts/CSS end / Fin des scripts/CSS de la BOEW
+        -->\r\n    <!-- Progressive enhancement begins / Dbut de l'amlioration progressive
+        -->\r\n\r\n\r\n\t<!-- Progressive enhancement begins / D&eacute;but de l'am&eacute;lioration
+        progressive -->\r\n\t<script src=\"http://www.tc.gc.ca/WET-BOEW/js/lib/jquery.min.js\"
+        type=\"text/javascript\"></script>\r\n\t<script src=\"http://www.tc.gc.ca/WET-BOEW/js/pe-ap.js\"
+        type=\"text/javascript\" id=\"progressive\"></script>\r\n\t<script type=\"text/javascript\">\r\n\t/*
+        <![CDATA[ */\r\n        var params = {\r\n            tabsv2:{},\r\n            navigation:{},\r\n
+        \           multimedia:{},\r\n            zebra:{selector:'.zebra'}\r\n        };\r\n
+        \       PE.progress(params);\r\n\t/* ]]> */\r\n\t</script>\r\n\t<!-- Progressive
+        enhancement ends / Fin de l'am&eacute;lioration progressive -->\r\n\r\n\t<!--
+        Custom scripts/CSS begin / D&eacute;but des scripts/CSS personnalis&eacute;s
+        -->\r\n\t<!-- Custom scripts/CSS end / Fin des scripts/CSS personnalis&eacute;s
+        -->\r\n\r\n\t<!-- WET print CSS begins / Debut du CSS de la BOEW pour l'impression
+        -->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/css/pf-if.css\" rel=\"stylesheet\"
+        media=\"print\" type=\"text/css\" />\r\n      <!-- GC Web Usability theme
+        begins / Debut du theme de la facilite d'emploi GC -->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/css/pf-if-theme-gcwu-fegc.css\"
+        rel=\"stylesheet\" media=\"print\" type=\"text/css\" />\r\n      <!-- GC Web
+        Usability theme ends / Fin du theme de la facilite d'emploi GC -->\r\n    <!--
+        FIP visual elements and identifiers begin / Debut des elements et identificateurs
+        visuels de PCIM -->\r\n    <link href=\"http://www.tc.gc.ca/WET-BOEW/theme-gcwu-fegc/fip-pcim/css/pf-if-fip-pcim.css\"
+        rel=\"stylesheet\" media=\"print\" type=\"text/css\" />\r\n    <!-- FIP visual
+        elements and identifiers end / Fin des elements et identificateurs visuels
+        de PCIM -->\r\n\r\n    <!-- WET print CSS ends / Fin du CSS de la BOEW pour
+        l'impression -->\r\n\r\n\t\t\t</head>\r\n\t\t<body>\r\n\t\t\r\n\t\t<!-- Two
+        column layout begins / D&eacute;but de la mise en page de deux colonnes -->\r\n\t\t<div
+        id=\"cn-body-inner-2col\">\r\n\t\t\r\n      <!-- Skip header begins / Dbut
+        du saut de l'en-tte -->\r\n      <div id=\"cn-skip-head\">\r\n        <ul
+        id=\"cn-tphp\">\r\n          <li id=\"cn-sh-link-1\">\r\n            <a href=\"#cn-cont\">Skip
+        to main content</a>\r\n          </li>\r\n          <li id=\"cn-sh-link-2\">\r\n
+        \           <a href=\"#cn-nav\">Skip to primary navigation</a>\r\n\r\n          </li>\r\n
+        \       </ul>\r\n      </div><!-- Skip header ends / Fin du saut de l'en-tte
+        -->\r\n      <!-- Header begins / Dbut de l'en-tte -->\r\n      <div id=\"cn-head\">\r\n
+        \       <div id=\"cn-head-inner\">\r\n          <!-- GC Web Usability theme
+        begins / Dbut du thme de la facilit d'emploi GC -->\r\n        <!-- GC menu
+        bar begins / Dbut de la barre de menu GC -->\r\n        <div id=\"cn-gcnb\">\r\n\r\n
+        \           <h2>Government of Canada navigation bar</h2>\r\n            <div
+        id=\"cn-gcnb-inner\">\r\n                <div id=\"fip-pcim-gcnb\">\r\n\t\t\t\t\t<div
+        id=\"cn-sig\"><div id=\"cn-sig-inner\"><div id=\"fip-pcim-sig-eng\" title=\"Government
+        of Canada\"><img src=\"http://www.tc.gc.ca/wet-boew/theme-gcwu-fegc/fip-pcim/images/sig-eng.gif\"
+        width=\"214\" height=\"20\" alt=\"Government of Canada\" /></div></div></div>\r\n\t\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t<li
+        id=\"cn-gcnb1\"><a rel=\"external\" href=\"http://www.canada.gc.ca/home.html\">Canada.gc.ca</a></li>\r\n\t\t\t\t\t\t\t<li
+        id=\"cn-gcnb2\"><a rel=\"external\" href=\"http://www.servicecanada.gc.ca/eng/home.shtml\">Services</a></li>\r\n\r\n\t\t\t\t\t\t\t<li
+        id=\"cn-gcnb3\"><a rel=\"external\" href=\"http://www.canada.gc.ca/depts/major/depind-eng.html\">Departments</a></li>\r\n\t\t\t\t\t\t\t<li
+        id=\"cn-gcnb-lang\">\r\n\r\n<a lang=\"fr\" xml:lang=\"fr\" title=\"Fran&ccedil;ais
+        - Version fran&ccedil;aise de cette page\" href=\"http://wwwapps.tc.gc.ca/Corp-Serv-Gen/2/PDC-DPC/contrat/rapport.aspx\">Fran&ccedil;ais</a>
+        \t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n
+        \       <!-- GC navigation bar ends / Fin de la barre de navigation GC -->\r\n\r\n\t\t\r\n\t
+        \ <!-- Banner begins / Dbut de la bannire -->\r\n        <div id=\"cn-banner\"><div
+        id=\"cn-banner-inner\">\r\n\t\t\t<div id=\"cn-wmms\"><div id=\"cn-wmms-inner\">\r\n\t\t\t\t<div
+        id=\"fip-pcim-wmms\" title=\"Symbol of the Government of Canada\"><img src=\"http://www.tc.gc.ca/wet-boew/theme-gcwu-fegc/fip-pcim/images/wmms.gif\"
+        width=\"126\" height=\"30\"  alt=\"Symbol of the Government of Canada\" /></div>\r\n
+        \           </div></div>\r\n            \r\n\t\t\t<!-- Site title begins /
+        Dbut du titre du site -->\r\n            <div id=\"cn-site-title\"><p id=\"cn-site-title-inner\"><a
+        href=\"http://www.tc.gc.ca/eng/menu.htm\">Transport Canada</a></p></div>\r\n\r\n
+        \           <!-- Site title ends / Fin du titre du site -->\r\n\r\n            <!--
+        Site search begins / Dbut de la recherche du site -->\r\n            <div
+        id=\"cn-search-box\">\r\n                <h2>Search</h2>\r\n                <form
+        action=\"http://search-recherche.tc.gc.ca/search.aspx\" method=\"get\">\r\n
+        \                   <div id=\"cn-search-box-inner\">\r\n                        <label
+        for=\"cn-search\">Search Web site</label>\r\n\r\n                        <input
+        id=\"cn-search\" name=\"q\" type=\"text\" value=\"\" size=\"27\" maxlength=\"150\"
+        />\r\n                        <input id=\"cn-search-submit\" name=\"cn-search-submit\"
+        type=\"submit\" value=\"Search\" />\r\n                    </div>\r\n                </form>\r\n
+        \           </div>\r\n\t\t\t<!-- Site search ends / Fin de la recherche du
+        site -->\r\n        </div></div>\r\n        <!-- Banner ends / Fin de la bannire
+        -->\r\n\r\n        <!-- Primary site navigation bar begins / Dbut de la barre
+        de navigation primaire du site -->\r\n        <div id=\"cn-psnb\">\r\n            <h2>Primary
+        site navigation bar</h2>\r\n            <div id=\"cn-psnb-inner\">\r\n                <div
+        id=\"cn-psnb-map\">\r\n                    \r\n\t<ul class=\"wet-boew-navigation
+        site-bar show-first rounded\">\r\n\t\t<li>\r\n\t\t\t<h3><a class=\"first\"
+        href=\"http://www.tc.gc.ca/eng/air-menu.htm\">Air</a></h3>\r\n\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-2\">\r\n\t\t\t\t\t<h4>Air
+        Transportation</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/airports-index.htm\">Airports</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/civilaviation/opssvs/aircraft-menu.htm\">Aircraft</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/civilaviation/opssvs/airlines-aviationoperations-menu.htm\">Airlines
+        and Aviation Operations</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/civilaviation/opssvs/aviationsafety-menu.htm\">Aviation
+        Safety</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/aviationsecurity/menu.htm\">Aviation Security</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/civilaviation/opssvs/emergencies-incidentreporting-menu.htm\">Emergencies
+        and Incident Reporting</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/environment-air-index.htm\">Air Transportation
+        and the Environment</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/civilaviation/opssvs/personneltraining-licensing-menu.htm\">Personnel
+        Training and Licensing</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\r\n\t\t\t\t\t<h4>Browse Air Resources</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/azlist-menu.htm\">A-Z Index</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/acts-regulations/acts-air.htm\">Acts and Regulations</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/air-faq.htm\">Frequently Asked Questions</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/services-menu.htm\">Services for Canadians</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/publications-air.htm\">Publications</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/en/regions.htm\">Regions</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/research-menu.htm\">Policy, Research and Statistics</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/site-menu.htm\">Site Map</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Air Contact Information</h4>\r\n\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/air-contactus.htm\">National Headquarters</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/marine-menu.htm\">Marine</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-2\">\r\n\t\t\t\t\t<h4>Marine
+        Transportation</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/ports-index.htm\">Ports</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marinesafety/vessels-menu.htm\">Vessels</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marinesafety/menu.htm\">Marine Safety</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marinesecurity/menu.htm\">Marine Security</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marinesafety/ptec-menu.htm\">Personnel Training,
+        Examination and Certification</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marinesafety/em-env-menu.htm\">Emergencies
+        &amp; Environment</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Browse Marine Resources</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/azlist-menu.htm\">A-Z Index</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/acts-regulations/acts-marine.htm\">Acts and
+        Regulations</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marine-faq.htm\">Frequently Asked Questions</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/services-menu.htm\">Services for Canadians</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/publications-marine.htm\">Publications</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/regions.htm\">Regions</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/research-menu.htm\">Policy, Research and Statistics</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/site-menu.htm\">Site Map</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Marine Contact Information</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/marine-contactus.htm\">National Headquarters</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/rail-menu.htm\">Rail</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-2\">\r\n\t\t\t\t\t<h4>Rail
+        Transportation</h4>\r\n\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/railsafety/menu.htm\">Rail Safety</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/railsecurity/menu.htm\">Rail Security</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/rail-personneltraining.htm\">Personnel Training
+        &amp; Licensing</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/railsafety/emergencies.htm\">Emergencies</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/environment-rail-index.htm\">Rail
+        Transportation and the Environment</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Browse Rail Resources</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/azlist-menu.htm\">A-Z Index</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/acts-regulations/acts-rail.htm\">Acts and Regulations</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/rail-faq.htm\">Frequently Asked Questions</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/services-menu.htm\">Services for Canadians</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/publications-rail.htm\">Publications</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/en/regions.htm\">Regions</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/research-menu.htm\">Policy, Research and Statistics</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/site-menu.htm\">Site Map</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Rail Contact Information</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/rail-contactus.htm\">National Headquarters</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\t\t\t\t\t\t\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/road-menu.htm\">Road</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-2\">\r\n\t\t\t\t\t<h4>Road
+        Transportation</h4>\r\n\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/surface-menu.htm\">Surface Infrastructure</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/roadsafety/menu.htm\">Road and Motor Vehicle
+        Safety</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/tdg/road-emergencies-398.htm\">Emergencies</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/environment-road-index.htm\">Road
+        Transportation and the Environment</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/roadsecurity/menu.htm\">Road Security</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Browse Road Resources</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/azlist-menu.htm\">A-Z Index</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/acts-regulations/acts-road.htm\">Acts and Regulations</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/road-faq.htm\">Frequently Asked Questions</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/services-menu.htm\">Services for Canadians</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/publications-road.htm\">Publications</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/regions.htm\">Regions</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/research-menu.htm\">Policy, Research and Statistics</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/site-menu.htm\">Site Map</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t\t<h4>Road Contact Information</h4>\r\n\t\t\t\t\t<ul>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/road-contactus.htm\">National Headquarters</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/safety-menu.htm\">Safety</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-3\">\r\n\t\t\t\t\t<ul>\r\n\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/safety-our-role.htm\">Our Role</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/safety-emergencies.htm\">Emergencies</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/tdg/safety-menu.htm\">Transportation of Dangerous
+        Goods</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/safety-partners.htm\">Partners</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/safety-consultations.htm\">Consultations</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/security-menu.htm\">Security</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-3\">\r\n\t\t\t\t\t<ul>\r\n\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/security-our-role.htm\">Our Role</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/security-partners.htm\">Partners</a>\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t\t<li>\r\n\t\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/security-consultations.htm\">Consultations</a>\r\n\r\n\t\t\t\t\t\t</li>\r\n\t\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/environment-menu.htm\">Environment</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\r\n\t\t\t\t<div class=\"span-3\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/environment-role-index.htm\">Our Role</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/environment-em-index.htm\">Environmental
+        Management</a>\r\n\t\t\t\t\t</li>\r\n\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs/environment-programs-index.htm\">Environmental
+        Programs</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a href=\"http://www.tc.gc.ca/eng/policy/acs-sustainable-transportation.htm\">Sustainable
+        Transportation</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/policy/acs-partners.htm\">Partners</a>\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/policy/acs-consultations.htm\">Consultations</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/innovation-menu.htm\">Innovation</a></h3>\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-3\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/innovation-accessible-transportation.htm\">Accessible
+        Transportation</a>\r\n\t\t\t\t\t</li>\r\n\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/innovation-clean-transportation.htm\">Clean
+        Transportation</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/innovation-gateways-and-corridors.htm\">Gateways
+        and Corridors</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a href=\"http://www.tc.gc.ca/eng/innovation/tdc-menu.htm\">Transportation
+        Development Centre</a>\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/innovation/its-menu.htm\">Intelligent Transportation
+        Systems</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a href=\"http://www.tc.gc.ca/eng/innovation/innovation-policy-menu.htm\">Innovation
+        Policy</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t<a href=\"http://www.tc.gc.ca/eng/innovation-partners.htm\">Partners</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t
+        \      </div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a href=\"http://www.tc.gc.ca/eng/resources-menu.htm\">Resources</a></h3>\r\n\r\n\t\t\t<div
+        class=\"showcase\">\r\n\t\t\t\t<div class=\"span-3\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/azlist-menu.htm\">A-Z Index</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/acts-regulations/menu.htm\">Acts and Regulations</a>\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/faq-menu.htm\">Frequently Asked Questions</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/corporate-services/library-menu.htm\">Library</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/services-menu.htm\">Services for Canadians</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/programs-menu.htm\">Programs</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/consultations-menu.htm\">Public Involvement
+        and Consultations</a>\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/publications-menu.htm\">Publications</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/regions.htm\">Regions</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/research-menu.htm\">Policy, Research and Statistics</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/site-menu.htm\">Site Map</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t</li>\r\n\t\t<li>\r\n\t\t\t<h3><a
+        href=\"http://www.tc.gc.ca/eng/regions.htm\">Regions</a></h3>\r\n\t\t\t<div
+        class=\"showcase position-right\">\r\n\t\t\t\t<div class=\"span-3\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/pacific/menu.htm\">Pacific Region</a>\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/prairieandnorthern/menu.htm\">Prairie and Northern
+        Region</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a href=\"http://www.tc.gc.ca/eng/ontario/menu.htm\">Ontario
+        Region</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\r\n\t\t\t\t\t\t<a href=\"http://www.tc.gc.ca/eng/regions-ncr.htm\">National
+        Capital Region</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/quebec/menu.htm\">Quebec Region</a>\r\n\t\t\t\t\t</li>\r\n\t\t\t\t\t<li>\r\n\t\t\t\t\t\t<a
+        href=\"http://www.tc.gc.ca/eng/atlantic/menu.htm\">Atlantic Region</a>\r\n\r\n\t\t\t\t\t</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</li>\r\n\t</ul>\r\n
+        \        \r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n
+        \       <!-- Primary site navigation bar ends / Fin de la barre de navigation
+        primaire du site -->\r\n\t\r\n\t\r\n<!-- Breadcrumb begins / Dbut du fil d'Ariane
+        -->\r\n          <div id=\"cn-bc\">\r\n            <h2>\r\n              Breadcrumb\r\n
+        \           </h2>\r\n            <div id=\"cn-bc-inner\">\r\n              <ol>\r\n\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/menu.htm\">Home</a></li>\r\n\r\n\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/aboutus-disclosure.htm\">Proactive Disclosure</a></li><li><a
+        href=\"menu.aspx\">Disclosure of Contracts</a></li><li>Quarters</li>\r\n\t</ol>\r\n\t\t</div></div>\r\n\t\t<!--
+        Breadcrumb ends / Fin du fil d'Ariane -->\r\n    <!-- GC Web Usability theme
+        ends / Fin du th&egrav;me de la facilit&eacute; d'emploi GC -->\r\n\t</div></div>\r\n\t<!--
+        Header ends / Fin de l'en-tte -->\r\n\t\r\n\t<!-- Columns begin / D&eacute;but
+        des colonnes -->\r\n\t<div id=\"cn-cols\"><div id=\"cn-cols-inner\">\r\n\t\t<!--
+        Main content begins / D&eacute;but du contenu principal --> \r\n\t\t<div id=\"cn-centre-col-gap\"></div>\r\n\t\t<div
+        id=\"cn-centre-col\"><div id=\"cn-centre-col-inner\">\r\n\t\t\t<!-- Content
+        title begins / D&eacute;but du titre du contenu -->\r\n\t\t\t<!-- Content
+        Title ends / Fin du titre du contenu -->\r\n\t\t<form name=\"pageForm\" method=\"post\"
+        action=\"reports.aspx\" id=\"pageForm\">\r\n<input type=\"hidden\" name=\"__VIEWSTATE\"
+        id=\"__VIEWSTATE\" value=\"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\"
+        />\r\n\r\n\r\n<h1 class=\"indent-none\" id=\"cn-cont\">Disclosure of Contracts</h1>\r\n
+        \   \r\n<p>Please select a quarter:</p>\r\n\r\n\r\n\r\n\r\n    <p><strong>2015
+        - 2016</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2015\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n    <p><strong>2014
+        - 2015</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=4&amp;year=2014\">4<sup>th</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=3&amp;year=2014\">3<sup>rd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=2&amp;year=2014\">2<sup>nd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2014\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n    <p><strong>2013
+        - 2014</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=4&amp;year=2013\">4<sup>th</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=3&amp;year=2013\">3<sup>rd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=2&amp;year=2013\">2<sup>nd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2013\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n    <p><strong>2012
+        - 2013</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=4&amp;year=2012\">4<sup>th</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=3&amp;year=2012\">3<sup>rd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=2&amp;year=2012\">2<sup>nd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2012\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n    <p><strong>2011
+        - 2012</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=4&amp;year=2011\">4<sup>th</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=3&amp;year=2011\">3<sup>rd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=2&amp;year=2011\">2<sup>nd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2011\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n    <p><strong>2010
+        - 2011</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=4&amp;year=2010\">4<sup>th</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=3&amp;year=2010\">3<sup>rd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=2&amp;year=2010\">2<sup>nd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2010\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n    <p><strong>2009
+        - 2010</strong></p>\r\n    \r\n        <ul>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=4&amp;year=2009\">4<sup>th</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=3&amp;year=2009\">3<sup>rd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=2&amp;year=2009\">2<sup>nd</sup>
+        Quarter</a></li>\r\n    \r\n        <li><a href=\"Contract_list.aspx?Quarter=1&amp;year=2009\">1<sup>st</sup>
+        Quarter</a></li>\r\n    \r\n        </ul>\r\n    \r\n\r\n</form>\r\n\t\t\t<!--
+        Date Modified begins / D&eacute;but de la date de modification -->\r\n\t\t\t<dl
+        id=\"cn-doc-dates\">\r\n\t\t\t\t<dt>Date modified:</dt>\r\n\t\t\t\t<dd><span>2015-09-24</span></dd>\r\n\t\t\t</dl>\r\n\t\t\t<div
+        class=\"clear\"></div>\r\n\t\t\t<!-- Date Modified ends / Fin de la date de
+        modification -->\r\n<!-- GC Web Usability theme ends / Fin du th&egrav;me
+        de la facilit&eacute; d'emploi GC -->\r\n\t\t</div>\r\n\t\t\r\n\t\t</div>\r\n\r\n\t\t\r\n\t\t\r\n\t\t<!--
+        Primary navigation (left column) ends / Fin de la navigation principale (colonne
+        gauche) -->\r\n\t\t<div id=\"cn-left-col-gap\"></div>\r\n\t\t<div id=\"cn-left-col\"><div
+        id=\"cn-left-col-inner\">\r\n\r\n\t\t\t<h2 id=\"cn-nav\">Left Side Menu</h2>\r\n\t\t\t<div
+        class=\"cn-left-col-default\">\r\n\t\t<h3>Proactive Disclosure</h3><ul><li><a
+        href=\"/Corp-Serv-Gen/2/PDC-DPC/contract/menu.aspx\" title=\"Disclosure of
+        Contracts\">Disclosure of Contracts</a></li><li><a href=\"/Corp-Serv-Gen/2/DGC-DSC/grant/disclosure.aspx\"
+        title=\"Disclosure of Grants and Contributions\">Disclosure of Grants and
+        Contributions</a></li><li><a href=\"/Corp-Serv-Gen/2/DTH-DVA/disclosure/index-summary.aspx\"
+        title=\"Report on Annual Expenditures for Travel, Hospitality and Conferences\">Report
+        on Annual Expenditures for Travel, Hospitality and Conferences</a></li><li><a
+        href=\"http://www.tc.gc.ca/eng/corporate-services/hr-reclassification-menu.htm\"
+        title=\"Disclosure of Positions Reclassified\">Disclosure of Positions Reclassified</a></li><li><a
+        href=\"/Corp-Serv-Gen/2/DTH-DVA/disclosure/menu.aspx\" title=\"Disclosure
+        of Travel and Hospitality Expenses\">Disclosure of Travel and Hospitality
+        Expenses</a></li><li><a href=\"http://www.tc.gc.ca/eng/aboutus-psdpa-menu.htm\"
+        title=\"Public Servants Disclosure Protection Act\">Public Servants Disclosure
+        Protection Act</a></li></ul>\r\n\t\t\t\t<!-- GC Web Usability theme begins
+        / D&eacute;but du th&egrav;me de la facilit&eacute; d'emploi GC -->\r\n\t\t\t\t<h3>Browse
+        By Mode</h3>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/air-menu.htm?utm_source=main&amp;utm_medium=doublelnk&amp;utm_campaign=airleftnav\"
+        title=\"Air Transportation &lt; Browse By Mode\">Air Transportation</a></li>
+        \ \r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/marine-menu.htm\" title=\"Marine
+        Transportation &lt; Browse By Mode\">Marine Transportation</a></li>  \r\n\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/rail-menu.htm\" title=\"Rail Transportation
+        &lt; Browse By Mode\">Rail Transportation</a></li>  \r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/road-menu.htm\"
+        title=\"Road Transportation &lt; Browse By Mode\">Road Transportation</a></li>
+        \ \r\n\r\n\t\t\t\t</ul>\r\n\r\n\t\t<!-- GC Web Usability theme ends / Fin
+        du th&egrav;me de la facilit&eacute; d'emploi GC -->\r\n\t\t\t\t\t</div>\r\n\t\t\r\n\t\t\t\t\t\t</div></div>\r\n\t\t\t\t<!--
+        Primary navigation (left column) ends / Fin de la navigation principale (colonne
+        gauche) -->\r\n\r\n\t\t\t\r\n\r\n\t\t\t\t\t</div></div>\r\n\t\t\t<!-- Columns
+        end / Fin des colonnes -->\r\n\t\t\r\n\t   <!-- Footer begins / Dbut du pied
+        de page -->\r\n      <div id=\"cn-foot\">\r\n\r\n        <div id=\"cn-foot-inner\">\r\n
+        \         <h2>\r\n            Footer\r\n          </h2><!-- GC Web Usability
+        theme begins / Dbut du thme de la facilit d'emploi GC -->\r\n\t\t  \r\n\t\t
+        \ <!-- Site footer begins / Dbut du pied de page du site -->\r\n          <div
+        id=\"cn-sft\">\r\n            <h3>\r\n              Site footer\r\n            </h3>\r\n
+        \           <div id=\"cn-sft-inner\">\r\n              \t\t\t<div id=\"cn-ft-tctr\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li
+        class=\"terms\"><a href=\"http://www.tc.gc.ca/eng/notices.htm\" rel=\"license\">Terms
+        and conditions</a></li>\r\n\t\t\t\t\t<li class=\"trans\"><a href=\"http://www.tc.gc.ca/eng/aboutus-disclosure.htm\">Transparency</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div
+        class=\"clear\"></div>\r\n\t\t\t<div class=\"span-2\">\r\n\t\t\t\t<h4><a href=\"http://www.tc.gc.ca/eng/aboutus-menu.htm\">About
+        us</a></h4>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/aboutus-department-overview.htm\">Our
+        Mandate</a></li>\r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/minister-menu.htm\">The
+        Minister</a></li>\r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/aboutus-department-menu.htm\">Organizational
+        Structure</a></li>\r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/publications-menu.htm\">Publications</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/site-menu.htm\">Site Map</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t<h4><a href=\"http://www.tc.gc.ca/eng/mediaroom/menu.htm\">News</a></h4>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t\t\t\t<li><a
+        href=\"http://news.gc.ca/web/dsptch-dstrbr-en.do?mthd=advSrch&crtr.dpt1D=6695&crtr.tp1D=1\">News
+        Releases</a></li>\r\n\t\t\t\t\t\t\t\t<li><a href=\"http://news.gc.ca/web/dsptch-dstrbr-en.do?mthd=advSrch&crtr.dpt1D=6695&crtr.tp1D=970\">Speeches</a></li>\r\n\t\t\t\t\t\t\t\t<li><a
+        href=\"http://news.gc.ca/web/dsptch-dstrbr-en.do?mthd=advSrch&crtr.dpt1D=6695&crtr.tp1D=3\">Media
+        Advisories</a></li>\r\n\t\t\t\t\t\t\t\t<li><a href=\"http://news.gc.ca/web/dsptch-dstrbr-en.do?mthd=advSrch&crtr.dpt1D=6695&crtr.tp1D=930\">Backgrounders</a></li>\r\n\t\t\t\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/mediaroom/photos-menu.htm\">Photo Gallery</a></li>\r\n\t\t\t\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/mediaroom/video-menu.htm\">Video Gallery</a></li>\r\n\t\t\t\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div
+        class=\"span-2\">\r\n\t\t\t\t<h4><a href=\"http://www.tc.gc.ca/eng/contact-us.htm\">Contact
+        us</a></h4>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a href=\"http://www.tc.gc.ca/eng/contact-us.htm#general\">Address</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/contact-us.htm#freq\">Telephone Numbers</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/contact-us.htm#freq\">Emails</a></li>\t\t\t\t\t\r\n\t\t\t\t\t<li><a
+        href=\"http://sage-geds.tpsgc-pwgsc.gc.ca/cgi-bin/direct500/eng/XEou%3dTC-TC%2co%3dGC%2cc%3dCA\">Find
+        an Employee</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"span-2\">\r\n\t\t\t\t<h4><a
+        href=\"http://www.tc.gc.ca/eng/mediaroom/socialmedia-menu.htm\">Stay connected</a></h4>\r\n\t\t\t\t<ul>\r\n
+        \         <li>\r\n            <a href=\"http://www.facebook.com/pages/Transport-Canada/401846167974\">Facebook</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://youtube.com/transportcanada\">YouTube</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://twitter.com/transport_gc\">Twitter</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://www.tc.gc.ca/eng/rss-feeds.htm\">Feeds</a></li>\r\n\t\t\t\t\t<li><a
+        href=\"http://wwwapps.tc.gc.ca/Comm/5/ListServ/Menu.aspx?lang=eng\">Subscribe
+        to E-news</a></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\r\n            </div>\r\n
+        \         </div><!-- Site footer ends / Fin du pied de page du site -->\r\n
+        \         <!-- GC footer begins / Dbut du pied de page GC -->\r\n          <div
+        id=\"cn-gcft\">\r\n            <h3>\r\n              Government of Canada
+        footer\r\n            </h3>\r\n            <div id=\"cn-gcft-inner\">\r\n
+        \             \t\t\t<div id=\"fip-pcim-gcft\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li><a
+        rel=\"external\" href=\"http://healthycanadians.gc.ca/index-eng.php\"><span>Health</span><br
+        />healthycanadians.gc.ca</a></li>\r\n\t\t\t\t\t<li><a rel=\"external\" href=\"http://www.voyage.gc.ca/index-eng.asp\"><span>Travel</span><br
+        />travel.gc.ca</a></li>\r\n\t\t\t\t\t<li><a rel=\"external\" href=\"http://www.servicecanada.gc.ca/eng/home.shtml\"><span>Service
+        Canada</span><br />servicecanada.gc.ca</a></li>\r\n\t\t\t\t\t<li><a rel=\"external\"
+        href=\"http://www.jobbank.gc.ca/intro-eng.aspx\"><span>Jobs</span><br />jobbank.gc.ca</a></li>\r\n\t\t\t\t\t<li><a
+        rel=\"external\" href=\"http://actionplan.gc.ca/eng/index.asp\"><span>Economy</span><br
+        />actionplan.gc.ca</a></li>\r\n\t\t\t\t\t<li id=\"cn-ft-ca\"><div><a rel=\"external\"
+        href=\"http://www.canada.gc.ca/home.html\">Canada.gc.ca</a></div></li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n
+        \           </div>\r\n          </div><!-- GC footer ends / Fin du pied de
+        page GC -->\r\n          <!-- GC Web Usability theme ends / Fin du thme de
+        la facilit d'emploi GC -->\r\n        </div>\r\n      </div><!-- Footer ends
+        / Fin du pied de page -->\r\n    </div><!-- Two column layout ends / Fin de
+        la mis en page de deux colonnes -->\r\n\r\n\r\n\t\t\r\n\t\t<!-- Two column
+        layout ends / Fin de la mis en page de deux colonnes -->\r\n\t\t</body>\r\n\t\t</html>\r\n\t\t\t"
+    http_version: 
+  recorded_at: Thu, 24 Sep 2015 12:50:53 GMT
+recorded_with: VCR 2.9.2

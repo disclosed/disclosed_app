@@ -20,9 +20,7 @@ class Scrapers::Dfo::Scraper < Scrapers::ContractScraper
   end
 
   def self.reports
-    page = Nokogiri::HTML(open("#{BASE_URL}reports-eng.asp"))
-    links = page.css(".center ul li a")
-    links.map { |a_tag| Scrapers::Report.new("dfo", "#{BASE_URL}#{a_tag['href']}") }
+    Scrapers::ReportUrlExtractor.new("#{BASE_URL}reports-eng.asp", "dfo", "Please select a report").reports
   end
 
 end
