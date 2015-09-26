@@ -3,6 +3,10 @@ module Scrapers::TextHelpers
     value.gsub("\u00A0", ' ')
   end
 
+  def clean_all_spaces(value)
+    value.gsub(/[\n\t]/, ' ').gsub(/\s+/, ' ')
+  end
+
   def clean_dash(value)
     value.gsub("\u2011", '-')
   end

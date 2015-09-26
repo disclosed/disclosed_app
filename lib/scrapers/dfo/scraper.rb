@@ -11,7 +11,7 @@ class Scrapers::Dfo::Scraper < Scrapers::ContractScraper
       Scrapers::TableMapping.new(:description),
       Scrapers::TableMapping.new(:comments)
     ]
-    Scrapers::TableExtractor.new(url, mappings).extract
+    Scrapers::TableExtractor.new(url, mappings).result
   end
 
   def contract_urls

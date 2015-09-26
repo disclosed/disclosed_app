@@ -31,7 +31,7 @@ class Scrapers::Stat::Scraper < Scrapers::ContractScraper
       Scrapers::TableMapping.new(:description, "description of work"),
       Scrapers::TableMapping.new(:comments)
     ]
-    Scrapers::TableExtractor.new(url, mappings).extract
+    Scrapers::TableExtractor.new(url, mappings).result
   end
 
   # Returns the urls for the contract pages available in the #report.

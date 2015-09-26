@@ -1,5 +1,5 @@
 class Scrapers::TableExtractor
-  include TextHelpers
+  include Scrapers::TextHelpers
   attr_reader :page, :result
 
   def initialize(url, row_mappings)
