@@ -11,9 +11,15 @@ module Scrapers::TextHelpers
     return nil if value.blank?
     begin
       Date.parse(value)
-    # Date.parse throws an argument error if date is invalid. Raise a better exception
     rescue ArgumentError => e
-      raise "Invalid date. #{value}"
+      # Sometimes the problem with dates is that the the month and day are switched
+      # Try parsing the date again with the month and day reversed.
+      year, day, month = value.match(/(\d{4})[-\/](\d{2})[-\/](\d{2})/).captures
+      begin 
+        Date.parse("#{year}-#{month}-#{day}")
+      rescue ArgumentError => e
+        puts "Invalid date. #{value}"
+      end
     end
   end
 
