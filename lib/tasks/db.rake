@@ -1,4 +1,3 @@
-require 'pry'
 namespace :db do
   namespace :data do
     desc "Create a SQL dump of the database"
