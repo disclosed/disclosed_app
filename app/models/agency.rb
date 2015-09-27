@@ -8,6 +8,10 @@ class Agency < ActiveRecord::Base
 
   before_validation :extract_abbr, on: :create
 
+  def has_scraper?
+    File.exists?(File.join(Rails.root, "lib", "scrapers", self.abbr, "/"))
+  end
+
   protected
   def extract_abbr
     return unless self.abbr.blank?

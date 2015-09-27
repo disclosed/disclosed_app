@@ -2,17 +2,23 @@ namespace :contracts do
   desc "Scrape the contract data and load it in the DB."
   task :scrape => :environment do
     agency = ask_for_agency
-    report = ask_for_report(agency)
+    reports = ask_for_reports(agency)
     create_log_file(agency)
     notifier = ScraperNotifier.new
     notifier.on(:scraping_contract, -> (args) {
       print "."
       $logger.debug("Scraping URL: #{args.inspect}")
     })
-    scraper  = scraper_for_agency(agency.abbr).new(report, notifier)
-    puts_and_log "There are #{scraper.contract_urls.count} contracts in #{report.url}."
-    range = get_range_from_user
-    scrape_report(scraper, agency, range)
+    reports.each do |report|
+      scraper  = scraper_for_agency(agency.abbr).new(report, notifier)
+      puts_and_log "There are #{scraper.contract_urls.count} contracts in #{report.url}."
+      if reports.length == 1
+        range = get_range_from_user
+      else
+        range = 0..-1 # all reports
+      end
+      scrape_report(scraper, agency, range)
+    end
   end
 end
 
@@ -33,7 +39,11 @@ end
 
 def ask_for_agency
   Agency.all.each do |agency|
-    puts "#{agency.abbr} - #{agency.name}"
+    if agency.has_scraper?
+      puts "#{agency.abbr} - #{agency.name}"
+    else
+      puts "(not implemented) #{agency.abbr} - #{agency.name}"
+    end
   end
   puts "Which agency would you like to scrape?"
   print "agency code > "
@@ -41,15 +51,20 @@ def ask_for_agency
   Agency.find_by(abbr: code) || (raise "Invalid code: #{code}.")
 end
 
-def ask_for_report(agency)
+def ask_for_reports(agency)
   scraper_class  = scraper_for_agency(agency.abbr)
   reports = scraper_class.reports
   puts "Report No.\tURL"
   reports.each_with_index { |report, index| puts "#{index}\t#{report.url}" }
   puts "Which report would you like to scrape?"
-  print "report number > "
-  index = STDIN.gets.chomp.to_i
-  reports[index]
+  print "report number or 'all'> "
+
+  response = STDIN.gets.chomp
+  if response.downcase == 'all'
+    reports
+  else
+    [reports[response.to_i]]
+  end
 end
 
 def get_range_from_user
