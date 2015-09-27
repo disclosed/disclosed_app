@@ -42,7 +42,7 @@ class Contract < ActiveRecord::Base
   end
 # total spending per each agency, grouped by year
    def self.spending_per_agency(agency)
-    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE agency_id = #{agency} GROUP BY year ORDER BY year")
+    find_by_sql("SELECT SUM(value) AS total, EXTRACT(year FROM effective_date) AS year FROM contracts WHERE agency_id = #{agency} AND effective_date IS NOT NULL GROUP BY year ORDER BY year")
   end
 
   def self.contract_for(attrs)
