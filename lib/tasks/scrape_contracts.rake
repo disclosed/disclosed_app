@@ -1,8 +1,13 @@
 namespace :contracts do
   desc "Scrape the contract data and load it in the DB."
   task :scrape => :environment do
-    agency = ask_for_agency
-    reports = ask_for_reports(agency)
+    if ENV['AGENCY'].blank?
+      agency = ask_for_agency
+      reports = ask_for_reports(agency)
+    else
+      agency = Agency.find_by(abbr: ENV['AGENCY']) || (raise "Invalid code: #{ENV['AGENCY']}.")
+      reports = all_reports(agency)
+    end
     create_log_file(agency)
     notifier = ScraperNotifier.new
     notifier.on(:scraping_contract, -> (args) {
@@ -65,6 +70,11 @@ def ask_for_reports(agency)
   else
     [reports[response.to_i]]
   end
+end
+
+def all_reports(agency)
+  scraper_class  = scraper_for_agency(agency.abbr)
+  scraper_class.reports
 end
 
 def get_range_from_user
