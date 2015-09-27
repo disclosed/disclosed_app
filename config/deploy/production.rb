@@ -45,6 +45,22 @@ namespace :puma do
   before :start, :make_dirs
 end
 
+namespace :contracts do
+  #  bundle exec cap production contracts:scrape agency=rcmp
+  desc 'Run scraper on the server'
+  task :scrape do
+    fail 'no agency code provided' unless ENV['agency']
+
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, "contracts:scrape", "AGENCY=#{ENV['agency']}"
+        end
+      end
+    end
+  end
+end
+
 namespace :deploy do
   desc "Make sure local git is in sync with remote."
   task :check_revision do
@@ -72,7 +88,7 @@ namespace :deploy do
     end
   end
 
-  #   bundle exec cap production deploy:invoke task=contracts:scrape
+  #   bundle exec cap production deploy:invoke task=db:seed
   desc 'Invoke rake task on the server'
   task :invoke do
     fail 'no task provided' unless ENV['task']
@@ -85,6 +101,7 @@ namespace :deploy do
       end
     end
   end
+
 
   before :starting,     :check_revision
   after  :finishing,    :compile_assets

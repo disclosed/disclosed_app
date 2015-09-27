@@ -24,6 +24,7 @@ gem 'less-rails'
 gem 'nokogiri'
 gem 'chronic' # Natural language date parser used by scraper to parse dates
 gem 'monetize' # Parse money amounts. Used by scraper.
+gem 'active_attr' # Used for value objects on steroids
 
 group :development do
   gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -38,7 +39,6 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'active_attr' # Used for value objects on steroids
 end
 
 group :test do
