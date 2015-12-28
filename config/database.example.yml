@@ -14,8 +14,3 @@ test:
   password: <%= ENV['POSTGRES_PASSWORD'] %>
   encoding: unicode
   pool: 5
-production:
-  adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
-  encoding: unicode
-  pool: 5
